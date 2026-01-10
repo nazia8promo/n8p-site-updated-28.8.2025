@@ -8,41 +8,84 @@
     <meta name="description" content="Nazia8 Promo - Premium promotional services and marketing solutions for your business growth" />
     <title>Nazia8 Promo - Premium Marketing Solutions</title>
 
-    <!-- Подключение стилей и интерактивных эффектов -->
+    <!-- Основные стили -->
     <link rel="stylesheet" crossorigin href="assets/index-4gwpjj3e.css">
+    <!-- Эффекты -->
     <link rel="stylesheet" href="assets/interactive.css">
+    <link rel="stylesheet" href="effects.css">
 
-    <!-- Скрипт сайта -->
+    <!-- Скрипты для интерактивности -->
     <script type="module" crossorigin src="assets/index-dpusbyut.js"></script>
+    <script type="module" src="assets/interactive.js"></script>
+    <script type="module" src="effects.js"></script>
+
+    <style>
+      /* Градиентный фон + базовая визуалка */
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      #root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        position: relative;
+        padding: 2rem;
+      }
+
+      .hero-button {
+        padding: 1rem 2rem;
+        background: #ff6b6b;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      }
+
+      .hero-button:hover {
+        transform: translateY(-4px) scale(1.05);
+        background: #ff8787;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      }
+
+      /* Плавный скролл для якорей */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Пример hero анимации пузырьков (уже есть в interactive.js) */
+      .bubble {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.5;
+        animation: float 8s infinite;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(-40px) translateX(20px); }
+        100% { transform: translateY(0) translateX(0); }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <h1>Welcome to Nazia8 Promo</h1>
+      <p>Premium Marketing Solutions for your business growth</p>
+      <button class="hero-button" onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'});">View Our Work</button>
+    </div>
 
-    <!-- Скрипт для генерации пузырьков и вспышек -->
-    <script>
-      // Создание пузырьков на фоне
-      function createBubble() {
-        const bubble = document.createElement('div');
-        bubble.className = 'bubble';
-        bubble.style.left = Math.random() * window.innerWidth + 'px';
-        bubble.style.width = 10 + Math.random() * 30 + 'px';
-        bubble.style.height = bubble.style.width;
-        bubble.style.background = `rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},0.6)`;
-        bubble.style.animationDuration = 3 + Math.random() * 5 + 's';
-        document.body.appendChild(bubble);
-        setTimeout(() => bubble.remove(), 8000);
-      }
-      setInterval(createBubble, 300);
-
-      // Вспышки при клике
-      document.body.addEventListener('click', (e) => {
-        const spark = document.createElement('div');
-        spark.className = 'spark';
-        spark.style.left = e.pageX - 15 + 'px';
-        spark.style.top = e.pageY - 15 + 'px';
-        document.body.appendChild(spark);
-        setTimeout(() => spark.remove(), 1000);
-      });
-    </script>
+    <!-- Пример секции для кнопки -->
+    <div id="work" style="height: 100vh; background: rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center;">
+      <h2>Our Work Showcase</h2>
+    </div>
   </body>
 </html>
