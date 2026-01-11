@@ -51,3 +51,24 @@ waitForDOM().then(() => {
     img.setAttribute('data-speed', '3');
   });
 });
+
+// SPA-safe fix for "View Our Work"
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href="/en/works"]');
+  if (!link) return;
+
+  e.preventDefault();
+
+  // ищем секцию с кейсами / логотипами
+  const target =
+    document.querySelector('#portfolio') ||
+    document.querySelector('#clients') ||
+    document.querySelector('#works') ||
+    document.querySelector('section:last-of-type');
+
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    alert('Portfolio section is coming soon 🚀');
+  }
+});
