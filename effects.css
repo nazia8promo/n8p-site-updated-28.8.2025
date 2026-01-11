@@ -1,6 +1,6 @@
 /* ===== GLOBAL SMOOTHNESS ===== */
-* {
-  transition: all 0.35s ease;
+a, button, .card, .hover-lift {
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
 body {
@@ -56,83 +56,83 @@ body {
   will-change: transform;
 }
 
-/* ===== SPA-SAFE УБОРКА БЕЛОГО ФОНА ===== */
-section.bg-white,
-div.bg-white,
-.bg-white {
-  background: transparent !important;
+/* ===== SPA-SAFE ФОН И БАЗОВЫЕ СТИЛИ ===== */
+html, body {
+  background: #f8fafc !important;
+  overflow-x: hidden;
 }
 
-/* ===== GLOBAL DARK PREMIUM BACKDROP ===== */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(1200px 600px at 10% 10%, rgba(255,165,0,0.18), transparent 65%),
-    radial-gradient(1000px 800px at 90% 20%, rgba(34,139,34,0.22), transparent 70%),
-    radial-gradient(800px 600px at 50% 90%, rgba(138,43,226,0.12), transparent 60%),
-    linear-gradient(180deg, #0a0a0f, #101014, #0a0a0f);
-  background-attachment: fixed;
+/* ===== ЧИТАЕМЫЙ ТЕКСТ ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: #0f172a;
+  text-shadow: 0 1px 3px rgba(0,0,0,.08);
 }
 
-/* ===== PREMIUM GLASS CARDS ===== */
-section > div,
-article > div,
+/* ===== КАРТОЧКИ — СВЕТЛЫЕ, ПРЕМИАЛЬНЫЕ ===== */
 .card,
+section > div > div,
 .rounded-xl,
 .rounded-lg {
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  background: rgba(20, 20, 25, 0.65) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px !important;
+  background: #ffffff !important;
+  border-radius: 20px !important;
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 10px 30px rgba(2,6,23,.08),
+    inset 0 1px 0 rgba(255,255,255,.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-/* ===== PREMIUM BUTTONS GLOW ===== */
+/* Специальные стили для стеклянных карточек */
+.glass {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ===== ГЛУБИНА БЕЗ ТЁМНОГО ФОНА ===== */
+section {
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(600px 200px at 10% 0%, rgba(34,139,34,.06), transparent),
+    radial-gradient(600px 200px at 90% 0%, rgba(255,165,0,.08), transparent);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ===== ПРЕМИАЛЬНЫЕ КНОПКИ ===== */
 a.rounded-full:hover,
 button.rounded-full:hover,
 .btn:hover,
 button:hover:not([disabled]) {
+  transform: translateY(-2px);
   box-shadow:
-    0 0 0 2px rgba(255,165,0,.6),
-    0 0 0 4px rgba(255,165,0,.2),
-    0 15px 50px rgba(255,165,0,.35),
-    0 5px 20px rgba(0,166,81,.25) !important;
-  transform: translateY(-4px) scale(1.05);
-  background: linear-gradient(135deg, #ff8a00, #ffaa00) !important;
+    0 10px 25px rgba(34,139,34,.25),
+    0 0 0 2px rgba(34,139,34,.2) !important;
 }
 
-/* ===== TEXT ENHANCEMENT ===== */
-h1, h2, h3, h4, h5, h6 {
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(135deg, #ffffff, #e6e6e6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* ===== PREMIUM IMAGE STYLING ===== */
+/* ===== ИЗОБРАЖЕНИЯ ПРЕМИУМ ===== */
 img:not(.no-enhance) {
-  border-radius: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== ENHANCED NAVIGATION ===== */
+/* ===== УЛУЧШЕННАЯ НАВИГАЦИЯ ===== */
 nav,
 header {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(15, 15, 20, 0.85) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* ===== ANIMATED SCANLINE ===== */
+/* ===== АНИМИРОВАННАЯ SCANLINE (светлая версия) ===== */
 body::after {
   content: "";
   position: fixed;
@@ -142,31 +142,78 @@ body::after {
   height: 1px;
   background: linear-gradient(90deg, 
     transparent, 
-    rgba(255,165,0,0.4), 
-    rgba(0,166,81,0.4), 
+    rgba(34,139,34,0.2), 
+    rgba(255,165,0,0.2), 
     transparent);
   z-index: 9999;
-  animation: scanline 3s ease-in-out infinite;
+  animation: scanline 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
 @keyframes scanline {
-  0%, 100% { transform: translateY(0); opacity: 0.3; }
-  50% { transform: translateY(100vh); opacity: 0.7; }
+  0%, 100% { transform: translateY(0); opacity: 0.1; }
+  50% { transform: translateY(100vh); opacity: 0.3; }
 }
 
-/* ===== FORM ELEMENTS ENHANCEMENT ===== */
+/* ===== УЛУЧШЕННЫЕ ФОРМЫ ===== */
 input,
 textarea,
 select {
-  background: rgba(20, 20, 25, 0.7) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  border-radius: 12px !important;
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(5px);
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: rgba(255,165,0,0.6) !important;
-  box-shadow: 0 0 0 3px rgba(255,165,0,0.2) !important;
+  border-color: rgba(34,139,34,0.4) !important;
+  box-shadow: 0 0 0 3px rgba(34,139,34,0.1) !important;
+}
+
+/* ===== ДОПОЛНИТЕЛЬНЫЕ ПРЕМИУМ ЭФФЕКТЫ ===== */
+
+/* Акцентные градиентные границы для специальных секций */
+section:nth-child(odd)::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255,165,0,0.3), 
+    rgba(34,139,34,0.3), 
+    transparent);
+}
+
+/* Минималистичные hover-эффекты для ссылок */
+a:not(.btn):not(.rounded-full):hover {
+  color: #228b22;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* Стили для списков */
+li::marker {
+  color: rgba(34,139,34,0.6);
+}
+
+/* Анимация появления для контента */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
