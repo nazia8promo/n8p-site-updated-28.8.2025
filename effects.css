@@ -1,89 +1,50 @@
-/* ===== GLOBAL SMOOTHNESS ===== */
+/* =========================================================
+   GLOBAL SMOOTHNESS (SAFE)
+========================================================= */
 a, button, .card, .hover-lift {
   transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
-body {
+html {
   scroll-behavior: smooth;
 }
 
-/* ===== GLOW EFFECTS ===== */
-.glow {
-  box-shadow:
-    0 0 20px rgba(255,165,0,.25),
-    0 0 40px rgba(0,166,81,.15);
-}
-
-/* ===== GLASS CARDS ===== */
-.glass {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 16px;
-}
-
-/* ===== HOVER LIFT ===== */
-.hover-lift:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,.25);
-}
-
-/* ===== SCROLL ANIMATION ===== */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== CTA PULSE ===== */
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 rgba(255,165,0,.4); }
-  50% { box-shadow: 0 0 30px rgba(255,165,0,.8); }
-  100% { box-shadow: 0 0 0 rgba(255,165,0,.4); }
-}
-
-.pulse {
-  animation: pulseGlow 2.5s infinite;
-}
-
-/* ===== PARALLAX ===== */
-.parallax {
-  will-change: transform;
-}
-
-/* ===== SPA-SAFE ФОН И БАЗОВЫЕ СТИЛИ ===== */
-html, body {
-  background: #f8fafc !important;
+body {
+  margin: 0;
+  background: #f8fafc;
   overflow-x: hidden;
 }
 
-/* ===== ПРЕМИУМНЫЕ ЗАГОЛОВКИ ===== */
+/* =========================================================
+   ROOT BACKGROUND (FIX SIDE COLUMNS)
+========================================================= */
+#root {
+  position: relative;
+  background:
+    radial-gradient(900px 320px at 10% 0%, rgba(34,139,34,.05), transparent),
+    radial-gradient(900px 320px at 90% 0%, rgba(255,165,0,.06), transparent);
+}
+
+/* =========================================================
+   HEADINGS (PREMIUM, READABLE)
+========================================================= */
 h1, h2, h3, h4 {
   color: #0f172a;
   letter-spacing: -0.02em;
-  text-shadow: 0 1px 3px rgba(0,0,0,.08);
-}
-
-h1 span.text-nazia-green {
-  color: #228b22;
-}
-
-h1 span.text-promo-orange {
-  color: #ff8c00;
+  text-shadow: 0 1px 3px rgba(0,0,0,.06);
 }
 
 h5, h6 {
   color: #334155;
 }
 
-/* ===== КАРТОЧКИ — СВЕТЛЫЕ, ПРЕМИАЛЬНЫЕ ===== */
+.text-nazia-green { color: #228b22; }
+.text-promo-orange { color: #ff8c00; }
+
+/* =========================================================
+   CARDS (LIGHT, PREMIUM)
+========================================================= */
 .card,
-section > div > div,
 .rounded-xl,
 .rounded-lg {
   background: #ffffff !important;
@@ -91,18 +52,22 @@ section > div > div,
   box-shadow:
     0 10px 30px rgba(2,6,23,.08),
     inset 0 1px 0 rgba(255,255,255,.6);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0,0,0,.04);
 }
 
-/* Специальные стили для стеклянных карточек */
+/* =========================================================
+   GLASS (OPTIONAL, SAFE)
+========================================================= */
 .glass {
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.4);
 }
 
-/* ===== ГЛУБИНА БЕЗ ТЁМНОГО ФОНА ===== */
+/* =========================================================
+   SECTION DECORATIVE DEPTH (FIXED)
+========================================================= */
 section {
   position: relative;
 }
@@ -114,11 +79,18 @@ section::before {
   background:
     radial-gradient(600px 200px at 10% 0%, rgba(34,139,34,.06), transparent),
     radial-gradient(600px 200px at 90% 0%, rgba(255,165,0,.08), transparent);
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
 
-/* ===== ПРЕМИАЛЬНЫЕ КНОПКИ ===== */
+section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   BUTTONS (PREMIUM, NO BREAK)
+========================================================= */
 a.rounded-full:hover,
 button.rounded-full:hover,
 .btn:hover,
@@ -126,157 +98,68 @@ button:hover:not([disabled]) {
   transform: translateY(-2px);
   box-shadow:
     0 10px 25px rgba(34,139,34,.25),
-    0 0 0 2px rgba(34,139,34,.2) !important;
+    0 0 0 2px rgba(34,139,34,.15);
 }
 
-/* ===== ИЗОБРАЖЕНИЯ ПРЕМИУМ ===== */
+/* =========================================================
+   IMAGES
+========================================================= */
 img:not(.no-enhance) {
   border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
 }
 
-/* ===== УЛУЧШЕННАЯ НАВИГАЦИЯ ===== */
-nav,
-header {
+/* =========================================================
+   NAVIGATION
+========================================================= */
+nav, header {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.92) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255,255,255,.92) !important;
+  border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
-/* ===== АНИМИРОВАННАЯ SCANLINE (светлая версия) ===== */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(34,139,34,0.2), 
-    rgba(255,165,0,0.2), 
-    transparent);
-  z-index: 9999;
-  animation: scanline 4s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes scanline {
-  0%, 100% { transform: translateY(0); opacity: 0.1; }
-  50% { transform: translateY(100vh); opacity: 0.3; }
-}
-
-/* ===== УЛУЧШЕННЫЕ ФОРМЫ ===== */
-input,
-textarea,
-select {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+/* =========================================================
+   FORMS
+========================================================= */
+input, textarea, select {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,.1) !important;
   border-radius: 10px !important;
-  backdrop-filter: blur(5px);
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: rgba(34,139,34,0.4) !important;
-  box-shadow: 0 0 0 3px rgba(34,139,34,0.1) !important;
+  border-color: rgba(34,139,34,.4) !important;
+  box-shadow: 0 0 0 3px rgba(34,139,34,.12) !important;
 }
 
-/* ===== ДОПОЛНИТЕЛЬНЫЕ ПРЕМИУМ ЭФФЕКТЫ ===== */
-
-/* Акцентные градиентные границы для специальных секций */
-section:nth-child(odd)::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 5%;
-  right: 5%;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(255,165,0,0.3), 
-    rgba(34,139,34,0.3), 
-    transparent);
-}
-
-/* Минималистичные hover-эффекты для ссылок */
-a:not(.btn):not(.rounded-full):hover {
-  color: #228b22;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-/* Стили для списков */
-li::marker {
-  color: rgba(34,139,34,0.6);
-}
-
-/* Анимация появления для контента */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* =========================================================
+   SCROLL / REVEAL
+========================================================= */
 .reveal {
-  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-/* ===== FIX SIDE COLUMNS ===== */
-body {
-  background: linear-gradient(
-    180deg,
-    #f8fafc 0%,
-    #f8fafc 40%,
-    #ffffff 100%
-  ) !important;
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: .6s ease;
 }
 
-#root {
-  background: transparent !important;
+/* =========================================================
+   LISTS
+========================================================= */
+li::marker {
+  color: rgba(34,139,34,.6);
 }
 
-/* ===== FIX SVG ICONS ===== */
-svg,
-svg * {
-  fill: currentColor !important;
-  stroke: currentColor !important;
-}
-
-.icon,
-.icon svg {
-  color: inherit !important;
-}
-
-/* DO NOT TOUCH SVG WITH TEXT EFFECTS */
-svg {
-  background: none !important;
-  -webkit-text-fill-color: initial !important;
-  background-clip: initial !important;
-  -webkit-background-clip: initial !important;
-}
-
-/* ===== УБЕДИМСЯ, ЧТО ИКОНКИ ОСТАЮТСЯ ВИДИМЫМИ ===== */
-svg[class*="icon"],
-svg[class*="Icon"],
-svg[class*="logo"],
-svg[class*="Logo"] {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: inline-block !important;
-}
-
-/* ===== ЗАЩИТА ОТ ПРОЗРАЧНОСТИ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ SVG ===== */
-svg * {
-  fill-opacity: 1 !important;
-  stroke-opacity: 1 !important;
-}
+/* =========================================================
+   ⚠️ SVG — НЕ ТРОГАТЬ
+========================================================= */
+/* СПЕЦИАЛЬНО ОСТАВЛЕНО ПУСТЫМ
+   НИКАКИХ svg *, fill, stroke, opacity
+*/
