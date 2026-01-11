@@ -1,10 +1,6 @@
 /* =========================================================
-   GLOBAL SMOOTHNESS (SAFE)
+   GLOBAL
 ========================================================= */
-a, button, .card, .hover-lift {
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -15,8 +11,12 @@ body {
   overflow-x: hidden;
 }
 
+a, button, .card {
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
 /* =========================================================
-   ROOT BACKGROUND (FIX SIDE COLUMNS)
+   ROOT BACKGROUND — УБИРАЕТ БОКОВЫЕ КОЛОНКИ
 ========================================================= */
 #root {
   position: relative;
@@ -26,7 +26,7 @@ body {
 }
 
 /* =========================================================
-   HEADINGS (PREMIUM, READABLE)
+   TYPOGRAPHY
 ========================================================= */
 h1, h2, h3, h4 {
   color: #0f172a;
@@ -42,21 +42,21 @@ h5, h6 {
 .text-promo-orange { color: #ff8c00; }
 
 /* =========================================================
-   CARDS (LIGHT, PREMIUM)
+   CARDS
 ========================================================= */
 .card,
 .rounded-xl,
 .rounded-lg {
   background: #ffffff !important;
   border-radius: 20px !important;
+  border: 1px solid rgba(0,0,0,.04);
   box-shadow:
     0 10px 30px rgba(2,6,23,.08),
     inset 0 1px 0 rgba(255,255,255,.6);
-  border: 1px solid rgba(0,0,0,.04);
 }
 
 /* =========================================================
-   GLASS (OPTIONAL, SAFE)
+   OPTIONAL GLASS (SAFE)
 ========================================================= */
 .glass {
   background: rgba(255,255,255,.85);
@@ -66,7 +66,7 @@ h5, h6 {
 }
 
 /* =========================================================
-   SECTION DECORATIVE DEPTH (FIXED)
+   SECTION DEPTH (ВОЗВРАЩАЕТ ДЕКОР)
 ========================================================= */
 section {
   position: relative;
@@ -89,7 +89,7 @@ section > * {
 }
 
 /* =========================================================
-   BUTTONS (PREMIUM, NO BREAK)
+   BUTTONS
 ========================================================= */
 a.rounded-full:hover,
 button.rounded-full:hover,
@@ -111,19 +111,22 @@ img:not(.no-enhance) {
 }
 
 /* =========================================================
-   NAVIGATION
+   NAV
 ========================================================= */
-nav, header {
+nav,
+header {
+  background: rgba(255,255,255,.92) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: rgba(255,255,255,.92) !important;
   border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
 /* =========================================================
    FORMS
 ========================================================= */
-input, textarea, select {
+input,
+textarea,
+select {
   background: #ffffff !important;
   border: 1px solid rgba(0,0,0,.1) !important;
   border-radius: 10px !important;
@@ -137,7 +140,7 @@ select:focus {
 }
 
 /* =========================================================
-   SCROLL / REVEAL
+   SCROLL REVEAL
 ========================================================= */
 .reveal {
   opacity: 0;
@@ -158,8 +161,6 @@ li::marker {
 }
 
 /* =========================================================
-   ⚠️ SVG — НЕ ТРОГАТЬ
+   SVG — НЕ ТРОГАТЬ ❗
+   (никаких svg, fill, stroke, opacity)
 ========================================================= */
-/* СПЕЦИАЛЬНО ОСТАВЛЕНО ПУСТЫМ
-   НИКАКИХ svg *, fill, stroke, opacity
-*/
