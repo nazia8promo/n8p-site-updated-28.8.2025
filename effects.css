@@ -56,15 +56,14 @@ body {
   will-change: transform;
 }
 
-/* ===== SPA-SAFE УБОРКА БЕЛОГО ФОНА (без React) ===== */
-/* kill pure white sections (SPA-safe) */
+/* ===== SPA-SAFE УБОРКА БЕЛОГО ФОНА ===== */
 section.bg-white,
 div.bg-white,
 .bg-white {
   background: transparent !important;
 }
 
-/* global dark premium backdrop */
+/* ===== GLOBAL DARK PREMIUM BACKDROP ===== */
 body::before {
   content: "";
   position: fixed;
@@ -78,7 +77,7 @@ body::before {
   background-attachment: fixed;
 }
 
-/* premium glass cards - enhanced version */
+/* ===== PREMIUM GLASS CARDS ===== */
 section > div,
 article > div,
 .card,
@@ -94,7 +93,7 @@ article > div,
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-/* buttons glow - premium enhancement */
+/* ===== PREMIUM BUTTONS GLOW ===== */
 a.rounded-full:hover,
 button.rounded-full:hover,
 .btn:hover,
@@ -108,7 +107,7 @@ button:hover:not([disabled]) {
   background: linear-gradient(135deg, #ff8a00, #ffaa00) !important;
 }
 
-/* text enhancement */
+/* ===== TEXT ENHANCEMENT ===== */
 h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   background: linear-gradient(135deg, #ffffff, #e6e6e6);
@@ -117,14 +116,14 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
-/* premium image styling */
+/* ===== PREMIUM IMAGE STYLING ===== */
 img:not(.no-enhance) {
   border-radius: 16px;
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* enhanced navigation */
+/* ===== ENHANCED NAVIGATION ===== */
 nav,
 header {
   backdrop-filter: blur(20px);
@@ -133,7 +132,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* subtle animated background elements */
+/* ===== ANIMATED SCANLINE ===== */
 body::after {
   content: "";
   position: fixed;
@@ -155,7 +154,7 @@ body::after {
   50% { transform: translateY(100vh); opacity: 0.7; }
 }
 
-/* form elements enhancement */
+/* ===== FORM ELEMENTS ENHANCEMENT ===== */
 input,
 textarea,
 select {
