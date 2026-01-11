@@ -1,75 +1,41 @@
-/* =========================================================
-   GLOBAL
-========================================================= */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+/* ===============================
+   GLOBAL BASE
+================================ */
+html, body {
   margin: 0;
+  padding: 0;
   background: #f8fafc;
   overflow-x: hidden;
 }
 
-a, button, .card {
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-}
-
-/* =========================================================
-   ROOT BACKGROUND — УБИРАЕТ БОКОВЫЕ КОЛОНКИ
-========================================================= */
 #root {
-  position: relative;
-  background:
-    radial-gradient(900px 320px at 10% 0%, rgba(34,139,34,.05), transparent),
-    radial-gradient(900px 320px at 90% 0%, rgba(255,165,0,.06), transparent);
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #f8fafc 45%,
+    #ffffff 100%
+  );
 }
 
-/* =========================================================
+/* ===============================
    TYPOGRAPHY
-========================================================= */
+================================ */
 h1, h2, h3, h4 {
   color: #0f172a;
   letter-spacing: -0.02em;
-  text-shadow: 0 1px 3px rgba(0,0,0,.06);
 }
 
-h5, h6 {
+h5, h6, p {
   color: #334155;
 }
 
-.text-nazia-green { color: #228b22; }
-.text-promo-orange { color: #ff8c00; }
-
-/* =========================================================
-   CARDS
-========================================================= */
-.card,
-.rounded-xl,
-.rounded-lg {
-  background: #ffffff !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(0,0,0,.04);
-  box-shadow:
-    0 10px 30px rgba(2,6,23,.08),
-    inset 0 1px 0 rgba(255,255,255,.6);
-}
-
-/* =========================================================
-   OPTIONAL GLASS (SAFE)
-========================================================= */
-.glass {
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,.4);
-}
-
-/* =========================================================
-   SECTION DEPTH (ВОЗВРАЩАЕТ ДЕКОР)
-========================================================= */
+/* ===============================
+   SECTIONS BACKGROUND (мёбиус вернётся)
+================================ */
 section {
   position: relative;
+  overflow: visible;
 }
 
 section::before {
@@ -77,71 +43,86 @@ section::before {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(600px 200px at 10% 0%, rgba(34,139,34,.06), transparent),
-    radial-gradient(600px 200px at 90% 0%, rgba(255,165,0,.08), transparent);
+    radial-gradient(600px 240px at 10% 0%, rgba(34,139,34,.08), transparent),
+    radial-gradient(600px 240px at 90% 0%, rgba(255,165,0,.10), transparent);
   z-index: 0;
   pointer-events: none;
 }
 
-section > * {
+/* ===============================
+   CARDS
+================================ */
+.card,
+.rounded-xl,
+.rounded-lg {
   position: relative;
   z-index: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(2,6,23,.08);
 }
 
-/* =========================================================
+/* ===============================
    BUTTONS
-========================================================= */
-a.rounded-full:hover,
-button.rounded-full:hover,
-.btn:hover,
-button:hover:not([disabled]) {
+================================ */
+button,
+.btn,
+a.rounded-full {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+button:hover,
+.btn:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 10px 25px rgba(34,139,34,.25),
-    0 0 0 2px rgba(34,139,34,.15);
+  box-shadow: 0 10px 25px rgba(34,139,34,.25);
 }
 
-/* =========================================================
-   IMAGES
-========================================================= */
-img:not(.no-enhance) {
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,.05);
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-}
-
-/* =========================================================
-   NAV
-========================================================= */
-nav,
-header {
-  background: rgba(255,255,255,.92) !important;
+/* ===============================
+   NAVBAR
+================================ */
+header,
+nav {
+  background: rgba(255,255,255,.95);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
-/* =========================================================
+/* ===============================
    FORMS
-========================================================= */
+================================ */
 input,
 textarea,
 select {
-  background: #ffffff !important;
-  border: 1px solid rgba(0,0,0,.1) !important;
-  border-radius: 10px !important;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 10px;
 }
 
 input:focus,
-textarea:focus,
-select:focus {
-  border-color: rgba(34,139,34,.4) !important;
-  box-shadow: 0 0 0 3px rgba(34,139,34,.12) !important;
+textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34,197,94,.15);
 }
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+/* ===============================
+   🚨 SVG FIX — САМОЕ ВАЖНОЕ
+================================ */
+/* ❌ УБРАЛИ global svg * override */
+
+/* ✅ SVG ведут себя как задумано библиотекой */
+svg {
+  display: inline-block;
+}
+
+/* если иконка font-based */
+.icon {
+  color: inherit;
+}
+
+/* ===============================
+   ANIMATION (SAFE)
+================================ */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -150,17 +131,5 @@ select:focus {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
-  transition: .6s ease;
+  transition: all .6s ease;
 }
-
-/* =========================================================
-   LISTS
-========================================================= */
-li::marker {
-  color: rgba(34,139,34,.6);
-}
-
-/* =========================================================
-   SVG — НЕ ТРОГАТЬ ❗
-   (никаких svg, fill, stroke, opacity)
-========================================================= */
