@@ -62,10 +62,23 @@ html, body {
   overflow-x: hidden;
 }
 
-/* ===== ЧИТАЕМЫЙ ТЕКСТ ===== */
-h1, h2, h3, h4, h5, h6 {
+/* ===== ПРЕМИУМНЫЕ ЗАГОЛОВКИ ===== */
+h1, h2, h3, h4 {
   color: #0f172a;
+  letter-spacing: -0.02em;
   text-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+h1 span.text-nazia-green {
+  color: #228b22;
+}
+
+h1 span.text-promo-orange {
+  color: #ff8c00;
+}
+
+h5, h6 {
+  color: #334155;
 }
 
 /* ===== КАРТОЧКИ — СВЕТЛЫЕ, ПРЕМИАЛЬНЫЕ ===== */
@@ -216,4 +229,54 @@ li::marker {
 
 .reveal {
   animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* ===== FIX SIDE COLUMNS ===== */
+body {
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #f8fafc 40%,
+    #ffffff 100%
+  ) !important;
+}
+
+#root {
+  background: transparent !important;
+}
+
+/* ===== FIX SVG ICONS ===== */
+svg,
+svg * {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+.icon,
+.icon svg {
+  color: inherit !important;
+}
+
+/* DO NOT TOUCH SVG WITH TEXT EFFECTS */
+svg {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  -webkit-background-clip: initial !important;
+}
+
+/* ===== УБЕДИМСЯ, ЧТО ИКОНКИ ОСТАЮТСЯ ВИДИМЫМИ ===== */
+svg[class*="icon"],
+svg[class*="Icon"],
+svg[class*="logo"],
+svg[class*="Logo"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+}
+
+/* ===== ЗАЩИТА ОТ ПРОЗРАЧНОСТИ ДЛЯ ВСЕХ ЭЛЕМЕНТОВ SVG ===== */
+svg * {
+  fill-opacity: 1 !important;
+  stroke-opacity: 1 !important;
 }
