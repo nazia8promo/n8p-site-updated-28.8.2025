@@ -229,3 +229,60 @@ svg {
   outline: 2px solid #22c55e;
   outline-offset: 2px;
 }
+
+/* ===============================
+   FIX SIDE PADDING (CRITICAL)
+================================ */
+
+/* Убираем все auto-centering */
+.container,
+[class*="max-w"],
+[class*="mx-auto"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Убираем горизонтальные паддинги */
+.container,
+[class*="px-"],
+[class*="pl-"],
+[class*="pr-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Мобилка — без компромиссов */
+@media (max-width: 768px) {
+  section,
+  main,
+  header,
+  footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* ===============================
+   SVG ICONS — FINAL FIX
+================================ */
+
+/* НЕ трогаем внутренности SVG */
+svg *,
+svg path,
+svg circle,
+svg rect {
+  fill: unset !important;
+  stroke: unset !important;
+}
+
+/* Иконки видимы */
+svg {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Если иконка через ::before */
+[class*="icon"]::before {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
