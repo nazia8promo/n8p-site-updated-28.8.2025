@@ -6,11 +6,9 @@ export default function Header() {
   return `
     <header class="site-header">
       <div class="header-inner">
-
         <div class="brand">
           <a href="/" data-link>${t("site.title")}</a>
         </div>
-
         <nav class="main-nav">
           <a href="/how-we-work" data-link>${t("nav.how")}</a>
           <a href="/cases" data-link>${t("nav.cases")}</a>
@@ -18,13 +16,11 @@ export default function Header() {
           <a href="/about" data-link>${t("nav.about")}</a>
           <a href="/contact" data-link>${t("nav.contact")}</a>
         </nav>
-
         <div class="lang-switch">
           <button data-lang="en" class="${lang === "en" ? "active" : ""}">EN</button>
           <button data-lang="ru" class="${lang === "ru" ? "active" : ""}">RU</button>
           <button data-lang="kz" class="${lang === "kz" ? "active" : ""}">KZ</button>
         </div>
-
       </div>
     </header>
   `;

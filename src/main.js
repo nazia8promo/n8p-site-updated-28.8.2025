@@ -1,25 +1,44 @@
+import { resolveRoute } from "./app/router.js";
+import { enableNavigation } from "./app/navigation.js";
+import { setLang } from "./app/i18n.js";
+import Shell from "./layout/Shell.js";
+
+const app = document.getElementById("app");
+
 function render() {
   const path = window.location.pathname;
   const Page = resolveRoute(path);
 
-  console.log("ROUTE:", path, Page); // 🔥 ВАЖНО
-
-  let html = "";
-  if (typeof Page === "function") {
-    html = Page();
-  } else if (typeof Page === "string") {
-    html = Page;
+  // 🔴 ВАЖНО: Shell рендерится ОДИН РАЗ
+  if (!app.dataset.shellMounted) {
+    app.innerHTML = Shell(Page());
+    app.dataset.shellMounted = "true";
   } else {
-    html = `<section class="page error">
-      <h1>Route not found</h1>
-      <p>${path}</p>
-    </section>`;
+    // 🔵 Меняем ТОЛЬКО контент
+    const content = app.querySelector(".app-content");
+    content.innerHTML = Page();
   }
-
-  app.innerHTML = `
-    ${Header()}
-    <main class="app-content">
-      ${html}
-    </main>
-  `;
 }
+
+// 🔁 навигация
+window.addEventListener("route-change", render);
+
+// 🌍 язык - как было
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-lang]");
+  if (!btn) return;
+
+  e.preventDefault();
+  setLang(btn.dataset.lang);
+  
+  // 🔑 ПОЛНЫЙ ПЕРЕРИСОВКА при смене языка
+  delete app.dataset.shellMounted;
+  
+  const path = window.location.pathname;
+  const Page = resolveRoute(path);
+  app.innerHTML = Shell(Page());
+  app.dataset.shellMounted = "true";
+});
+
+enableNavigation();
+render();

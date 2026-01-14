@@ -1,13 +1,9 @@
 import { navigate } from "./router.js";
 import { setLang } from "./i18n.js";
 
-let initialized = false;
-
 export function enableNavigation() {
-  if (initialized) return;
-  initialized = true;
-
   document.addEventListener("click", (e) => {
+    // 🌍 language switch
     const langBtn = e.target.closest("button[data-lang]");
     if (langBtn) {
       e.preventDefault();
@@ -15,6 +11,7 @@ export function enableNavigation() {
       return;
     }
 
+    // 🔗 SPA navigation
     const link = e.target.closest("a[data-link]");
     if (link) {
       e.preventDefault();
