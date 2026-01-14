@@ -164,7 +164,7 @@ const translations = {
     nav_contact: "Контакт",
 
     /* HOME */
-    home_title: "Продажи как управляемая система",
+    home_title: "RU TEST",
     home_sub:
       "Это вход в операционную модель продаж, а не перечень услуг.",
 
