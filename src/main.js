@@ -1,11 +1,3 @@
-import "./styles/reset.css";
-import "./styles/base.css";
-import "./styles/layout.css";
-import "./styles/theme.css";
-import "./styles/client-ready.css";
-
-// остальной JS
-
 import { resolveRoute } from "./app/router.js";
 import { enableNavigation } from "./app/navigation.js";
 import { setLang } from "./app/i18n.js";
