@@ -1,7 +1,6 @@
 import Header from "./components/Header.js";
 import { resolveRoute } from "./app/router.js";
-import { navigate } from "./app/router.js";
-import { setLang } from "./app/i18n.js";
+import { enableNavigation } from "./app/navigation.js";
 
 const app = document.getElementById("app");
 
@@ -18,27 +17,9 @@ function render() {
   `;
 }
 
-// 🔁 роутинг
 window.addEventListener("route-change", render);
 window.addEventListener("popstate", render);
 
-// 🔗 ЕДИНСТВЕННЫЙ click-listener
-document.addEventListener("click", (e) => {
-  // 🌍 язык
-  const langBtn = e.target.closest("button[data-lang]");
-  if (langBtn) {
-    e.preventDefault();
-    setLang(langBtn.dataset.lang);
-    return;
-  }
-
-  // 🔗 SPA ссылки
-  const link = e.target.closest("a[data-link]");
-  if (link) {
-    e.preventDefault();
-    navigate(link.getAttribute("href"));
-  }
-});
-
-// 🚀 старт
+// 🚀 init
+enableNavigation();
 render();
