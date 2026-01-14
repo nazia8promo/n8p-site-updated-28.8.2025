@@ -5,8 +5,8 @@ export default function About() {
     <section class="page about">
 
       <header class="page-header">
-        <h1>${t("about_title")}</h1>
-        <p>${t("about_sub")}</p>
+        <h1 class="t-command">${t("about_title")}</h1>
+        <p class="t-context">${t("about_sub")}</p>
       </header>
 
       <section class="about-section">
