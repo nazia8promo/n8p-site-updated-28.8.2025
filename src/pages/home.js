@@ -1,4 +1,4 @@
-import { t } from "../i18n/index.js";
+import { t } from "../app/i18n.js";
 
 export default function Home() {
   return `
