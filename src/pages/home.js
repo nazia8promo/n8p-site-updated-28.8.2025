@@ -1,56 +1,49 @@
-import { t } from "../app/i18n.js";
+import { t } from "../i18n/index.js";
 
 export default function Home() {
   return `
     <section class="page home">
 
-      <!-- ORIENTATION -->
       <section class="home-orientation">
-        <h1 class="t-command">${t("We operate sales as a system.")}</h1>
+        <h1 class="t-command">${t("home.title")}</h1>
+
         <p class="t-context">
-          ${t("From fragmented sales execution<br />to controlled, scalable revenue operations.")}
+          ${t("home.subtitle")}
         </p>
+
         <p class="role-filter t-context">
-          ${t("Not an agency.<br />Not consulting.<br />Sales operations under management.")}
+          ${t("home.role")}
         </p>
+
         <a class="primary-cta" href="/how-we-work">
-          ${t("Enter the operating model →")}
+          ${t("home.enter")}
         </a>
       </section>
 
-      <!-- DECISION MATRIX -->
       <section class="home-decisions">
 
-        <div class="entry-panel decision-block primary" data-route="/how-we-work">
-          <h2>${t("decision_block1_title")}</h2>
-          <p>
-            ${t("decision_block1_desc")}
-          </p>
-          <a href="/how-we-work">${t("decision_block1_link")}</a>
+        <div class="entry-panel primary" data-route="/how-we-work">
+          <h2>${t("home.decisions.model.title")}</h2>
+          <p>${t("home.decisions.model.desc")}</p>
+          <a>${t("home.decisions.model.link")}</a>
         </div>
 
-        <div class="entry-panel decision-block" data-route="/cases">
-          <h2>${t("decision_block2_title")}</h2>
-          <p>
-            ${t("decision_block2_desc")}
-          </p>
-          <a href="/cases">${t("decision_block2_link")}</a>
+        <div class="entry-panel" data-route="/cases">
+          <h2>${t("home.decisions.cases.title")}</h2>
+          <p>${t("home.decisions.cases.desc")}</p>
+          <a>${t("home.decisions.cases.link")}</a>
         </div>
 
-        <div class="entry-panel decision-block" data-route="/platform">
-          <h2>${t("decision_block3_title")}</h2>
-          <p>
-            ${t("decision_block3_desc")}
-          </p>
-          <a href="/platform">${t("decision_block3_link")}</a>
+        <div class="entry-panel" data-route="/platform">
+          <h2>${t("home.decisions.platform.title")}</h2>
+          <p>${t("home.decisions.platform.desc")}</p>
+          <a>${t("home.decisions.platform.link")}</a>
         </div>
 
-        <div class="entry-panel decision-block" data-route="/contact">
-          <h2>${t("decision_block4_title")}</h2>
-          <p>
-            ${t("decision_block4_desc")}
-          </p>
-          <a href="/contact">${t("decision_block4_link")}</a>
+        <div class="entry-panel" data-route="/contact">
+          <h2>${t("home.decisions.contact.title")}</h2>
+          <p>${t("home.decisions.contact.desc")}</p>
+          <a>${t("home.decisions.contact.link")}</a>
         </div>
 
       </section>

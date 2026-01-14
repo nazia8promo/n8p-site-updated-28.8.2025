@@ -8,7 +8,7 @@ export default function Header() {
       <div class="header-inner">
 
         <div class="brand">
-          <a href="/" data-link>Nazia 8 Promo</a>
+          <a href="/" data-link>${t("site_title")}</a>
         </div>
 
         <nav class="main-nav">
