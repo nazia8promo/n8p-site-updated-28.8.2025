@@ -1,13 +1,20 @@
-import Header from "./components/Header.js";
-import { resolveRoute } from "./app/router.js";
-import { enableNavigation } from "./app/navigation.js";
-
-const app = document.getElementById("app");
-
 function render() {
   const path = window.location.pathname;
   const Page = resolveRoute(path);
-  const html = typeof Page === "function" ? Page() : Page;
+
+  console.log("ROUTE:", path, Page); // 🔥 ВАЖНО
+
+  let html = "";
+  if (typeof Page === "function") {
+    html = Page();
+  } else if (typeof Page === "string") {
+    html = Page;
+  } else {
+    html = `<section class="page error">
+      <h1>Route not found</h1>
+      <p>${path}</p>
+    </section>`;
+  }
 
   app.innerHTML = `
     ${Header()}
@@ -16,10 +23,3 @@ function render() {
     </main>
   `;
 }
-
-window.addEventListener("route-change", render);
-window.addEventListener("popstate", render);
-
-// 🚀 init
-enableNavigation();
-render();
