@@ -1,0 +1,430 @@
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))i(s);new MutationObserver(s=>{for(const n of s)if(n.type==="childList")for(const r of n.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function a(s){const n={};return s.integrity&&(n.integrity=s.integrity),s.referrerPolicy&&(n.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?n.credentials="include":s.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function i(s){if(s.ep)return;s.ep=!0;const n=a(s);fetch(s.href,n)}})();const d={en:{site_title:"Nazia 8 Promo",nav_how:"How we work",nav_cases:"Cases",nav_platform:"Platform",nav_about:"About",nav_contact:"Contact",home_title:"Sales operations, operated as a system",home_sub:"This is an entry point into sales operations, not a list of services.",decision_block1_title:"Understand the operating model",decision_block1_desc:"How sales are structured, controlled, and scaled as a system.",decision_block1_link:"Go to operating model",decision_block2_title:"See execution in context",decision_block2_desc:"How sales systems were applied in real operating environments.",decision_block2_link:"View case studies",decision_block3_title:"Understand the system layer",decision_block3_desc:"The operating layer used to run and control sales.",decision_block3_link:"View operating layer",decision_block4_title:"Enter a conversation",decision_block4_desc:"Direct entry into an operational discussion.",decision_block4_link:"Contact operator",cases_title:"Case hub",cases_sub:"Examples of how sales operations were structured and operated as systems.",case_not_found:"Case not found",back_to_cases:"Back to cases",open_case:"Open case",cases_open:"Open case",cases_back:"Back to case hub",case_context:"Context",case_problem:"System problem",case_operating_changes:"Operating changes",case_before:"Before",case_after:"After",case_anchor:"Sales stopped being performed and started being operated.",case_execution_layers:"Execution layers",case_demand_layer:"Demand layer",case_sales_layer:"Sales execution layer",case_infra_layer:"Infrastructure / AI layer",case_outcome:"Outcome",back_to_case_hub:"Back to case hub",view_operating_model:"View operating model",how_title:"Operating Model",how_sub:"Sales are not executed as a set of tasks. They are operated as a system.",how_principle_title:"Core principle",how_principle_p1:"Revenue and sales performance cannot be managed through isolated actions, tools, or campaigns.",how_principle_p2:"They require an operating model that defines ownership, decision flow, and control.",how_overview_title:"Operating model overview",how_model_title:"Operating model overview",how_step1_title:"System audit",how_step1_desc:"Existing sales execution, demand flow, and decision structure are assessed.",how_step2_title:"Operating layer setup",how_step2_desc:"Sales operations are structured into a controllable system.",how_step3_title:"Execution integration",how_step3_desc:"Demand, sales execution, and infrastructure operate inside a unified model.",how_step4_title:"Operational control",how_step4_desc:"Visibility, feedback loops, and governance are established.",how_step5_title:"Scaling & evolution",how_step5_desc:"The system adapts as complexity grows.",how_role_title:"Role clarification",how_role_p1:"This is not a consulting or agency model.",how_role_p2:"Sales operations are actively operated, not advised or outsourced by task.",view_cases:"View cases",view_operating_layer:"View operating layer",how_exit_cases:"View cases",how_exit_platform:"View operating layer",platform_title:"Operating Layer",platform_sub:"Sales cannot be operated at scale without a dedicated operating layer.",platform_why_title:"Why an operating layer is required",platform_why_p1:"As sales complexity grows, execution, demand, and decision-making cannot be reliably controlled through tools, reports, or individual effort alone.",platform_why_p2:"An operating layer connects execution, visibility, and control into a single system.",platform_what_title:"What this layer represents",platform_what_1:"Operational ownership of sales execution",platform_what_2:"Explicit decision flows",platform_what_3:"Feedback loops between demand and execution",platform_what_4:"System-level visibility",platform_how_title:"How it is used",platform_how_p1:"Sales operations are run on top of a Sales Operating System (S:O:S Sales).",platform_how_p2:"The system does not replace teams or tools. It governs how they operate together.",platform_note:"This site does not sell the platform. It explains the operating layer used to run sales operations.",platform_exit_cases:"View cases",platform_exit_model:"View operating model",about_title:"Role Clarification",about_sub:"Nazia 8 Promo operates sales systems. It does not sell services or tools.",about_what_title:"What this role represents",about_what_p1:"Nazia 8 Promo acts as a sales operations partner, responsible for how sales are structured, governed, and executed.",about_what_p2:"The focus is on operational control and system-level outcomes, not task delivery.",about_not_title:"What this role is not",about_not_1:"Marketing agency",about_not_2:"CRM vendor or software provider",about_not_3:"Consulting company",about_not_4:"Outsourced sales team",about_operator_title:"Operator position",about_operator_p1:"Sales operations are actively operated, not advised from the outside.",about_operator_p2:"Responsibility is taken for how the system functions over time, not for isolated actions.",about_exit_model:"View operating model",about_exit_cases:"View cases",contact_title:"Contact",contact_sub:"Entry point into the operating conversation.",contact_option_1_title:"Strategy call",contact_option_1_desc:"High-level discussion of sales operations.",contact_option_2_title:"Sales audit",contact_option_2_desc:"Initial assessment of the current sales system.",contact_option_3_title:"Operator conversation",contact_option_3_desc:"Direct conversation about operating sales as a system."},ru:{site_title:"Nazia 8 Promo",nav_how:"Как мы работаем",nav_cases:"Кейсы",nav_platform:"Платформа",nav_about:"О роли",nav_contact:"Контакт",home_title:"Продажи как управляемая система",home_sub:"Это вход в операционную модель продаж, а не перечень услуг.",decision_block1_title:"Понять операционную модель",decision_block1_desc:"Как продажи структурируются, контролируются и масштабируются как система.",decision_block1_link:"Перейти к модели",decision_block2_title:"Посмотреть исполнение в контексте",decision_block2_desc:"Как системы продаж применялись в реальных операционных средах.",decision_block2_link:"Открыть кейсы",decision_block3_title:"Понять системный слой",decision_block3_desc:"Операционный слой, на котором управляются продажи.",decision_block3_link:"Смотреть платформу",decision_block4_title:"Начать разговор",decision_block4_desc:"Прямой вход в операционный диалог.",decision_block4_link:"Связаться",cases_title:"Кейсы",cases_sub:"Системы продаж в реальных операционных условиях.",case_not_found:"Кейс не найден",back_to_cases:"Назад к кейсам",open_case:"Открыть кейс",cases_open:"Открыть кейс",cases_back:"Назад к кейсам",case_context:"Контекст",case_problem:"Системная проблема",case_operating_changes:"Операционные изменения",case_before:"До",case_after:"После",case_anchor:"Продажи перестали выполняться и начали управляться как система.",case_execution_layers:"Слои исполнения",case_demand_layer:"Слой спроса",case_sales_layer:"Слой исполнения продаж",case_infra_layer:"Инфраструктура / AI",case_outcome:"Результат",back_to_case_hub:"Назад к хабу кейсов",view_operating_model:"Операционная модель",how_title:"Операционная модель",how_sub:"Продажи — это не набор задач. Это управляемая система.",how_principle_title:"Ключевой принцип",how_principle_p1:"Выручкой и продажами невозможно управлять через разрозненные действия, инструменты или кампании.",how_principle_p2:"Для этого требуется операционная модель с чёткой ответственностью, логикой решений и контролем.",how_overview_title:"Обзор операционной модели",how_model_title:"Обзор операционной модели",how_step1_title:"Аудит системы",how_step1_desc:"Анализ текущего исполнения продаж, потока спроса и структуры решений.",how_step2_title:"Настройка операционного слоя",how_step2_desc:"Продажи структурируются в управляемую систему.",how_step3_title:"Интеграция исполнения",how_step3_desc:"Спрос, продажи и инфраструктура работают внутри единой модели.",how_step4_title:"Операционный контроль",how_step4_desc:"Формируется прозрачность, контуры обратной связи и управление.",how_step5_title:"Масштабирование и развитие",how_step5_desc:"Система адаптируется по мере роста сложности.",how_role_title:"Прояснение роли",how_role_p1:"Это не консалтинг и не агентская модель.",how_role_p2:"Продажи управляются операционно, а не через советы или отдельные задачи.",view_cases:"Посмотреть кейсы",view_operating_layer:"Операционный слой",how_exit_cases:"Смотреть кейсы",how_exit_platform:"Смотреть платформу",platform_title:"Операционный слой",platform_sub:"Продажами невозможно управлять в масштабе без операционного слоя.",platform_why_title:"Зачем нужен операционный слой",platform_why_p1:"По мере роста сложности продаж исполнение, спрос и принятие решений невозможно надёжно контролировать только инструментами, отчётами или индивидуальными усилиями.",platform_why_p2:"Операционный слой объединяет исполнение, видимость и контроль в единую систему.",platform_what_title:"Что представляет собой этот слой",platform_what_1:"Операционная ответственность за исполнение продаж",platform_what_2:"Явные потоки принятия решений",platform_what_3:"Контуры обратной связи между спросом и исполнением",platform_what_4:"Системный уровень видимости",platform_how_title:"Как он используется",platform_how_p1:"Продажи управляются поверх Sales Operating System (S:O:S Sales).",platform_how_p2:"Система не заменяет команды или инструменты, а управляет их совместной работой.",platform_note:"Этот сайт не продаёт платформу. Он объясняет операционный слой, используемый для управления продажами.",platform_exit_cases:"Смотреть кейсы",platform_exit_model:"Смотреть модель",about_title:"Прояснение роли",about_sub:"Партнёр по управлению продажами, а не подрядчик.",about_what_title:"Что представляет собой эта роль",about_what_p1:"Nazia 8 Promo выступает операционным партнёром по продажам и отвечает за то, как продажи структурируются, управляются и исполняются.",about_what_p2:"Фокус — на операционном контроле и системных результатах, а не на выполнении отдельных задач.",about_not_title:"Чем эта роль не является",about_not_1:"Маркетинговое агентство",about_not_2:"Вендор CRM или программного обеспечения",about_not_3:"Консалтинговая компания",about_not_4:"Аутсорсинговая команда продаж",about_operator_title:"Операторская позиция",about_operator_p1:"Продажи управляются операционно, а не консультируются со стороны.",about_operator_p2:"Ответственность берётся за работу системы во времени, а не за отдельные действия.",about_exit_model:"Смотреть модель",about_exit_cases:"Смотреть кейсы",contact_title:"Контакт",contact_sub:"Кіру нүктесі в операционный диалог",contact_option_1_title:"Стратегический звонок",contact_option_1_desc:"Разговор на высоком уровне об операциях продаж.",contact_option_2_title:"Аудит продаж",contact_option_2_desc:"Первичная оценка текущей системы продаж.",contact_option_3_title:"Разговор с оператором",contact_option_3_desc:"Прямой диалог об управлении продажами как системой."},kz:{site_title:"Nazia 8 Promo",nav_how:"Қалай жұмыс істейміз",nav_cases:"Кейстер",nav_platform:"Платформа",nav_about:"Рөл туралы",nav_contact:"Байланыс",home_title:"Сатулар — басқарылатын жүйе",home_sub:"Бұл қызметтер тізімі емес, сату операцияларына кіру нүктесі.",decision_block1_title:"Операциялық модельді түсіну",decision_block1_desc:"Сатулар жүйе ретінде қалай құрылып, бақыланып, масштабталады.",decision_block1_link:"Модельге өту",decision_block2_title:"Орындауды контексте көру",decision_block2_desc:"Сату жүйелері нақты ортада қалай қолданылды.",decision_block2_link:"Кейстерді көру",decision_block3_title:"Жүйелік қабатты түсіну",decision_block3_desc:"Сатуларды басқаруға арналған операциялық қабат.",decision_block3_link:"Платформаны көру",decision_block4_title:"Әңгімеге кіру",decision_block4_desc:"Операциялық диалогқа тікелей кіру.",decision_block4_link:"Байланысу",cases_title:"Кейстер",cases_sub:"Нақты операциялық ортада іске асқан сату жүйелері.",case_not_found:"Кейс табылмады",back_to_cases:"Кейстерге оралу",open_case:"Кейсті ашу",cases_open:"Кейсті ашу",cases_back:"Кейстерге оралу",case_context:"Контекст",case_problem:"Жүйелік мәселе",case_operating_changes:"Операциялық өзгерістер",case_before:"Бұрын",case_after:"Кейін",case_anchor:"Сатулар орындалудан басқарылатын жүйеге айналды.",case_execution_layers:"Орындау қабаттары",case_demand_layer:"Сұраныс қабаты",case_sales_layer:"Сату орындау қабаты",case_infra_layer:"Инфрақұрылым / AI",case_outcome:"Нәтиже",back_to_case_hub:"Кейс хабына оралу",view_operating_model:"Операциялық модель",how_title:"Операциялық модель",how_sub:"Сатулар — бұл тапсырмалар жиынтығы емес. Бұл басқарылатын жүйе.",how_principle_title:"Негізгі қағида",how_principle_p1:"Түсімді және сатуды жеке әрекеттер, құралдар немесе науқандар арқылы басқару мүмкін емес.",how_principle_p2:"Ол үшін жауапкершілігі, шешім логикасы және бақылауы бар операциялық модель қажет.",how_overview_title:"Операциялық модельге шолу",how_model_title:"Операциялық модельге шолу",how_step1_title:"Жүйені аудиттеу",how_step1_desc:"Сатудың орындалуы, сұраныс ағыны және шешім құрылымы талданады.",how_step2_title:"Операциялық қабатты орнату",how_step2_desc:"Сатулар басқарылатын жүйе ретінде құрылымдалады.",how_step3_title:"Орындалуды интеграциялау",how_step3_desc:"Сұраныс, сату және инфрақұрылым бір модельде жұмыс істейді.",how_step4_title:"Операциялық бақылау",how_step4_desc:"Көрінімділік, кері байланыс және басқару орнатылады.",how_step5_title:"Масштабтау және даму",how_step5_desc:"Жүйе күрделілік артқан сайын бейімделеді.",how_role_title:"Рөлді нақтылау",how_role_p1:"Бұл консалтинг те, агенттік те емес.",how_role_p2:"Сатулар кеңес арқылы емес, операциялық түрде басқарылады.",view_cases:"Кейстерді көру",view_operating_layer:"Операциялық қабат",how_exit_cases:"Кейстерді көру",how_exit_platform:"Платформаны көру",platform_title:"Операциялық қабат",platform_sub:"Операциялық қабатсыз сатуды масштабта басқару мүмкін емес.",platform_why_title:"Операциялық қабат не үшін қажет",platform_why_p1:"Сату күрделілігі артқан сайын орындауды, сұранысты және шешім қабылдауды тек құралдармен, есептермен немесе жеке күшпен сенімді басқару мүмкін емес.",platform_why_p2:"Операциялық қабат орындауды, көрінімділікті және бақылауды бір жүйеге біріктіреді.",platform_what_title:"Бұл қабат нені білдіреді",platform_what_1:"Сату орындалуына операциялық жауапкершілік",platform_what_2:"Айқын шешім қабылдау ағындары",platform_what_3:"Сұраныс пен орындау арасындағы кері байланыс контурлары",platform_what_4:"Жүйелік көрінімділік деңгейі",platform_how_title:"Қалай қолданылады",platform_how_p1:"Сатулар Sales Operating System (S:O:S Sales) үстінде басқарылады.",platform_how_p2:"Жүйе командалар мен құралдарды алмастырмайды, олардың бірге жұмыс істеуін басқарады.",platform_note:"Бұл сайт платформаны сатпайды. Ол сатуларды басқаруға қолданылатын операциялық қабатты түсіндіреді.",platform_exit_cases:"Кейстерді көру",platform_exit_model:"Модельді көру",about_title:"Рөлді нақтылау",about_sub:"Сату операциялары бойынша серіктес, вендор емес.",about_what_title:"Бұл рөл нені білдіреді",about_what_p1:"Nazia 8 Promo сатулардың қалай құрылып, басқарылып және орындалатыны үшін жауап беретін операциялық серіктес ретінде әрекет етеді.",about_what_p2:"Негізгі назар — жекелеген тапсырмаларға емес, операциялық бақылау мен жүйелік нәтижелерге аударылады.",about_not_title:"Бұл рөл нені білдірмейді",about_not_1:"Маркетингтік агенттік",about_not_2:"CRM немесе бағдарламалық жасақтама вендоры",about_not_3:"Консалтингтік компания",about_not_4:"Сатуларды аутсорсингке беру командасы",about_operator_title:"Операторлық позиция",about_operator_p1:"Сатулар сырттан кеңес беру арқылы емес, операциялық түрде басқарылады.",about_operator_p2:"Жауапкершілік жекелеген әрекеттерге емес, жүйенің уақыт бойы қалай жұмыс істейтініне алынады.",about_exit_model:"Модельді көру",about_exit_cases:"Кейстерді көру",contact_title:"Байланыс",contact_sub:"Операциялық әңгімеге кіру нүктесі",contact_option_1_title:"Стратегиялық қоңырау",contact_option_1_desc:"Сату операциялары туралы жоғары деңгейдегі әңгіме.",contact_option_2_title:"Сатулар аудиті",contact_option_2_desc:"Ағымдағы сату жүйесін бастапқы бағалау.",contact_option_3_title:"Операторлық әңгіме",contact_option_3_desc:"Сатуларды жүйе ретінде басқару туралы тікелей диалог."}};let _=localStorage.getItem("lang")||"en";function e(o){return d[_]?.[o]||d.en[o]||o}function m(o){_=o,localStorage.setItem("lang",o)}function f(){return _}function u(){return`
+    <section class="page home">
+
+      <!-- ORIENTATION -->
+      <section class="home-orientation">
+        <h1 class="t-command">${e("We operate sales as a system.")}</h1>
+        <p class="t-context">
+          ${e("From fragmented sales execution<br />to controlled, scalable revenue operations.")}
+        </p>
+        <p class="role-filter t-context">
+          ${e("Not an agency.<br />Not consulting.<br />Sales operations under management.")}
+        </p>
+        <a class="primary-cta" href="/how-we-work">
+          ${e("Enter the operating model →")}
+        </a>
+      </section>
+
+      <!-- DECISION MATRIX -->
+      <section class="home-decisions">
+
+        <div class="entry-panel decision-block primary" data-route="/how-we-work">
+          <h2>${e("decision_block1_title")}</h2>
+          <p>
+            ${e("decision_block1_desc")}
+          </p>
+          <a href="/how-we-work">${e("decision_block1_link")}</a>
+        </div>
+
+        <div class="entry-panel decision-block" data-route="/cases">
+          <h2>${e("decision_block2_title")}</h2>
+          <p>
+            ${e("decision_block2_desc")}
+          </p>
+          <a href="/cases">${e("decision_block2_link")}</a>
+        </div>
+
+        <div class="entry-panel decision-block" data-route="/platform">
+          <h2>${e("decision_block3_title")}</h2>
+          <p>
+            ${e("decision_block3_desc")}
+          </p>
+          <a href="/platform">${e("decision_block3_link")}</a>
+        </div>
+
+        <div class="entry-panel decision-block" data-route="/contact">
+          <h2>${e("decision_block4_title")}</h2>
+          <p>
+            ${e("decision_block4_desc")}
+          </p>
+          <a href="/contact">${e("decision_block4_link")}</a>
+        </div>
+
+      </section>
+
+    </section>
+  `}function w(){return`
+    <section class="page how-we-work">
+
+      <header class="page-header">
+        <h1>${e("how_title")}</h1>
+        <p>${e("how_sub")}</p>
+      </header>
+
+      <section class="work-section">
+        <h2>${e("how_principle_title")}</h2>
+        <p>${e("how_principle_p1")}</p>
+        <p>${e("how_principle_p2")}</p>
+      </section>
+
+      <section class="work-section">
+        <h2>${e("how_model_title")}</h2>
+
+        <ol class="work-steps">
+          <li class="model-step">
+            <strong>${e("how_step1_title")}</strong><br />
+            ${e("how_step1_desc")}
+          </li>
+
+          <li class="model-step">
+            <strong>${e("how_step2_title")}</strong><br />
+            ${e("how_step2_desc")}
+          </li>
+
+          <li class="model-step">
+            <strong>${e("how_step3_title")}</strong><br />
+            ${e("how_step3_desc")}
+          </li>
+
+          <li class="model-step">
+            <strong>${e("how_step4_title")}</strong><br />
+            ${e("how_step4_desc")}
+          </li>
+
+          <li class="model-step">
+            <strong>${e("how_step5_title")}</strong><br />
+            ${e("how_step5_desc")}
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section">
+        <h2>${e("how_role_title")}</h2>
+        <p>${e("how_role_p1")}</p>
+        <p>${e("how_role_p2")}</p>
+      </section>
+
+      <footer class="work-exit">
+        <a href="/cases">${e("how_exit_cases")}</a>
+        <a href="/platform">${e("how_exit_platform")}</a>
+      </footer>
+
+    </section>
+  `}const l=[{id:"sales-ops-stabilization",title:"Sales Operations System Stabilization",summary:"Sales execution was transformed from activity-based work into an operated system.",tags:{industry:"B2B Services",stage:"Growth",scope:"Full Sales Operations"},context:{market:"B2B services with complex decision cycles.",complexity:"Multiple channels, long sales cycle, several stakeholders per deal.",constraints:"Existing sales team, no single operational owner, fragmented visibility."},systemProblem:"Sales could not be reliably controlled because demand, execution, and decision-making were not connected into a single operating system.",operatingChanges:{before:["Sales execution was activity-driven","Demand entered sales without operational ownership","Control existed only through reports and meetings"],after:["Sales execution became system-operated","Clear ownership of sales operations was established","Decision flow became explicit and repeatable"]},executionLayers:{demand:"Demand generation operated as a controlled input layer to sales.",sales:"Sales team worked inside a unified execution and qualification model.",infrastructure:"Automation and AI supported routing, prioritization, and control."},outcome:["Sales execution became predictable","Scaling stopped increasing operational noise","Management gained operational visibility","Decisions shifted from reactive to systemic"]},{id:"revops-alignment-enablement",title:"Revenue Operations Alignment",summary:"Disconnected revenue functions were aligned into a single operating model.",tags:{industry:"SaaS",stage:"Scale",scope:"Revenue Enablement"},context:{market:"Subscription-based SaaS operating across multiple regions.",complexity:"High inbound volume, short sales cycles, multiple acquisition channels.",constraints:"Fast growth, overloaded sales team, marketing-led demand."},systemProblem:"Revenue could not be scaled because demand generation and sales execution operated as isolated functions without a shared operating model.",operatingChanges:{before:["Marketing optimized for volume, not execution readiness","Sales reacted to demand without prioritization","Revenue decisions were based on lagging indicators"],after:["Demand and sales operated inside a shared revenue model","Qualification and routing became system-defined","Revenue decisions became proactive and structured"]},executionLayers:{demand:"Inbound demand was structured and routed based on execution capacity.",sales:"Sales execution followed a unified qualification and follow-up logic.",infrastructure:"Automation and AI supported prioritization and workload balancing."},outcome:["Revenue growth became manageable","Sales capacity was protected from overload","Demand quality improved system-wide","Revenue operations became scalable"]}];function b(){return`
+    <section class="page cases">
+
+      <header class="page-header">
+        <h1>${e("cases_title")}</h1>
+        <p>${e("cases_sub")}</p>
+      </header>
+
+      <section class="cases-grid">
+        ${l.map(o=>`
+          <article class="case-card">
+            <h2>${o.title}</h2>
+            <p>${o.summary}</p>
+
+            <div class="case-tags">
+              <span>${o.tags.industry}</span>
+              <span>${o.tags.stage}</span>
+              <span>${o.tags.scope}</span>
+            </div>
+
+            <div class="case-actions">
+              <a href="/cases/${o.id}">
+                ${e("cases_open")}
+              </a>
+            </div>
+          </article>
+        `).join("")}
+      </section>
+
+    </section>
+  `}function g(o){const t=l.findIndex(a=>a.id===o);return t===-1?{}:{prev:l[t-1]||null,next:l[t+1]||null}}function v(o){const t=l.find(i=>i.id===o.id);if(!t)return`
+      <section class="page">
+        <h1>${e("case_not_found")}</h1>
+        <a href="/cases">${e("back_to_cases")}</a>
+      </section>
+    `;const a=g(t.id);return`
+    <section class="page case-detail">
+
+      <!-- SCREEN 1: HEADER -->
+      <header class="case-header">
+        <h1>${t.title}</h1>
+        <p>${t.summary}</p>
+
+        <div class="case-tags">
+          <span>${t.tags.industry}</span>
+          <span>${t.tags.stage}</span>
+          <span>${t.tags.scope}</span>
+        </div>
+      </header>
+
+      <!-- SCREEN 2: CONTEXT -->
+      <section class="case-section">
+        <h2>${e("case_context")}</h2>
+        <p>${t.context.market}</p>
+        <p>${t.context.complexity}</p>
+        <p>${t.context.constraints}</p>
+      </section>
+
+      <!-- SCREEN 3: SYSTEM PROBLEM -->
+      <section class="case-section case-problem">
+        <h2>${e("case_problem")}</h2>
+        <p>${t.systemProblem}</p>
+      </section>
+
+      <!-- SCREEN 4: OPERATING CHANGES -->
+      <section class="case-section">
+        <h2>${e("case_operating_changes")}</h2>
+
+        <div class="before-after">
+          <div>
+            <h3>${e("case_before")}</h3>
+            <ul>
+              ${t.operatingChanges.before.map(i=>`<li>${i}</li>`).join("")}
+            </ul>
+          </div>
+
+          <div>
+            <h3>${e("case_after")}</h3>
+            <ul>
+              ${t.operatingChanges.after.map(i=>`<li>${i}</li>`).join("")}
+            </ul>
+          </div>
+        </div>
+
+        <p class="case-anchor">
+          ${e("case_anchor")}
+        </p>
+      </section>
+
+      <!-- SCREEN 5: EXECUTION LAYERS -->
+      <section class="case-section">
+        <h2>${e("case_execution_layers")}</h2>
+
+        <div class="layers">
+          <div>
+            <h3>${e("case_demand_layer")}</h3>
+            <p>${t.executionLayers.demand}</p>
+          </div>
+
+          <div>
+            <h3>${e("case_sales_layer")}</h3>
+            <p>${t.executionLayers.sales}</p>
+          </div>
+
+          <div>
+            <h3>${e("case_infra_layer")}</h3>
+            <p>${t.executionLayers.infrastructure}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 6: OUTCOME -->
+      <section class="case-section">
+        <h2>${e("case_outcome")}</h2>
+        <ul>
+          ${t.outcome.map(i=>`<li>${i}</li>`).join("")}
+        </ul>
+      </section>
+
+      <!-- SCREEN 7: EXIT / HUB NAVIGATION -->
+      <footer class="case-exit">
+
+        <div class="case-nav">
+          ${a.prev?`
+            <a href="/cases/${a.prev.id}">
+              ← ${a.prev.title}
+            </a>
+          `:""}
+
+          <a href="/cases">${e("back_to_case_hub")}</a>
+
+          ${a.next?`
+            <a href="/cases/${a.next.id}">
+              ${a.next.title} →
+            </a>
+          `:""}
+        </div>
+
+        <div class="case-nav-secondary">
+          <a href="/how-we-work">${e("view_operating_model")}</a>
+        </div>
+
+      </footer>
+
+    </section>
+  `}function y(){return`
+    <section class="page platform">
+
+      <!-- SCREEN 1: ORIENTATION -->
+      <header class="page-header">
+        <h1>${e("platform_title")}</h1>
+        <p>
+          ${e("platform_sub")}
+        </p>
+      </header>
+
+      <!-- SCREEN 2: WHY -->
+      <section class="platform-section">
+        <h2>${e("platform_why_title")}</h2>
+        <p>
+          ${e("platform_why_p1")}
+        </p>
+        <p>
+          ${e("platform_why_p2")}
+        </p>
+      </section>
+
+      <!-- SCREEN 3: WHAT IT IS -->
+      <section class="platform-section">
+        <h2>${e("platform_what_title")}</h2>
+        <ul>
+          <li>${e("platform_what_1")}</li>
+          <li>${e("platform_what_2")}</li>
+          <li>${e("platform_what_3")}</li>
+          <li>${e("platform_what_4")}</li>
+        </ul>
+      </section>
+
+      <!-- SCREEN 4: HOW IT IS USED -->
+      <section class="platform-section">
+        <h2>${e("platform_how_title")}</h2>
+        <p>
+          ${e("platform_how_p1")}
+        </p>
+        <p>
+          ${e("platform_how_p2")}
+        </p>
+      </section>
+
+      <!-- SCREEN 5: POSITIONING -->
+      <section class="platform-section platform-note">
+        <p>
+          ${e("platform_note")}
+        </p>
+      </section>
+
+      <!-- SCREEN 6: EXIT -->
+      <footer class="platform-exit">
+        <a href="/cases">${e("platform_exit_cases")}</a>
+        <a href="/how-we-work">${e("platform_exit_model")}</a>
+      </footer>
+
+    </section>
+  `}function k(){return`
+    <section class="page about">
+
+      <!-- SCREEN 1: ORIENTATION -->
+      <header class="page-header">
+        <h1>${e("about_title")}</h1>
+        <p>
+          ${e("about_sub")}
+        </p>
+      </header>
+
+      <!-- SCREEN 2: WHAT THIS IS -->
+      <section class="about-section">
+        <h2>What this role represents</h2>
+        <p>
+          Nazia 8 Promo acts as a sales operations partner,
+          responsible for how sales are structured,
+          governed, and executed.
+        </p>
+        <p>
+          The focus is on operational control and
+          system-level outcomes, not task delivery.
+        </p>
+      </section>
+
+      <!-- SCREEN 3: WHAT THIS IS NOT -->
+      <section class="about-section">
+        <h2>What this role is not</h2>
+        <ul>
+          <li>Marketing agency</li>
+          <li>CRM vendor or software provider</li>
+          <li>Consulting company</li>
+          <li>Outsourced sales team</li>
+        </ul>
+      </section>
+
+      <!-- SCREEN 4: OPERATOR POSITION -->
+      <section class="about-section">
+        <h2>Operator position</h2>
+        <p>
+          Sales operations are actively operated,
+          not advised from the outside.
+        </p>
+        <p>
+          Responsibility is taken for how the system
+          functions over time, not for isolated actions.
+        </p>
+      </section>
+
+      <!-- SCREEN 5: EXIT -->
+      <footer class="about-exit">
+        <a href="/how-we-work">${e("about_exit_model")}</a>
+        <a href="/cases">${e("about_exit_cases")}</a>
+      </footer>
+
+    </section>
+  `}function $(){return`
+    <section class="page contact">
+
+      <header class="page-header">
+        <h1>${e("contact_title")}</h1>
+        <p>${e("contact_sub")}</p>
+      </header>
+
+      <section class="contact-options">
+
+        <div class="contact-option">
+          <h2>Strategy Call</h2>
+          <p>High-level discussion of sales operations.</p>
+        </div>
+
+        <div class="contact-option">
+          <h2>Sales Audit</h2>
+          <p>Initial assessment of the current sales system.</p>
+        </div>
+
+        <div class="contact-option">
+          <h2>Operator Conversation</h2>
+          <p>Direct conversation about operating sales as a system.</p>
+        </div>
+
+      </section>
+
+    </section>
+  `}const h={"/":u,"/how-we-work":w,"/cases":b,"/platform":y,"/about":k,"/contact":$};function S(o){if(h[o])return h[o];if(o.startsWith("/cases/")){const t=o.split("/")[2];return()=>v({id:t})}return u}function x(o){history.pushState({},"",o),window.dispatchEvent(new Event("route-change"))}function E(){document.addEventListener("click",t=>{const a=t.target.closest("[data-link]");a&&(t.preventDefault(),x(a.getAttribute("href")))});const o=window.location.pathname;document.querySelectorAll(".decision-block").forEach(t=>{t.dataset.route===o?t.classList.add("active"):t.classList.remove("active")})}function O(){const o=f();return`
+    <header class="site-header">
+      <div class="header-inner">
+
+        <div class="brand">
+          <a href="/" data-link>Nazia 8 Promo</a>
+        </div>
+
+        <nav class="main-nav">
+          <a href="/how-we-work" data-link>${e("nav_how")}</a>
+          <a href="/cases" data-link>${e("nav_cases")}</a>
+          <a href="/platform" data-link>${e("nav_platform")}</a>
+          <a href="/about" data-link>${e("nav_about")}</a>
+          <a href="/contact" data-link>${e("nav_contact")}</a>
+        </nav>
+
+        <div class="lang-switch">
+          <button data-lang="en" class="${o==="en"?"active":""}">EN</button>
+          <button data-lang="ru" class="${o==="ru"?"active":""}">RU</button>
+          <button data-lang="kz" class="${o==="kz"?"active":""}">KZ</button>
+        </div>
+
+      </div>
+    </header>
+  `}function N(o){return`
+    ${O()}
+
+    <main class="app-content">
+      ${o}
+    </main>
+  `}const c=document.getElementById("app");function p(){const o=window.location.pathname,t=S(o),a=typeof t=="function"?t():t;if(!c.dataset.shellMounted)c.innerHTML=N(a),c.dataset.shellMounted="true";else{const i=c.querySelector(".app-content");i.innerHTML=a}}window.addEventListener("route-change",p);document.addEventListener("click",o=>{const t=o.target.closest("[data-lang]");t&&(o.preventDefault(),m(t.dataset.lang),delete c.dataset.shellMounted,p())});E();p();
