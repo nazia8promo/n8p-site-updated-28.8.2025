@@ -1,37 +1,33 @@
+import Header from "./components/Header.js";
 import { resolveRoute } from "./app/router.js";
-import { enableNavigation } from "./app/navigation.js";
 import { setLang } from "./app/i18n.js";
-import Shell from "./layout/Shell.js";
 
 const app = document.getElementById("app");
 
 function render() {
   const path = window.location.pathname;
   const Page = resolveRoute(path);
-
   const html = typeof Page === "function" ? Page() : Page;
 
-  if (!app.dataset.shellMounted) {
-    app.innerHTML = Shell(html);
-    app.dataset.shellMounted = "true";
-  } else {
-    const content = app.querySelector(".app-content");
-    content.innerHTML = html;
-  }
+  app.innerHTML = `
+    ${Header()}
+    ${html}
+  `;
 }
 
+// 🔁 ОБЯЗАТЕЛЬНО
 window.addEventListener("route-change", render);
+window.addEventListener("popstate", render);
 
+// 🌍 Обработка смены языка
 document.addEventListener("click", (e) => {
   const btn = e.target.closest("[data-lang]");
   if (!btn) return;
 
   e.preventDefault();
   setLang(btn.dataset.lang);
-
-  delete app.dataset.shellMounted;
-  render();
+  render(); // 🔥 ПЕРЕРИСОВКА ВСЕЙ СТРАНИЦЫ
 });
 
-enableNavigation();
+// 🚀 первый рендер
 render();
