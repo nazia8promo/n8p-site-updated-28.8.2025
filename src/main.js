@@ -1,42 +1,28 @@
 import Header from "./components/Header.js";
 import { resolveRoute } from "./app/router.js";
+import { enableNavigation, updateActiveState } from "./app/navigation.js";
 
 const app = document.getElementById("app");
 
-function renderHeader() {
-  const header = document.querySelector("header");
-  if (header) {
-    header.outerHTML = Header();
-  } else {
-    app.insertAdjacentHTML("afterbegin", Header());
-  }
-}
-
-function renderPage() {
+function render() {
   const path = window.location.pathname;
   const Page = resolveRoute(path);
   const html = typeof Page === "function" ? Page() : Page;
 
-  let main = document.querySelector("main");
-  if (!main) {
-    app.insertAdjacentHTML("beforeend", `<main></main>`);
-    main = document.querySelector("main");
-  }
+  app.innerHTML = `
+    ${Header()}
+    <main class="app-content">
+      ${html}
+    </main>
+  `;
 
-  main.innerHTML = html;
+  updateActiveState();
 }
 
-// 🔁 page меняется часто
-window.addEventListener("route-change", () => {
-  renderPage();
-});
+// 🔁 роутинг
+window.addEventListener("route-change", render);
+window.addEventListener("popstate", render);
 
-// 🌍 язык — редкий event
-window.addEventListener("lang-change", () => {
-  renderHeader();
-  renderPage();
-});
-
-// 🚀 первый рендер
-renderHeader();
-renderPage();
+// 🚀 init
+enableNavigation();
+render();
