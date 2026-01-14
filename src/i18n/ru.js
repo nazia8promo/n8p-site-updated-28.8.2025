@@ -1,4 +1,8 @@
 export default {
+  site: {
+    title: "Nazia 8 Promo"
+  },
+
   nav: {
     how: "Как мы работаем",
     cases: "Кейсы",
