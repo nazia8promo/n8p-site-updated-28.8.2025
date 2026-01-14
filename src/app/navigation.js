@@ -1,21 +1,21 @@
 import { navigate } from "./router.js";
-import { setLang } from "./i18n.js";
 
 export function enableNavigation() {
   document.addEventListener("click", (e) => {
-    // 🌍 language switch
-    const langBtn = e.target.closest("button[data-lang]");
-    if (langBtn) {
-      e.preventDefault();
-      setLang(langBtn.dataset.lang);
-      return;
-    }
+    const link = e.target.closest("[data-link]");
+    if (!link) return;
 
-    // 🔗 SPA navigation
-    const link = e.target.closest("a[data-link]");
-    if (link) {
-      e.preventDefault();
-      navigate(link.getAttribute("href"));
+    e.preventDefault();
+    navigate(link.getAttribute("href"));
+  });
+
+  // ACTIVE state for decision-blocks
+  const path = window.location.pathname;
+  document.querySelectorAll(".decision-block").forEach((block) => {
+    if (block.dataset.route === path) {
+      block.classList.add("active");
+    } else {
+      block.classList.remove("active");
     }
   });
 }
