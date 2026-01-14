@@ -1,33 +1,42 @@
 import Header from "./components/Header.js";
 import { resolveRoute } from "./app/router.js";
-import { setLang } from "./app/i18n.js";
 
 const app = document.getElementById("app");
 
-function render() {
+function renderHeader() {
+  const header = document.querySelector("header");
+  if (header) {
+    header.outerHTML = Header();
+  } else {
+    app.insertAdjacentHTML("afterbegin", Header());
+  }
+}
+
+function renderPage() {
   const path = window.location.pathname;
   const Page = resolveRoute(path);
   const html = typeof Page === "function" ? Page() : Page;
 
-  app.innerHTML = `
-    ${Header()}
-    ${html}
-  `;
+  let main = document.querySelector("main");
+  if (!main) {
+    app.insertAdjacentHTML("beforeend", `<main></main>`);
+    main = document.querySelector("main");
+  }
+
+  main.innerHTML = html;
 }
 
-// 🔁 ОБЯЗАТЕЛЬНО
-window.addEventListener("route-change", render);
-window.addEventListener("popstate", render);
+// 🔁 page меняется часто
+window.addEventListener("route-change", () => {
+  renderPage();
+});
 
-// 🌍 Обработка смены языка
-document.addEventListener("click", (e) => {
-  const btn = e.target.closest("[data-lang]");
-  if (!btn) return;
-
-  e.preventDefault();
-  setLang(btn.dataset.lang);
-  render(); // 🔥 ПЕРЕРИСОВКА ВСЕЙ СТРАНИЦЫ
+// 🌍 язык — редкий event
+window.addEventListener("lang-change", () => {
+  renderHeader();
+  renderPage();
 });
 
 // 🚀 первый рендер
-render();
+renderHeader();
+renderPage();

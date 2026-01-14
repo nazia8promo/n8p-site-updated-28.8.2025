@@ -10,7 +10,8 @@ export function setLang(lang) {
   if (!dictionaries[lang]) return;
   currentLang = lang;
   localStorage.setItem("lang", lang);
-  window.dispatchEvent(new Event("route-change"));
+- window.dispatchEvent(new Event("route-change"));
++ window.dispatchEvent(new Event("lang-change"));
 }
 
 export function t(key) {
