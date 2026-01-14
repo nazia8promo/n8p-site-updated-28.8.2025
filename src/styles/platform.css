@@ -1,0 +1,36 @@
+.platform-section {
+  margin-bottom: var(--space-xl);
+  max-width: 720px;
+}
+
+.platform-section ul {
+  padding-left: var(--space-m);
+}
+
+.platform-section li {
+  margin-bottom: var(--space-s);
+}
+
+.platform-block {
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-muted);
+  transition:
+    background 120ms ease,
+    border-color 120ms ease;
+}
+
+.platform-block:hover {
+  background: var(--surface-inset);
+  border-color: var(--border-active);
+}
+
+.platform-note {
+  border-left: 3px solid var(--color-border);
+  padding-left: var(--space-m);
+  opacity: 0.8;
+}
+
+.platform-exit {
+  display: flex;
+  gap: var(--space-m);
+}

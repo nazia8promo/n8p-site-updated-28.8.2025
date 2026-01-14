@@ -1,0 +1,256 @@
+/* src/styles/theme.css */
+/* ============================================
+   VISUAL POLISH FOUNDATION
+   Нейтральная палитра, акцент = функция,
+   ритм через spacing и контраст
+=============================================== */
+
+/* ============ 1️⃣ ЦВЕТОВАЯ СИСТЕМА (МИНИМУМ) ============ */
+:root {
+  /* DESIGN TOKENS — ядро системы */
+  
+  /* SURFACES */
+  --surface-primary: #0e0f11;
+  --surface-secondary: #161a20;
+  --surface-inset: #1a1d22;
+
+  /* BORDERS */
+  --border-muted: rgba(255,255,255,0.08);
+  --border-active: rgba(255,255,255,0.24);
+
+  /* TEXT ROLES — HARDENED */
+  --text-command: #ffffff;              /* всегда 100% */
+  --text-context: rgba(255,255,255,0.82); /* было 0.72 — МАЛО */
+  --text-annotation: rgba(255,255,255,0.58); /* было 0.48 */
+
+  /* ACTION */
+  --accent-commit: #4c7cff;
+  
+  /* Основные нейтральные цвета (старые, для совместимости) */
+  --bg-main: var(--surface-primary);
+  --bg-soft: var(--surface-secondary);
+  --text-main: var(--text-command);
+  --text-muted: var(--text-context);
+  --accent: var(--accent-commit);
+  --border-soft: var(--border-muted);
+  
+  /* Контролируемые акценты (старые, для совместимости) */
+  --color-accent: var(--accent);
+  --color-accent-soft: rgba(95, 140, 255, 0.1);
+}
+
+/* Цвет параграфов */
+p {
+  color: var(--text-context);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* ============ 2️⃣ АКЦЕНТЫ ССЫЛОК И CTA ============ */
+/* Основные ссылки */
+a {
+  color: var(--accent-commit);
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Усиленные ссылки в футере и кейсах */
+.page-footer a,
+.case-actions a {
+  font-weight: 500;
+}
+
+/* ============ 3️⃣ КАРТОЧКИ И БЛОКИ ============ */
+/* Общие стили для всех карточек */
+.case-card,
+.decision-block,
+.platform-block,
+.contact-option {
+  border: 1px solid var(--border-muted);
+  background: var(--surface-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Эффекты при наведении */
+.case-card:hover,
+.decision-block:hover {
+  background: rgba(95, 140, 255, 0.05);
+  border-color: var(--accent-commit);
+}
+
+/* ============ 4️⃣ HEADER / FOOTER ============ */
+/* Шапка сайта */
+.site-header {
+  background: var(--surface-primary);
+  border-bottom: 1px solid var(--border-muted);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1rem 0;
+}
+
+/* Бренд (логотип/название) */
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-command);
+  font-size: 1.25rem;
+}
+
+/* Подвал сайта */
+.site-footer {
+  background: var(--surface-primary);
+  border-top: 1px solid var(--border-muted);
+  padding: 2rem 0;
+}
+
+/* ============ 5️⃣ ТИПОГРАФИЯ ============ */
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-command);
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  letter-spacing: -0.01em;
+  font-size: 2.5rem;
+  max-width: 900px;
+}
+
+h2 {
+  letter-spacing: -0.01em;
+  font-size: 2rem;
+}
+
+/* Подзаголовок в шапке страницы */
+.page-header p {
+  max-width: 640px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-context);
+}
+
+/* ============ ДОПОЛНИТЕЛЬНЫЕ УТОЧНЕНИЯ ============ */
+/* Контейнеры для выравнивания */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Отступы для создания визуального ритма */
+.section {
+  padding: 3rem 0;
+}
+
+.section-sm {
+  padding: 1.5rem 0;
+}
+
+/* Кнопки (базовые стили) */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--accent-commit);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4066d9;
+  text-decoration: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--border-muted);
+  color: var(--text-command);
+}
+
+.btn-outline:hover {
+  background-color: rgba(76, 124, 255, 0.1);
+  border-color: var(--accent-commit);
+  text-decoration: none;
+}
+
+/* Списки */
+ul, ol {
+  color: var(--text-context);
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Цитаты */
+blockquote {
+  border-left: 4px solid var(--accent-commit);
+  padding-left: 1.5rem;
+  margin-left: 0;
+  font-style: italic;
+  color: var(--text-command);
+}
+
+/* Разделители */
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border-muted);
+  margin: 2rem 0;
+}
+
+/* Вспомогательные класси */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .case-card,
+  .decision-block,
+  .platform-block,
+  .contact-option {
+    padding: 1rem;
+  }
+}

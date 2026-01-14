@@ -1,0 +1,40 @@
+.entry-panel {
+  border: 1px solid var(--border-muted);
+  background: var(--surface-secondary);
+  padding: 40px;
+  transition:
+    border-color 120ms ease,
+    background 120ms ease;
+  cursor: pointer;
+}
+
+.entry-panel:hover {
+  border-color: var(--border-active);
+  background: color-mix(
+    in srgb,
+    var(--surface-secondary) 85%,
+    var(--surface-inset) 15%
+  );
+}
+
+.decision-block {
+  cursor: grab;
+  user-select: none;
+}
+
+.decision-block.dragging {
+  cursor: grabbing;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .decision-block {
+    cursor: pointer;
+    transform: none !important;
+  }
+
+  .decision-block.dragging {
+    opacity: 1;
+  }
+}

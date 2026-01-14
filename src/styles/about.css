@@ -1,0 +1,17 @@
+.about-section {
+  max-width: 720px;
+  margin-bottom: var(--space-xl);
+}
+
+.about-section ul {
+  padding-left: var(--space-m);
+}
+
+.about-section li {
+  margin-bottom: var(--space-s);
+}
+
+.about-exit {
+  display: flex;
+  gap: var(--space-m);
+}

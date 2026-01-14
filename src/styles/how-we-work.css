@@ -1,0 +1,41 @@
+.work-section {
+  max-width: 720px;
+  margin-bottom: var(--space-xl);
+}
+
+.work-steps {
+  padding-left: var(--space-m);
+}
+
+.work-steps li {
+  margin-bottom: var(--space-m);
+}
+
+.model-step {
+  border: 1px solid var(--border-muted);
+  background: var(--surface-secondary);
+  padding: 32px;
+  margin-bottom: 20px;
+  transition:
+    opacity 120ms ease,
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+/* ACTIVE FOCUS */
+.model-step:hover {
+  border-color: var(--border-active);
+  background: var(--surface-inset);
+  opacity: 1;
+}
+
+/* DE-EMPHASIZE OTHERS */
+.model-step:hover ~ .model-step,
+.model-step:has(~ .model-step:hover) {
+  opacity: 0.35;
+}
+
+.work-exit {
+  display: flex;
+  gap: var(--space-m);
+}

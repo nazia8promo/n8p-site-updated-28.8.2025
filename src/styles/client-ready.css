@@ -1,0 +1,50 @@
+.page-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-context);
+}
+
+.case-card,
+.platform-section {
+  background: var(--surface-secondary);
+  border-radius: 6px;
+}
+
+/* ============================== */
+/* OPERATOR-LEVEL LAYOUT PATTERN */
+/* ============================== */
+
+/* Контейнер — широкий, контент — ограниченный */
+/* Фон = 100%, текст = 720px, пустота справа = осознанный negative space */
+
+.hero,
+.home-orientation {
+  max-width: 720px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Альтернатива для чуть более центрированного ощущения, но всё ещё enterprise */
+.hero.centered,
+.home-orientation.centered {
+  max-width: 720px;
+  margin-left: 80px;
+}
+
+/* Подзаголовок — отдельный момент (очень важный) */
+/* Исправляем "слипание" через вертикальный ритм и иерархию */
+
+.hero h1 {
+  max-width: 720px;
+}
+
+.hero p {
+  max-width: 560px;
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #b8c0cc; /* softer than headline */
+}

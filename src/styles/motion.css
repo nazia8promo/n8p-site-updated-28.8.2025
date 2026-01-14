@@ -1,0 +1,31 @@
+.page {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.commit-transition {
+  transition: opacity 120ms ease;
+}
+
+/* subtle hover blocks */
+.platform-block,
+.contact-option {
+  transition: transform var(--duration-base) var(--ease),
+              opacity var(--duration-base) var(--ease);
+}
+
+.platform-block:hover,
+.contact-option:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}

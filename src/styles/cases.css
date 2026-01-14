@@ -1,0 +1,38 @@
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-l);
+}
+
+.case-card {
+  padding: var(--space-m);
+  border: 1px solid #eee;
+}
+
+.case-block {
+  margin-bottom: var(--space-l);
+}
+
+.case-actions {
+  display: flex;
+  gap: var(--space-s);
+  margin-top: var(--space-s);
+}
+
+.case-actions button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.case-expand {
+  margin-top: var(--space-m);
+  border-top: 1px solid #eee;
+  padding-top: var(--space-s);
+}
+
+.compare-mode .case-card {
+  border-color: #111;
+  background: #fafafa;
+}

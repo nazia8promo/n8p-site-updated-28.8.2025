@@ -1,0 +1,563 @@
+/* #app больше не flex-контейнер на всю высоту */
+#app {
+  display: block;
+}
+
+/* Основной контент в flex */
+/* .app-content { ... } -- УДАЛЕНО ПО ШАГУ 3 */
+
+/* Жёстко фиксим hit-testing */
+.page,
+.home-orientation,
+.home-decisions {
+  position: relative;
+  z-index: 1;
+}
+
+.system-bar {
+  height: 56px;
+  border-bottom: 1px solid var(--border-muted);
+  background: linear-gradient(
+    180deg,
+    #0b0c0e,
+    var(--surface-primary)
+  );
+  display: flex;
+  align-items: center;
+}
+
+/* ПАТЧ 2 — ЧЁТКО ОТДЕЛЯЕМ HEADER ОТ КОНТЕНТА */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11,12,14,0.98),
+      rgba(14,15,17,0.92)
+    );
+  border-bottom: none;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.04),
+    0 12px 24px rgba(0,0,0,0.35);
+}
+
+/* ПАТЧ 1 — УЖИМАЕМ HEADER ПО ВЫСОТЕ (убираем «воздух») */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+
+/* 2️⃣ Бренд — текст, не кнопка */
+.brand a {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-command);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* BRAND (основной стиль остается) */
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-command);
+  white-space: nowrap;
+}
+
+/* NAV */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* ПАТЧ 3 — ДЕЛАЕМ НАВИГАЦИЮ СПОКОЙНЕ И ЧИЩЕ */
+.main-nav a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--text-command);
+  text-decoration: none;
+}
+
+.main-nav a:hover::after {
+  content: none;
+}
+
+/* ПАТЧ 4 — АКТИВНЫЙ ПУНКТ — ЧЁТКО, НО ТИХО */
+.main-nav a.active {
+  color: var(--text-command);
+  box-shadow: inset 0 -1px 0 var(--accent-commit);
+}
+
+/* LANG */
+.lang-switch {
+  display: flex;
+  gap: 12px;
+}
+
+.lang-switch a {
+  font-size: 14px;
+  color: var(--text-annotation);
+  text-decoration: none;
+}
+
+.lang-switch a:hover {
+  color: var(--text-command);
+}
+
+/* 4️⃣ Языки — «системный переключатель» */
+.lang-switch button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  padding: 2px 4px;
+  color: var(--text-annotation);
+  cursor: pointer;
+}
+
+.lang-switch button:hover {
+  color: var(--text-command);
+  text-decoration: underline;
+}
+
+.lang-switch button.active {
+  color: var(--accent-commit);
+}
+
+.system-bar .lang-switch a {
+  background: transparent;
+  border: none;
+  color: var(--text-annotation);
+  font-size: 13px;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.system-bar .lang-switch a:hover {
+  color: var(--text-command);
+  text-decoration: underline;
+}
+
+.system-bar .lang-switch a.active {
+  color: var(--accent-commit);
+}
+
+.system-bar a {
+  color: var(--text-annotation);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.system-bar a:hover {
+  color: var(--text-command);
+}
+
+.system-bar a.active {
+  color: var(--accent-commit);
+}
+
+.brand strong {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-command);
+}
+
+.site-footer {
+  padding: var(--space-m);
+  border-top: 1px solid var(--border-muted);
+  border-bottom: none;
+  margin-top: auto;
+  background: var(--surface-secondary);
+}
+
+.footer-nav a {
+  margin-right: var(--space-s);
+  font-size: var(--font-s);
+  color: var(--text-context);
+}
+
+.footer-nav a:hover {
+  color: var(--text-command);
+}
+
+/* E2️⃣ МИКРО-РЕАКЦИЯ НА ROUTE (НЕ АНИМАЦИЯ) */
+.page {
+  padding: 48px var(--space-m) 56px;
+  background:
+    linear-gradient(
+      180deg,
+      #0c0f14 0%,
+      #0b0e12 100%
+    );
+  animation: page-enter 0.18s ease-out;
+}
+
+/* ПАТЧ 2 — HERO: ВИЗУАЛЬНО ОТДЕЛЯЕМ ОТ БЛОКОВ */
+.page-header {
+  max-width: 820px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+/* ПАТЧ 1 — уменьшить отступы intro-блока */
+.home-orientation {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+/* ПАТЧ 6 — ВЕРТИКАЛЬНЫЙ РИТМ (МЕНЬШЕ СКРОЛЛА) */
+.home-decisions {
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* ПАТЧ 3 — DECISION-БЛОКИ: ВИДНЫ СРАЗУ (БЕЗ HOVER) */
+/* E3️⃣ DECISION-BLOCKS — МИКРО-ТАКТИЛЬНОСТЬ */
+.decision-block {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.00)
+    ),
+    var(--surface-inset);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.02),
+    0 0 0 rgba(0,0,0,0);
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+/* D1 — ВИЗУАЛЬНО УБИРАЕМ АКЦЕНТ С .primary */
+/* primary — семантика, НЕ состояние */
+.decision-block.primary {
+  background: var(--surface-inset);
+  border-color: var(--border-muted);
+}
+
+/* D2 — ACTIVE = ЕДИНСТВЕННЫЙ АКЦЕНТ */
+/* active — текущий маршрут */
+.decision-block.active {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(76,124,255,0.14),
+      rgba(76,124,255,0.06)
+    ),
+    var(--surface-inset);
+  border-color: var(--accent-commit);
+}
+
+/* D3 — HOVER ВСЕГДА СЛАБЕЕ ACTIVE */
+.decision-block:hover {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(76,124,255,0.08),
+      rgba(76,124,255,0.02)
+    ),
+    var(--surface-inset);
+  border-color: var(--accent-commit);
+  transform: translateY(-1px);
+}
+
+/* E3️⃣ УСИЛЕНИЕ ПРИ HOVER / ACTIVE */
+.decision-block:hover,
+.decision-block.active {
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* ПАТЧ C1 — ЗАГОЛОВОК КАК КОМАНДА */
+.decision-block h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  color: var(--text-command);
+}
+
+/* ПАТЧ C2 — ОПИСАНИЕ КАК КОНТЕКСТ (ТИШЕ) */
+.decision-block p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+
+/* ПАТЧ C3 — ACTION КАК «COMMIT», НЕ КНОПКА */
+/* E4️⃣ ACTION-LINK — ЧУТЬ БОЛЬШЕ УВЕРЕННОСТИ */
+.decision-block a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--accent-commit);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.decision-block a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ПАТЧ C4 — ВНУТРЕННИЙ РИТМ БЛОКА (МИКРО) */
+.decision-block > * + * {
+  margin-top: 6px;
+}
+
+/* F2️⃣ CASE-CARD = SYSTEM RECORD, НЕ КАРТОЧКА */
+.case-card {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0)
+    ),
+    var(--surface-inset);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 20px 24px;
+  border-radius: 8px;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+/* F3️⃣ CASE-CARD HOVER = INTENT (НЕ ВАУ) */
+.case-card:hover {
+  border-color: var(--accent-commit);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(76,124,255,0.06),
+      rgba(76,124,255,0.02)
+    ),
+    var(--surface-inset);
+  transform: translateY(-1px);
+}
+
+/* F6️⃣ ACTIVE CASE (ЕСЛИ ЕСТЬ ПЕРЕХОД В /cases/{id}) */
+.case-card.active {
+  border-color: var(--accent-commit);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(76,124,255,0.12),
+      rgba(76,124,255,0.04)
+    ),
+    var(--surface-inset);
+}
+
+/* F4️⃣ ТИПОГРАФИЯ ВНУТРИ CASE */
+/* F4️⃣ ПАТЧ 2 — заголовок кейса */
+.case-card h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+  color: var(--text-command);
+}
+
+/* F4️⃣ ПАТЧ 3 — описание кейса */
+.case-card p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+
+/* F4️⃣ ПАТЧ 4 — внутренний ритм */
+.case-card > * + * {
+  margin-top: 6px;
+}
+
+/* F5️⃣ CASES LIST = НЕ СЕТКА, А РЕЕСТР */
+.cases-list {
+  display: grid;
+  gap: 16px;
+}
+
+/* ДОПОЛНИТЕЛЬНО: акцент первого блока через текст */
+/* .decision-block.primary h2::after {
+  content: " — entry point";
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-annotation);
+} */
+
+/* ===============================
+   SPA ROOT — КРИТИЧЕСКИЙ ФИКС
+   =============================== */
+
+/* 1. #app — НЕ flex, НЕ слой */
+#app {
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+/* 2. Контент — единственный layout-контейнер */
+.app-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+/* 3. Header всегда выше контента, но без фанатизма */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+/* 4. Явно запрещаем контенту лезть поверх */
+.page,
+.home-orientation,
+.home-decisions {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   HARD FIX: убираем залипший hover навсегда
+   ========================================= */
+
+/* Hover работает ТОЛЬКО на реальных hover-устройствах */
+@media (hover: hover) and (pointer: fine) {
+  .decision-block:hover {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(76,124,255,0.08),
+        rgba(76,124,255,0.02)
+      ),
+      var(--surface-inset);
+    border-color: var(--accent-commit);
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.04),
+      0 6px 16px rgba(0,0,0,0.35);
+  }
+
+  .case-card:hover {
+    border-color: var(--accent-commit);
+    background:
+      linear-gradient(
+        180deg,
+        rgba(76,124,255,0.06),
+        rgba(76,124,255,0.02)
+      ),
+      var(--surface-inset);
+    transform: translateY(-1px);
+  }
+}
+
+/* На всех остальных устройствах hover ОТКЛЮЧЕН */
+@media (hover: none), (pointer: coarse) {
+  .decision-block:hover {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.00)
+      ),
+      var(--surface-inset) !important;
+    border-color: rgba(255,255,255,0.06) !important;
+    transform: none !important;
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.02),
+      0 0 0 rgba(0,0,0,0) !important;
+  }
+
+  .case-card:hover {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0)
+      ),
+      var(--surface-inset) !important;
+    border-color: rgba(255,255,255,0.06) !important;
+    transform: none !important;
+  }
+}
+
+/* === PHASE SEPARATOR: intro → decisions === */
+.home-orientation::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 24px 0 32px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+}
+
+/* E1️⃣ МИКРО-РАЗДЕЛИТЕЛЬ МЕЖДУ HEADER И СТРАНИЦЕЙ */
+/* === subtle system divider === */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.06),
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* E2️⃣ МИКРО-РЕАКЦИЯ НА ROUTE (НЕ АНИМАЦИЯ) */
+@keyframes page-enter {
+  from {
+    opacity: 0.96;
+    transform: translateY(1px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

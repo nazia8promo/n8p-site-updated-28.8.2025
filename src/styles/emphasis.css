@@ -1,0 +1,20 @@
+.t-command {
+  font-size: clamp(40px, 4.5vw, 60px);
+  font-weight: 650;
+  line-height: 1.05;
+  color: var(--text-command);
+  letter-spacing: -0.025em;
+}
+
+.t-context {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-context);
+  max-width: 640px;
+}
+
+.t-annotation {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-annotation);
+}

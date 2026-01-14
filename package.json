@@ -1,0 +1,24 @@
+{
+  "name": "nazia8promo-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazia8promo/n8p-site-updated-28.8.2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazia8promo/n8p-site-updated-28.8.2025/issues"
+  },
+  "homepage": "https://github.com/nazia8promo/n8p-site-updated-28.8.2025#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
