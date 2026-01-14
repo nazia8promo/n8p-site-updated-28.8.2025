@@ -476,6 +476,7 @@ export function t(key) {
 export function setLang(lang) {
   currentLang = lang;
   localStorage.setItem("lang", lang);
+  window.dispatchEvent(new Event("route-change"));
 }
 
 export function getLang() {
