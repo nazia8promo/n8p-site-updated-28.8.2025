@@ -561,3 +561,49 @@
     transform: translateY(0);
   }
 }
+
+/* === MOBILE ADAPTATION === */
+@media (max-width: 768px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .lang-switch {
+    justify-content: flex-start;
+  }
+
+  .decision-block {
+    padding: 16px;
+    transform: none !important;
+  }
+
+  .decision-block:hover {
+    background: var(--surface-inset);
+    border-color: var(--border-muted);
+  }
+
+  .page {
+    padding: 24px 16px 32px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .case-card {
+    padding: 16px;
+  }
+
+  .cases-list {
+    gap: 12px;
+  }
+}
