@@ -12,6 +12,8 @@ const translations = {
     home_title: "Sales operations, operated as a system",
     home_sub:
       "This is an entry point into sales operations, not a list of services.",
+    home_role: "Not an agency. Not consulting. Sales operations under management.",
+    home_enter: "Enter the operating model →",
 
     decision_block1_title: "Understand the operating model",
     decision_block1_desc:
@@ -167,6 +169,8 @@ const translations = {
     home_title: "RU TEST",
     home_sub:
       "Это вход в операционную модель продаж, а не перечень услуг.",
+    home_role: "Не агентство. Не консалтинг. Продажи под управлением.",
+    home_enter: "Перейти к операционной модели →",
 
     decision_block1_title: "Понять операционную модель",
     decision_block1_desc:
@@ -202,7 +206,7 @@ const translations = {
     case_problem: "Системная проблема",
     case_operating_changes: "Операционные изменения",
     case_before: "До",
-    case_after: "После",
+    case_after: "Кейін",
     case_anchor:
       "Продажи перестали выполняться и начали управляться как система.",
     case_execution_layers: "Слои исполнения",
@@ -297,7 +301,7 @@ const translations = {
 
     /* CONTACT */
     contact_title: "Контакт",
-    contact_sub: "Кіру нүктесі в операционный диалог",
+    contact_sub: "Вход в операционный диалог.", // ✅ ИСПРАВЛЕНО
     contact_option_1_title: "Стратегический звонок",
     contact_option_1_desc:
       "Разговор на высоком уровне об операциях продаж.",
@@ -322,6 +326,8 @@ const translations = {
     home_title: "Сатулар — басқарылатын жүйе",
     home_sub:
       "Бұл қызметтер тізімі емес, сату операцияларына кіру нүктесі.",
+    home_role: "Агенттік емес. Консалтинг емес. Басқарылатын сату операциялары.",
+    home_enter: "Операциялық модельге өту →",
 
     decision_block1_title: "Операциялық модельді түсіну",
     decision_block1_desc:

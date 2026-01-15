@@ -23,7 +23,8 @@ function render() {
 window.addEventListener("route-change", render);
 
 document.addEventListener("click", (e) => {
-  const btn = e.target.closest("[data-lang]");
+  // ✅ ФИКС: ограничиваем обработчик ТОЛЬКО кнопками с data-lang
+  const btn = e.target.closest("button[data-lang]");
   if (!btn) return;
 
   e.preventDefault();
