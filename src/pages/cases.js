@@ -3,7 +3,7 @@ import { cases } from "../data/cases.js";
 
 export default function Cases() {
   return `
-    <section class="page cases">
+    <section class="page cases app-content">
 
       <header class="page-header">
         <h1 class="t-command">${t("cases_title")}</h1>
