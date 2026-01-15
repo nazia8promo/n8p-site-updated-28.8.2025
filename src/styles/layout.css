@@ -28,6 +28,7 @@
 
 /* ПАТЧ 2 — ЧЁТКО ОТДЕЛЯЕМ HEADER ОТ КОНТЕНТА */
 /* ПАТЧ D — HEADER SEPARATOR */
+/* ПАТЧ I — Header — отделяем от контента */
 .site-header {
   position: sticky;
   top: 0;
@@ -36,11 +37,11 @@
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.85),
-      rgba(0,0,0,0.65)
+      rgba(11,12,14,0.95),
+      rgba(11,12,14,0.85)
     );
-  backdrop-filter: blur(6px);
-  border-bottom: none;
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.04),
     0 12px 24px rgba(0,0,0,0.35);
@@ -200,13 +201,14 @@
 }
 
 /* E2️⃣ МИКРО-РЕАКЦИЯ НА ROUTE (НЕ АНИМАЦИЯ) */
+/* ПАТЧ I — Основной контент (под заголовком) */
 .page {
   padding: 48px var(--space-m) 56px;
   background:
     linear-gradient(
       180deg,
-      #0c0f14 0%,
-      #0b0e12 100%
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.0)
     );
   animation: page-enter 0.18s ease-out;
 }
@@ -283,9 +285,15 @@
 /* ПАТЧ 3 — DECISION-БЛОКИ: ВИДНЫ СРАЗУ (БЕЗ HOVER) */
 /* E3️⃣ DECISION-BLOCKS — МИКРО-ТАКТИЛЬНОСТЬ */
 /* ПАТЧ C — UNIFY DECISION BLOCKS */
+/* ПАТЧ I — Decision blocks — базово видны даже без hover */
 .decision-block {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.08);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.01)
+    );
+  border: 1px solid rgba(255,255,255,0.06);
   padding: 20px 24px;
   border-radius: 8px;
   box-shadow:
@@ -460,7 +468,7 @@
 }
 
 /* F4️⃣ ТИПОГРАФИЯ ВНУТРИ CASE */
-/* F4️⃣ ПАТЧ 2 — заголовок кейса */
+/* F4️⃣ ПАТЧ 2 — загловок кейса */
 .case-card h2 {
   font-size: 1rem;
   font-weight: 600;
@@ -574,8 +582,13 @@
 /* На всех остальных устройствах hover ОТКЛЮЧЕН */
 @media (hover: none), (pointer: coarse) {
   .decision-block:hover {
-    background: rgba(255,255,255,0.02) !important;
-    border-color: rgba(255,255,255,0.08) !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.01)
+      ) !important;
+    border-color: rgba(255,255,255,0.06) !important;
     transform: none !important;
     box-shadow:
       inset 0 0 0 1px rgba(255,255,255,0.02),
@@ -717,4 +730,25 @@
   .cases-list {
     gap: 12px;
   }
+}
+
+/* ===========================================
+   ПАТЧ I — Фоновая глубина (без залипания hover)
+   =========================================== */
+
+/* ПАТЧ I — Фон всей страницы (очень мягкий) */
+body {
+  background:
+    radial-gradient(
+      1200px 600px at 20% -10%,
+      rgba(76, 124, 255, 0.06),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #0b0c0e 0%,
+      #0e1116 100%
+    );
+  min-height: 100vh;
+  margin: 0;
 }
