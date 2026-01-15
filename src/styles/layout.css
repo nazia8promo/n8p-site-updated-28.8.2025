@@ -235,19 +235,36 @@
   z-index: -1;
 }
 
-/* ПАТЧ B — H1 GRADIENT TEXT */
+/* ПАТЧ H — Главный заголовок (H1) */
 .page-header h1 {
-  background: linear-gradient(
-    180deg,
-    #f8fafc 0%,
-    #cfd8e3 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2.4rem;
+  font-size: clamp(32px, 4.5vw, 44px);
   line-height: 1.15;
   font-weight: 600;
   letter-spacing: -0.02em;
+
+  margin-bottom: 14px;
+
+  /* Белёсый градиент как в RAGFlow */
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #dbe3f0 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-wrap: balance;
+}
+
+/* ПАТЧ H — Подзаголовок (description под H1) */
+.page-header p {
+  max-width: 720px;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-context);
+
+  margin-bottom: 28px;
 }
 
 /* ПАТЧ 1 — уменьшить отступы intro-блока */
@@ -319,20 +336,22 @@
     0 6px 16px rgba(0,0,0,0.35);
 }
 
-/* ПАТЧ C1 — ЗАГОЛОВОК КАК КОМАНДА */
+/* ПАТЧ H — Заголовки внутри блоков (decision blocks) */
 .decision-block h2 {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 600;
+  line-height: 1.3;
   letter-spacing: -0.01em;
-  margin-bottom: 4px;
-  color: var(--text-command);
+
+  margin-bottom: 6px;
+  color: #f1f5ff;
 }
 
-/* ПАТЧ C2 — ОПИСАНИЕ КАК КОНТЕКСТ (ТИШЕ) */
+/* ПАТЧ H — Текст внутри блоков */
 .decision-block p {
-  font-size: 0.9rem;
-  line-height: 1.55;
-  color: rgba(255,255,255,0.65);
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--text-context);
   margin: 0;
 }
 
@@ -671,8 +690,24 @@
   }
 
   .page-header h1 {
-    font-size: 1.8rem;
+    font-size: clamp(28px, 5vw, 36px);
     line-height: 1.2;
+  }
+
+  .page-header p {
+    font-size: 15px;
+    line-height: 1.45;
+    margin-bottom: 24px;
+  }
+
+  .decision-block h2 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .decision-block p {
+    font-size: 13.5px;
+    line-height: 1.4;
   }
 
   .case-card {
