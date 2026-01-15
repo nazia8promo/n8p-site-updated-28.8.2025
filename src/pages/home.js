@@ -25,25 +25,33 @@ export default function Home() {
         <div class="decision-block primary" data-route="/how-we-work">
           <h2>${t("decision_block1_title")}</h2>
           <p>${t("decision_block1_desc")}</p>
-          <a>${t("decision_block1_link")}</a>
+          <a href="/how-we-work" data-link>
+            ${t("decision_block1_link")}
+          </a>
         </div>
 
         <div class="decision-block" data-route="/cases">
           <h2>${t("decision_block2_title")}</h2>
           <p>${t("decision_block2_desc")}</p>
-          <a>${t("decision_block2_link")}</a>
+          <a href="/cases" data-link>
+            ${t("decision_block2_link")}
+          </a>
         </div>
 
         <div class="decision-block" data-route="/platform">
           <h2>${t("decision_block3_title")}</h2>
           <p>${t("decision_block3_desc")}</p>
-          <a>${t("decision_block3_link")}</a>
+          <a href="/platform" data-link>
+            ${t("decision_block3_link")}
+          </a>
         </div>
 
         <div class="decision-block" data-route="/contact">
           <h2>${t("decision_block4_title")}</h2>
           <p>${t("decision_block4_desc")}</p>
-          <a>${t("decision_block4_link")}</a>
+          <a href="/contact" data-link>
+            ${t("decision_block4_link")}
+          </a>
         </div>
 
       </section>
