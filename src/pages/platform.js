@@ -6,21 +6,15 @@ export default function Platform() {
 
       <!-- SCREEN 1: ORIENTATION -->
       <header class="page-header">
-        <h1>${t("platform_title")}</h1>
-        <p>
-          ${t("platform_sub")}
-        </p>
+        <h1 class="t-command">${t("platform_title")}</h1>
+        <p class="t-context">${t("platform_sub")}</p>
       </header>
 
       <!-- SCREEN 2: WHY -->
       <section class="platform-section">
         <h2>${t("platform_why_title")}</h2>
-        <p>
-          ${t("platform_why_p1")}
-        </p>
-        <p>
-          ${t("platform_why_p2")}
-        </p>
+        <p>${t("platform_why_p1")}</p>
+        <p>${t("platform_why_p2")}</p>
       </section>
 
       <!-- SCREEN 3: WHAT IT IS -->
@@ -37,25 +31,19 @@ export default function Platform() {
       <!-- SCREEN 4: HOW IT IS USED -->
       <section class="platform-section">
         <h2>${t("platform_how_title")}</h2>
-        <p>
-          ${t("platform_how_p1")}
-        </p>
-        <p>
-          ${t("platform_how_p2")}
-        </p>
+        <p>${t("platform_how_p1")}</p>
+        <p>${t("platform_how_p2")}</p>
       </section>
 
       <!-- SCREEN 5: POSITIONING -->
       <section class="platform-section platform-note">
-        <p>
-          ${t("platform_note")}
-        </p>
+        <p>${t("platform_note")}</p>
       </section>
 
       <!-- SCREEN 6: EXIT -->
       <footer class="platform-exit">
-        <a href="/cases">${t("platform_exit_cases")}</a>
-        <a href="/how-we-work">${t("platform_exit_model")}</a>
+        <a href="/cases" data-link>${t("platform_exit_cases")}</a>
+        <a href="/how-we-work" data-link>${t("platform_exit_model")}</a>
       </footer>
 
     </section>

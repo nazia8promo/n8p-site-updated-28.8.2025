@@ -1,20 +1,17 @@
-import { cases } from "../data/cases.js";
-import { getCaseNavigation } from "../app/caseNav.js";
 import { t } from "../app/i18n.js";
+import cases from "../data/cases.js";
 
 export default function CaseDetail(params) {
   const data = cases.find((c) => c.id === params.id);
 
   if (!data) {
     return `
-      <section class="page">
-        <h1>${t("case_not_found")}</h1>
-        <a href="/cases">${t("back_to_cases")}</a>
+      <section class="page case-detail">
+        <p>${t("case_not_found")}</p>
+        <a href="/cases" data-link>${t("back_to_case_hub")}</a>
       </section>
     `;
   }
-
-  const nav = getCaseNavigation(data.id);
 
   return `
     <section class="page case-detail">
@@ -51,27 +48,21 @@ export default function CaseDetail(params) {
 
         <div class="before-after">
           <div>
-            <h3>${t("case_before")}</h3>
+            <strong>${t("case_before")}</strong>
             <ul>
-              ${data.operatingChanges.before
-                .map((i) => `<li>${i}</li>`)
-                .join("")}
+              ${data.before.map((i) => `<li>${i}</li>`).join("")}
             </ul>
           </div>
 
           <div>
-            <h3>${t("case_after")}</h3>
+            <strong>${t("case_after")}</strong>
             <ul>
-              ${data.operatingChanges.after
-                .map((i) => `<li>${i}</li>`)
-                .join("")}
+              ${data.after.map((i) => `<li>${i}</li>`).join("")}
             </ul>
           </div>
         </div>
 
-        <p class="case-anchor">
-          ${t("case_anchor")}
-        </p>
+        <p class="case-anchor">${t("case_anchor")}</p>
       </section>
 
       <!-- SCREEN 5: EXECUTION LAYERS -->
@@ -80,17 +71,17 @@ export default function CaseDetail(params) {
 
         <div class="layers">
           <div>
-            <h3>${t("case_demand_layer")}</h3>
+            <strong>${t("case_demand_layer")}</strong>
             <p>${data.executionLayers.demand}</p>
           </div>
 
           <div>
-            <h3>${t("case_sales_layer")}</h3>
+            <strong>${t("case_sales_layer")}</strong>
             <p>${data.executionLayers.sales}</p>
           </div>
 
           <div>
-            <h3>${t("case_infra_layer")}</h3>
+            <strong>${t("case_infra_layer")}</strong>
             <p>${data.executionLayers.infrastructure}</p>
           </div>
         </div>
@@ -104,29 +95,10 @@ export default function CaseDetail(params) {
         </ul>
       </section>
 
-      <!-- SCREEN 7: EXIT / HUB NAVIGATION -->
+      <!-- SCREEN 7: EXIT -->
       <footer class="case-exit">
-
-        <div class="case-nav">
-          ${nav.prev ? `
-            <a href="/cases/${nav.prev.id}">
-              ← ${nav.prev.title}
-            </a>
-          ` : ""}
-
-          <a href="/cases">${t("back_to_case_hub")}</a>
-
-          ${nav.next ? `
-            <a href="/cases/${nav.next.id}">
-              ${nav.next.title} →
-            </a>
-          ` : ""}
-        </div>
-
-        <div class="case-nav-secondary">
-          <a href="/how-we-work">${t("view_operating_model")}</a>
-        </div>
-
+        <a href="/cases" data-link>${t("back_to_case_hub")}</a>
+        <a href="/how-we-work" data-link>${t("view_operating_model")}</a>
       </footer>
 
     </section>

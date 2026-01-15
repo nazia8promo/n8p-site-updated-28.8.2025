@@ -5,25 +5,25 @@ export default function Contact() {
     <section class="page contact">
 
       <header class="page-header">
-        <h1>${t("contact_title")}</h1>
-        <p>${t("contact_sub")}</p>
+        <h1 class="t-command">${t("contact_title")}</h1>
+        <p class="t-context">${t("contact_sub")}</p>
       </header>
 
       <section class="contact-options">
 
         <div class="contact-option">
-          <h2>Strategy Call</h2>
-          <p>High-level discussion of sales operations.</p>
+          <h2>${t("contact_option_1_title")}</h2>
+          <p>${t("contact_option_1_desc")}</p>
         </div>
 
         <div class="contact-option">
-          <h2>Sales Audit</h2>
-          <p>Initial assessment of the current sales system.</p>
+          <h2>${t("contact_option_2_title")}</h2>
+          <p>${t("contact_option_2_desc")}</p>
         </div>
 
         <div class="contact-option">
-          <h2>Operator Conversation</h2>
-          <p>Direct conversation about operating sales as a system.</p>
+          <h2>${t("contact_option_3_title")}</h2>
+          <p>${t("contact_option_3_desc")}</p>
         </div>
 
       </section>

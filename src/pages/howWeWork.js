@@ -5,8 +5,8 @@ export default function HowWeWork() {
     <section class="page how-we-work">
 
       <header class="page-header">
-        <h1>${t("how_title")}</h1>
-        <p>${t("how_sub")}</p>
+        <h1 class="t-command">${t("how_title")}</h1>
+        <p class="t-context">${t("how_sub")}</p>
       </header>
 
       <section class="work-section">
@@ -53,8 +53,8 @@ export default function HowWeWork() {
       </section>
 
       <footer class="work-exit">
-        <a href="/cases">${t("how_exit_cases")}</a>
-        <a href="/platform">${t("how_exit_platform")}</a>
+        <a href="/cases" data-link>${t("how_exit_cases")}</a>
+        <a href="/platform" data-link>${t("how_exit_platform")}</a>
       </footer>
 
     </section>
