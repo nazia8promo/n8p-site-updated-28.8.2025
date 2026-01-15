@@ -289,13 +289,17 @@
   text-wrap: balance;
 }
 
-/* ПАТЧ B — ПОДЗАГОЛОВОК + ТЕКСТ ПОД НИМ (меньше воздуха) */
-.page-header p {
+/* === HERO DESCRIPTION TEXT (HOME) === */
+.page-header p,
+.page-header .hero-subtext {
   font-size: 1.05rem;
   line-height: 1.55;
-  color: var(--text-muted);
+
+  /* Голубовато-серый, как у верхнего текста */
+  color: #c7d2fe;
+
   max-width: 720px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 /* ПАТЧ 1 — уменьшить отступы intro-блока */
