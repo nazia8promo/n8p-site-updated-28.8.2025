@@ -11,6 +11,10 @@ export default function Header() {
           <a href="/" data-link>${t("site_title")}</a>
         </div>
 
+        <button class="mobile-menu-toggle" aria-label="Menu">
+          MENU
+        </button>
+
         <nav class="main-nav">
           <a href="/how-we-work" data-link>${t("nav_how")}</a>
           <a href="/cases" data-link>${t("nav_cases")}</a>

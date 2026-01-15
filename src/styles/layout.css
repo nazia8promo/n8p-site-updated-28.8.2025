@@ -825,3 +825,98 @@ body {
     font-size: 11px;
   }
 }
+
+/* ===========================================
+   CSS — мобильная логика меню
+   =========================================== */
+
+/* === MOBILE MENU === */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-command);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(11,12,14,0.98),
+      rgba(11,12,14,0.92)
+    );
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+    z-index: 1001;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+    padding: 12px 24px;
+    color: rgba(255,255,255,0.7);
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .main-nav a:hover {
+    color: var(--text-command);
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  .main-nav a.active {
+    color: var(--text-command);
+    background-color: rgba(76, 124, 255, 0.08);
+    box-shadow: inset 4px 0 0 var(--accent-commit);
+  }
+
+  /* Обновляем header-inner для мобильных с кнопкой меню */
+  .header-inner {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  /* На мобильных скрываем обычную навигацию по умолчанию */
+  .main-nav:not(.is-open) {
+    display: none;
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .mobile-menu-toggle {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
