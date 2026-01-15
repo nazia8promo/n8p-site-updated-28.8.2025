@@ -3,29 +3,30 @@ export const cases = [
     id: "sales-ops-stabilization",
     title: "Sales Operations System Stabilization",
     summary:
-      "Sales execution was transformed from activity-based work into an operated system.",
+      "Sales execution was transformed from fragmented activity into a controlled operating system.",
 
     tags: {
       industry: "B2B Services",
       stage: "Growth",
-      scope: "Full Sales Operations"
+      scope: "Sales Operations"
     },
 
     context: {
-      market: "B2B services with complex decision cycles.",
+      market:
+        "B2B services company with a complex sales cycle and multiple decision-makers per deal.",
       complexity:
-        "Multiple channels, long sales cycle, several stakeholders per deal.",
+        "Sales activity existed, but execution lacked a unified operating owner.",
       constraints:
-        "Existing sales team, no single operational owner, fragmented visibility."
+        "No single operating system connected demand, execution, and control."
     },
 
     systemProblem:
-      "Sales could not be reliably controlled because demand, execution, and decision-making were not connected into a single operating system.",
+      "Sales could not be reliably controlled because demand entered chaotically, execution was activity-driven, and decisions were reactive and disconnected.",
 
     operatingChanges: {
       before: [
-        "Sales execution was activity-driven",
-        "Demand entered sales without operational ownership",
+        "Sales execution driven by tasks and individual effort",
+        "No operational ownership of the funnel",
         "Control existed only through reports and meetings"
       ],
       after: [
@@ -37,50 +38,50 @@ export const cases = [
 
     executionLayers: {
       demand:
-        "Demand generation operated as a controlled input layer to sales.",
+        "Demand operated as a controlled input into sales.",
       sales:
-        "Sales team worked inside a unified execution and qualification model.",
+        "Unified qualification and execution logic across the funnel.",
       infrastructure:
-        "Automation and AI supported routing, prioritization, and control."
+        "Routing, prioritization, and operational visibility enabled by infrastructure."
     },
 
     outcome: [
       "Sales execution became predictable",
-      "Scaling stopped increasing operational noise",
-      "Management gained operational visibility",
+      "Scaling no longer increased operational noise",
+      "Management gained real-time operational visibility",
       "Decisions shifted from reactive to systemic"
     ]
   },
 
-  // 🔹 CONTRAST CASE
   {
-    id: "revops-alignment-enablement",
+    id: "revenue-ops-alignment",
     title: "Revenue Operations Alignment",
     summary:
-      "Disconnected revenue functions were aligned into a single operating model.",
+      "Revenue-related functions were aligned into a single operating system.",
 
     tags: {
       industry: "SaaS",
-      stage: "Scale",
-      scope: "Revenue Enablement"
+      stage: "Scale-up",
+      scope: "Revenue Operations"
     },
 
     context: {
-      market: "Subscription-based SaaS operating across multiple regions.",
+      market:
+        "Subscription-based SaaS operating across multiple regions with high inbound volume.",
       complexity:
-        "High inbound volume, short sales cycles, multiple acquisition channels.",
+        "Marketing and sales operated as isolated functions.",
       constraints:
-        "Fast growth, overloaded sales team, marketing-led demand."
+        "No shared revenue operating model existed."
     },
 
     systemProblem:
-      "Revenue could not be scaled because demand generation and sales execution operated as isolated functions without a shared operating model.",
+      "Revenue could not be scaled because marketing and sales were disconnected, demand quality was misaligned with execution capacity, and decisions relied on lagging indicators.",
 
     operatingChanges: {
       before: [
         "Marketing optimized for volume, not execution readiness",
         "Sales reacted to demand without prioritization",
-        "Revenue decisions were based on lagging indicators"
+        "Revenue decisions were delayed and reactive"
       ],
       after: [
         "Demand and sales operated inside a shared revenue model",
@@ -91,11 +92,11 @@ export const cases = [
 
     executionLayers: {
       demand:
-        "Inbound demand was structured and routed based on execution capacity.",
+        "Inbound demand structured by execution capacity.",
       sales:
-        "Sales execution followed a unified qualification and follow-up logic.",
+        "Unified qualification and follow-up logic.",
       infrastructure:
-        "Automation and AI supported prioritization and workload balancing."
+        "Prioritization and workload balancing enabled by infrastructure."
     },
 
     outcome: [
