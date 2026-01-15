@@ -1,5 +1,5 @@
 import { t } from "../app/i18n.js";
-import cases from "../data/cases.js";
+import { cases } from "../data/cases.js";
 
 export default function Cases() {
   return `

@@ -1,8 +1,9 @@
 import { t } from "../app/i18n.js";
-import cases from "../data/cases.js";
+import { cases } from "../data/cases.js";
 
-export default function CaseDetail(params) {
-  const data = cases.find((c) => c.id === params.id);
+export default function CaseDetail(params = {}) {
+  const caseId = params.id;
+  const data = cases.find((c) => c.id === caseId);
 
   if (!data) {
     return `
@@ -16,7 +17,6 @@ export default function CaseDetail(params) {
   return `
     <section class="page case-detail">
 
-      <!-- SCREEN 1: HEADER -->
       <header class="case-header">
         <h1>${data.title}</h1>
         <p>${data.summary}</p>
@@ -28,7 +28,6 @@ export default function CaseDetail(params) {
         </div>
       </header>
 
-      <!-- SCREEN 2: CONTEXT -->
       <section class="case-section">
         <h2>${t("case_context")}</h2>
         <p>${data.context.market}</p>
@@ -36,13 +35,11 @@ export default function CaseDetail(params) {
         <p>${data.context.constraints}</p>
       </section>
 
-      <!-- SCREEN 3: SYSTEM PROBLEM -->
       <section class="case-section case-problem">
         <h2>${t("case_problem")}</h2>
         <p>${data.systemProblem}</p>
       </section>
 
-      <!-- SCREEN 4: OPERATING CHANGES -->
       <section class="case-section">
         <h2>${t("case_operating_changes")}</h2>
 
@@ -65,7 +62,6 @@ export default function CaseDetail(params) {
         <p class="case-anchor">${t("case_anchor")}</p>
       </section>
 
-      <!-- SCREEN 5: EXECUTION LAYERS -->
       <section class="case-section">
         <h2>${t("case_execution_layers")}</h2>
 
@@ -87,7 +83,6 @@ export default function CaseDetail(params) {
         </div>
       </section>
 
-      <!-- SCREEN 6: OUTCOME -->
       <section class="case-section">
         <h2>${t("case_outcome")}</h2>
         <ul>
@@ -95,7 +90,6 @@ export default function CaseDetail(params) {
         </ul>
       </section>
 
-      <!-- SCREEN 7: EXIT -->
       <footer class="case-exit">
         <a href="/cases" data-link>${t("back_to_case_hub")}</a>
         <a href="/how-we-work" data-link>${t("view_operating_model")}</a>
