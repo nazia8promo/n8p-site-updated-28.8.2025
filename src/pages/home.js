@@ -1,40 +1,52 @@
 import { t } from "../app/i18n.js";
 
-export default function About() {
+export default function Home() {
   return `
-    <section class="page about">
+    <section class="page home">
 
-      <header class="page-header">
-        <h1>${t("about_title")}</h1>
-        <p>${t("about_sub")}</p>
-      </header>
+      <section class="home-orientation">
+        <h1 class="t-command">${t("home_title")}</h1>
 
-      <section class="about-section">
-        <h2>${t("about_what_title")}</h2>
-        <p>${t("about_what_p1")}</p>
-        <p>${t("about_what_p2")}</p>
+        <p class="t-context">
+          ${t("home_sub")}
+        </p>
+
+        <p class="role-filter t-context">
+          ${t("home_role")}
+        </p>
+
+        <a class="primary-cta" href="/how-we-work" data-link>
+          ${t("home_enter")}
+        </a>
       </section>
 
-      <section class="about-section">
-        <h2>${t("about_not_title")}</h2>
-        <ul>
-          <li>${t("about_not_1")}</li>
-          <li>${t("about_not_2")}</li>
-          <li>${t("about_not_3")}</li>
-          <li>${t("about_not_4")}</li>
-        </ul>
-      </section>
+      <section class="home-decisions">
 
-      <section class="about-section">
-        <h2>${t("about_operator_title")}</h2>
-        <p>${t("about_operator_p1")}</p>
-        <p>${t("about_operator_p2")}</p>
-      </section>
+        <div class="decision-block primary" data-route="/how-we-work">
+          <h2>${t("decision_block1_title")}</h2>
+          <p>${t("decision_block1_desc")}</p>
+          <a>${t("decision_block1_link")}</a>
+        </div>
 
-      <footer class="about-exit">
-        <a href="/how-we-work" data-link>${t("about_exit_model")}</a>
-        <a href="/cases" data-link>${t("about_exit_cases")}</a>
-      </footer>
+        <div class="decision-block" data-route="/cases">
+          <h2>${t("decision_block2_title")}</h2>
+          <p>${t("decision_block2_desc")}</p>
+          <a>${t("decision_block2_link")}</a>
+        </div>
+
+        <div class="decision-block" data-route="/platform">
+          <h2>${t("decision_block3_title")}</h2>
+          <p>${t("decision_block3_desc")}</p>
+          <a>${t("decision_block3_link")}</a>
+        </div>
+
+        <div class="decision-block" data-route="/contact">
+          <h2>${t("decision_block4_title")}</h2>
+          <p>${t("decision_block4_desc")}</p>
+          <a>${t("decision_block4_link")}</a>
+        </div>
+
+      </section>
 
     </section>
   `;
