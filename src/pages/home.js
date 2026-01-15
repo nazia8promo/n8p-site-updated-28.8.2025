@@ -4,21 +4,21 @@ export default function Home() {
   return `
     <section class="page home">
 
-      <section class="home-orientation">
+      <section class="page-header">
         <h1 class="t-command">${t("home_title")}</h1>
 
-        <p class="t-context">
+        <p class="system-definition t-context">
           ${t("home_sub")}
         </p>
 
-        <p class="role-filter t-context">
+        <p class="system-statement t-context">
           ${t("home_role")}
         </p>
-
-        <a class="primary-cta" href="/how-we-work" data-link>
-          ${t("home_enter")}
-        </a>
       </section>
+
+      <a class="primary-cta" href="/how-we-work" data-link>
+        ${t("home_enter")}
+      </a>
 
       <section class="home-decisions">
 
