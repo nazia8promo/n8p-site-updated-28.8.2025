@@ -18,7 +18,7 @@ export default function CrmPage() {
                 Product website direction
               </div>
 
-              <h1 className="mt-5 max-w-5xl hero-display text-white">
+              <h1 className="mt-5 max-w-4xl page-display text-white">
                 {crmPage.hero.title}
               </h1>
 
@@ -93,7 +93,7 @@ export default function CrmPage() {
                 <h3 className="mt-6 card-display font-semibold text-[#0B132B]">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-base leading-8 text-[#5B6475]">
+                <p className="mt-4 body-regular text-[#5B6475]">
                   {item.text}
                 </p>
               </div>
@@ -139,7 +139,7 @@ export default function CrmPage() {
                   {item.title}
                 </div>
                 <div className="mt-4 h-px w-12 bg-[#D4A373]" />
-                <p className="mt-4 text-base leading-8 text-[#334155]">
+                <p className="mt-4 body-regular text-[#334155]">
                   {item.text}
                 </p>
               </div>

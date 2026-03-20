@@ -12,7 +12,7 @@ export default function RopPage() {
               Программа для РОП
             </div>
 
-            <h1 className="editorial-title hero-display max-w-5xl">
+            <h1 className="editorial-title page-display max-w-4xl">
               {ropPage.hero.title}
             </h1>
 
@@ -28,7 +28,7 @@ export default function RopPage() {
                 Management layer
               </div>
               <div className="mt-4 h-px w-16 bg-[#D4A373]" />
-              <p className="mt-5 text-base leading-8 text-[#334155]">
+              <p className="mt-5 body-regular text-[#334155]">
                 Страница для РОП должна ощущаться как управленческий
                 инструмент: ownership, контроль команды, разбор потерь,
                 структура ответственности и рабочая воронка.
@@ -59,7 +59,7 @@ export default function RopPage() {
                 >
                   <div className="flex items-start gap-3">
                     <div className="mt-1 h-2.5 w-2.5 rounded-full bg-[#0F766E]" />
-                    <div className="text-base leading-8 text-[#334155]">
+                    <div className="body-regular text-[#334155]">
                       {item}
                     </div>
                   </div>

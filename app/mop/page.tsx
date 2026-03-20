@@ -17,7 +17,7 @@ export default function MopPage() {
               Программа для МОП
             </div>
 
-            <h1 className="editorial-title hero-display max-w-5xl">
+            <h1 className="editorial-title page-display max-w-4xl">
               {mopPage.hero.title}
             </h1>
 
@@ -33,7 +33,7 @@ export default function MopPage() {
                 Editorial framing
               </div>
               <div className="mt-4 h-px w-16 bg-[#D4A373]" />
-              <p className="mt-5 text-base leading-8 text-[#334155]">
+              <p className="mt-5 body-regular text-[#334155]">
                 Эта страница должна продавать не “курс по общению”, а
                 уверенную рабочую логику: входящий лид, ownership,
                 следующий шаг, дисциплина этапов и прозрачность для РОП.
@@ -64,7 +64,7 @@ export default function MopPage() {
                 >
                   <div className="flex items-start gap-3">
                     <div className="mt-1 h-2.5 w-2.5 rounded-full bg-[#1D4ED8]" />
-                    <div className="text-base leading-8 text-[#334155]">
+                    <div className="body-regular text-[#334155]">
                       {item}
                     </div>
                   </div>
@@ -101,7 +101,7 @@ export default function MopPage() {
                 <h3 className="mt-6 card-display font-semibold text-[#0B132B]">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-base leading-8 text-[#5B6475]">
+                <p className="mt-4 body-regular text-[#5B6475]">
                   {item.text}
                 </p>
               </div>

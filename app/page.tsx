@@ -26,12 +26,12 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <h1 className="editorial-title hero-display max-w-5xl">
+              <h1 className="editorial-title hero-display max-w-4xl">
                 Премиальная система продаж для МОП, РОП и компаний,
                 которым нужен не шум, а управляемый результат.
               </h1>
 
-              <p className="editorial-subtitle body-large max-w-3xl">
+              <p className="editorial-subtitle body-large max-w-2xl">
                 {homePage.hero.text}
               </p>
             </div>
@@ -181,7 +181,7 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold text-[#0B132B]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-base leading-8 text-[#5B6475]">
+                  <p className="mt-3 body-regular text-[#5B6475]">
                     {item.text}
                   </p>
                 </div>
@@ -222,7 +222,7 @@ export default function HomePage() {
                 <h3 className="mt-6 card-display font-semibold text-[#0B132B]">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-base leading-8 text-[#5B6475]">
+                <p className="mt-4 body-regular text-[#5B6475]">
                   {item.text}
                 </p>
 
@@ -268,7 +268,7 @@ export default function HomePage() {
                   <h3 className="mt-3 text-2xl font-semibold text-white">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-base leading-8 text-[#CBD5E1]">
+                  <p className="mt-3 body-regular text-[#CBD5E1]">
                     {item.text}
                   </p>
                 </div>
@@ -292,7 +292,7 @@ export default function HomePage() {
                 <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
                   Academy-first
                 </div>
-                <p className="mt-4 text-base leading-8 text-[#5B6475]">
+                <p className="mt-4 body-regular text-[#5B6475]">
                   Сайт и бренд построены вокруг обучения и системной логики продаж,
                   а не вокруг набора услуг без ядра.
                 </p>
@@ -302,7 +302,7 @@ export default function HomePage() {
                 <div className="text-xs uppercase tracking-[0.28em] text-[#0F766E]">
                   Implementation-driven
                 </div>
-                <p className="mt-4 text-base leading-8 text-[#5B6475]">
+                <p className="mt-4 body-regular text-[#5B6475]">
                   Мы говорим не только об обучении, но и о том, как знания
                   превращаются в ежедневную практику команды.
                 </p>
@@ -312,7 +312,7 @@ export default function HomePage() {
                 <div className="text-xs uppercase tracking-[0.28em] text-[#9A6A33]">
                   Product-connected
                 </div>
-                <p className="mt-4 text-base leading-8 text-[#5B6475]">
+                <p className="mt-4 body-regular text-[#5B6475]">
                   S:O:S CRM встроена в архитектуру как отдельный product-layer,
                   который закрепляет методику в рабочем процессе.
                 </p>
@@ -335,7 +335,7 @@ export default function HomePage() {
                   {homePage.crm.title}
                 </h2>
 
-                <p className="mt-4 max-w-2xl text-base leading-8 text-[#CBD5E1] md:text-lg">
+                <p className="mt-4 max-w-2xl body-regular text-[#CBD5E1] md:text-lg">
                   {homePage.crm.text}
                 </p>
 

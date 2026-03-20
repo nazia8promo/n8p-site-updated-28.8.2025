@@ -454,3 +454,80 @@ pre {
     font-size: clamp(1.35rem, 6vw, 1.75rem);
   }
 }
+
+/* ===== Typography polish overrides ===== */
+
+.hero-display {
+  font-size: clamp(2.45rem, 4vw, 4.2rem);
+  line-height: 0.99;
+  letter-spacing: -0.04em;
+}
+
+.page-display {
+  font-size: clamp(2.2rem, 3.35vw, 3.7rem);
+  line-height: 1.01;
+  letter-spacing: -0.038em;
+}
+
+.section-display {
+  font-size: clamp(1.95rem, 2.7vw, 2.95rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+.card-display {
+  font-size: clamp(1.28rem, 1.45vw, 1.62rem);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+}
+
+.body-large {
+  font-size: clamp(1rem, 0.95vw, 1.1rem);
+  line-height: 1.78;
+}
+
+.body-regular {
+  font-size: 1rem;
+  line-height: 1.74;
+}
+
+.label-premium {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.premium-dark .body-large,
+.premium-dark .body-regular {
+  color: #d7dfec;
+}
+
+.premium-panel p,
+.premium-card p {
+  line-height: 1.72;
+}
+
+@media (max-width: 768px) {
+  .hero-display {
+    font-size: clamp(2.1rem, 9vw, 3.1rem);
+    line-height: 1.02;
+  }
+
+  .page-display {
+    font-size: clamp(1.95rem, 8vw, 2.8rem);
+    line-height: 1.03;
+  }
+
+  .section-display {
+    font-size: clamp(1.65rem, 6.6vw, 2.2rem);
+  }
+
+  .card-display {
+    font-size: clamp(1.22rem, 5.6vw, 1.5rem);
+  }
+
+  .body-large {
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+}

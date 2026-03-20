@@ -17,7 +17,7 @@ export default function CompaniesPage() {
               Корпоративный формат
             </div>
 
-            <h1 className="editorial-title hero-display max-w-5xl">
+            <h1 className="editorial-title page-display max-w-4xl">
               {companiesPage.hero.title}
             </h1>
 
@@ -33,7 +33,7 @@ export default function CompaniesPage() {
                 B2B framing
               </div>
               <div className="mt-4 h-px w-16 bg-[#D4A373]" />
-              <p className="mt-5 text-base leading-8 text-[#334155]">
+              <p className="mt-5 body-regular text-[#334155]">
                 Это не “обучение для сотрудников на один день”. Это
                 сборка управляемой системы продаж: роли, процесс,
                 дисциплина, внедрение и рабочая среда команды.
@@ -64,7 +64,7 @@ export default function CompaniesPage() {
                 >
                   <div className="flex items-start gap-3">
                     <div className="mt-1 h-2.5 w-2.5 rounded-full bg-[#9A6A33]" />
-                    <div className="text-base leading-8 text-[#334155]">
+                    <div className="body-regular text-[#334155]">
                       {item}
                     </div>
                   </div>
@@ -112,7 +112,7 @@ export default function CompaniesPage() {
                   {item.title}
                 </div>
                 <div className="mt-4 h-px w-12 bg-[#D4A373]" />
-                <p className="mt-4 text-base leading-8 text-[#334155]">
+                <p className="mt-4 body-regular text-[#334155]">
                   {item.text}
                 </p>
               </div>
