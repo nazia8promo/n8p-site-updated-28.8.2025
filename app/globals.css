@@ -732,3 +732,78 @@ body {
     font-size: clamp(1.55rem, 5.8vw, 2.1rem);
   }
 }
+/* ===== CTA visibility + homepage motion zone ===== */
+.button-premium-dark, .button-premium-blue, .button-premium-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.button-premium-dark {
+  background: #081733 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(8, 23, 51, 0.18);
+}
+.button-premium-dark:hover {
+  background: #0B1E43 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+.button-premium-blue {
+  background: #2D66F6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(45, 102, 246, 0.20);
+}
+.button-premium-blue:hover {
+  background: #1E4FD1 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+.button-premium-gold {
+  background: #F3E0C4 !important;
+  color: #9A6323 !important;
+  border: 1px solid rgba(200, 138, 53, 0.26) !important;
+}
+.button-premium-gold:hover {
+  background: #ECD2AC !important;
+  color: #8A571F !important;
+  transform: translateY(-1px);
+}
+.home-motion-zone {
+  position: relative;
+  overflow: hidden;
+}
+.home-motion-zone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(45, 102, 246, 0.08), transparent 24%), radial-gradient(circle at bottom left, rgba(200, 138, 53, 0.10), transparent 22%);
+  pointer-events: none;
+}
+.motion-chip {
+  border-radius: 9999px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.motion-stage-card {
+  border-radius: 1.25rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.motion-mini-card {
+  border-radius: 1rem;
+  padding: 0.75rem 0.9rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}

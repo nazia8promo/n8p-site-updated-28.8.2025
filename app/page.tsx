@@ -8,6 +8,7 @@ import { homePage } from "@/content/site/home";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { AnimationPlaceholder } from "@/components/site/AnimationPlaceholder";
 import { CTAButtons } from "@/components/site/CTAButtons";
+import { HomeMotionPlaceholder } from "@/components/site/HomeMotionPlaceholder";
 
 export default function HomePage() {
   return (
@@ -152,6 +153,13 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Motion Placeholder — сразу после hero */}
+      <section className="section-space pt-2">
+        <div className="container-premium">
+          <HomeMotionPlaceholder />
         </div>
       </section>
 
