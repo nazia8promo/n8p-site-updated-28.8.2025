@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StructuredData } from "@/components/site/StructuredData";
+import { MobileStickyCTA } from "@/components/site/MobileStickyCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nazia8promo.kz"),
@@ -51,6 +52,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#0B132B",
+  colorScheme: "light",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,6 +69,7 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <MobileStickyCTA />
       </body>
     </html>
   );

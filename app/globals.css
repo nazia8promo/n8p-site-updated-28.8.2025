@@ -401,3 +401,9 @@ pre {
     line-height: 1.02;
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

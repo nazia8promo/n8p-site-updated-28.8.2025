@@ -49,6 +49,8 @@ export function SiteFooter() {
           © Nazia8Promo.kz — premium sales academy and implementation
         </div>
       </div>
+
+      <div className="h-20 md:hidden" />
     </footer>
   );
 }
