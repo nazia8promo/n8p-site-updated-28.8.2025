@@ -531,3 +531,21 @@ pre {
     line-height: 1.72;
   }
 }
+/* ===== Dense layout pass ===== */
+.section-space { padding-top: 3.1rem; padding-bottom: 3.1rem; }
+.hero-display { font-size: clamp(2.4rem, 4vw, 4rem); line-height: 0.98; }
+.page-display { font-size: clamp(2rem, 3.1vw, 3.25rem); line-height: 1; }
+.section-display { font-size: clamp(1.8rem, 2.5vw, 2.7rem); line-height: 1.04; }
+.card-display { font-size: clamp(1.2rem, 1.4vw, 1.5rem); line-height: 1.12; }
+.body-large { font-size: clamp(1rem, 0.95vw, 1.08rem); line-height: 1.72; }
+.body-regular { font-size: 0.98rem; line-height: 1.68; }
+.label-premium { font-size: 0.8rem; letter-spacing: 0.18em; }
+.premium-panel, .premium-card { box-shadow: 0 12px 40px rgba(11, 19, 43, 0.05); }
+
+@media (max-width: 768px) {
+  .section-space { padding-top: 2.2rem; padding-bottom: 2.2rem; }
+  .hero-display { font-size: clamp(2rem, 8.2vw, 3rem); }
+  .page-display { font-size: clamp(1.75rem, 7vw, 2.45rem); }
+  .section-display { font-size: clamp(1.55rem, 6vw, 2.05rem); }
+  .card-display { font-size: clamp(1.15rem, 5.2vw, 1.42rem); }
+}

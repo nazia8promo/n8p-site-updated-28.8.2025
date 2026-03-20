@@ -11,7 +11,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-[#FAF7F2]/88 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link
           href="/"
           className="text-lg font-semibold tracking-[0.16em] text-[#0B132B]"
@@ -20,7 +20,7 @@ export function SiteHeader() {
           NAZIA 8 PROMO
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           {siteNavigation.map((item) => {
             const active = pathname === item.href;
             return (
@@ -45,7 +45,7 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="rounded-full bg-[#0B132B] px-5 py-2 text-sm text-white transition hover:bg-[#111C3D]"
+            className="rounded-full bg-[#0B132B] px-4 py-2 text-sm text-white transition hover:bg-[#111C3D]"
           >
             Оставить заявку
           </Link>
@@ -63,7 +63,7 @@ export function SiteHeader() {
 
       {open ? (
         <div className="border-t border-slate-200 bg-white md:hidden">
-          <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-4">
+          <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-3">
             {siteNavigation.map((item) => {
               const active = pathname === item.href;
               return (

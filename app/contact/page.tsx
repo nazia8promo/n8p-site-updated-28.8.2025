@@ -10,8 +10,8 @@ import { SectionTitle } from "@/components/site/SectionTitle";
 export default function ContactPage() {
   return (
     <div className="page-wrap pb-24">
-      <section className="container-premium pt-14 pb-16 lg:pt-20">
-        <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
+      <section className="container-premium pt-8 pb-10 lg:pt-12">
+        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#EEF4FF] px-4 py-2 text-sm font-medium text-[#1D4ED8] ring-1 ring-[#1D4ED8]/18">
               Контакт и следующий шаг
@@ -51,9 +51,9 @@ export default function ContactPage() {
             text="Здесь не нужен длинный текст. Нужны ясные варианты: стратегия, быстрый контакт или продуктовая демонстрация."
           />
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {contactPage.options.map((item, index) => (
-              <div key={item.title} className="premium-panel p-8">
+              <div key={item.title} className="premium-panel p-6">
                 <div
                   className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
                     index === 0
@@ -100,7 +100,7 @@ export default function ContactPage() {
 
       <section className="section-space premium-dark">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
             <SectionTitle
               eyebrow="Экосистема бренда"
               title="Nazia8Promo — academy + implementation. S:O:S CRM — product layer. У каждого направления свой вход, но одна экосистема."
@@ -133,7 +133,7 @@ export default function ContactPage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="premium-panel p-8 lg:p-10">
+          <div className="premium-panel p-6 lg:p-8">
             <SectionTitle
               eyebrow="Последний переход"
               title="Выбери правильный маршрут и перейди к действию"

@@ -6,19 +6,20 @@ export const metadata: Metadata = pageMetadata.crm;
 import Link from "next/link";
 import { crmPage } from "@/content/site/crm";
 import { SectionTitle } from "@/components/site/SectionTitle";
+import { CrmProofRail } from "@/components/site/CrmProofRail";
 
 export default function CrmPage() {
   return (
     <div className="page-wrap pb-24">
-      <section className="container-premium pt-14 pb-16 lg:pt-20">
-        <div className="premium-band premium-dark p-8 lg:p-10">
-          <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
+      <section className="container-premium pt-8 pb-10 lg:pt-12">
+        <div className="premium-band premium-dark p-6 lg:p-8">
+          <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-[#D4A373]/14 px-4 py-2 text-sm text-[#D4A373] ring-1 ring-[#D4A373]/20">
                 Product website direction
               </div>
 
-              <h1 className="mt-5 max-w-4xl page-display text-white">
+              <h1 className="mt-5 max-w-3xl page-display text-white">
                 {crmPage.hero.title}
               </h1>
 
@@ -72,9 +73,9 @@ export default function CrmPage() {
             text="Продуктовый слой тоже должен выглядеть premium: чисто, понятно и без перегруженного списка модулей."
           />
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
             {crmPage.features.items.map((item, index) => (
-              <div key={item.title} className="premium-panel p-8">
+              <div key={item.title} className="premium-panel p-6">
                 <div
                   className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
                     index === 0
@@ -110,7 +111,7 @@ export default function CrmPage() {
             text="Это и есть сильная product-подача: не шуметь функциями, а показать, почему продукт легче понять, показать и внедрить в рабочий процесс команды."
           />
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
               {
                 title: "Ближе к реальности",
@@ -150,7 +151,7 @@ export default function CrmPage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="premium-panel p-8 lg:p-10">
+          <div className="premium-panel p-6 lg:p-8">
             <SectionTitle
               eyebrow="Связка с Nazia8Promo"
               title="S:O:S CRM — отдельный product brand внутри экосистемы Nazia8Promo."

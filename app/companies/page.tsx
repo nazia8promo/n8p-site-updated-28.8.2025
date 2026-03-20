@@ -10,8 +10,8 @@ import { SectionTitle } from "@/components/site/SectionTitle";
 export default function CompaniesPage() {
   return (
     <div className="page-wrap pb-24">
-      <section className="container-premium pt-14 pb-16 lg:pt-20">
-        <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
+      <section className="container-premium pt-8 pb-10 lg:pt-12">
+        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#F6EBDD] px-4 py-2 text-sm font-medium text-[#9A6A33] ring-1 ring-[#D4A373]/28">
               Корпоративный формат
@@ -45,7 +45,7 @@ export default function CompaniesPage() {
 
       <section className="section-space bg-[#F8FAFC]">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <SectionTitle
               eyebrow={companiesPage.benefits.eyebrow}
               title={companiesPage.benefits.title}
@@ -83,7 +83,7 @@ export default function CompaniesPage() {
             text="Корпоративная программа должна выглядеть не как тренинг на день, а как маршрут внедрения управляемой системы продаж."
           />
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
               {
                 title: "Диагностика",
@@ -123,7 +123,7 @@ export default function CompaniesPage() {
 
       <section className="section-space premium-dark">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
             <SectionTitle
               eyebrow="B2B-вход"
               title="Если компании нужен не курс, а реально внедрённая система продаж — это уже разговор про роли, процесс и product layer."
@@ -156,7 +156,7 @@ export default function CompaniesPage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="premium-panel p-8 lg:p-10">
+          <div className="premium-panel p-6 lg:p-8">
             <SectionTitle
               eyebrow="Следующий шаг"
               title="Обсудить корпоративное внедрение"

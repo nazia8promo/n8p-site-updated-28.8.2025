@@ -5,8 +5,8 @@ import { SectionTitle } from "@/components/site/SectionTitle";
 export default function RopPage() {
   return (
     <div className="page-wrap pb-24">
-      <section className="container-premium pt-14 pb-16 lg:pt-20">
-        <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
+      <section className="container-premium pt-8 pb-10 lg:pt-12">
+        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#EAF6F4] px-4 py-2 text-sm font-medium text-[#0F766E] ring-1 ring-[#0F766E]/16">
               Программа для РОП
@@ -40,7 +40,7 @@ export default function RopPage() {
 
       <section className="section-space bg-[#F8FAFC]">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <SectionTitle
               eyebrow={ropPage.benefits.eyebrow}
               title={ropPage.benefits.title}
@@ -72,7 +72,7 @@ export default function RopPage() {
 
       <section className="section-space premium-dark">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
             <SectionTitle
               eyebrow="Управленческий фокус"
               title="Ownership, контроль, разбор потерь и управляемая воронка — это ядро программы для РОП."
@@ -105,7 +105,7 @@ export default function RopPage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="premium-panel p-8 lg:p-10">
+          <div className="premium-panel p-6 lg:p-8">
             <SectionTitle
               eyebrow="Следующий уровень"
               title="Когда логика управления собрана, её нужно перенести в рабочую среду команды."

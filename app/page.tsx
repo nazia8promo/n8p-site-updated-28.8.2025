@@ -11,7 +11,7 @@ import { CTAButtons } from "@/components/site/CTAButtons";
 export default function HomePage() {
   return (
     <div className="page-wrap pb-24">
-      <section className="container-premium pt-14 pb-20 lg:pt-20">
+      <section className="container-premium pt-8 pb-12 lg:pt-14">
         <div className="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#F6EBDD] px-4 py-2 text-sm font-medium text-[#9A6A33] ring-1 ring-[#D4A373]/40">
@@ -26,12 +26,12 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <h1 className="editorial-title hero-display max-w-4xl">
+              <h1 className="editorial-title hero-display max-w-3xl">
                 Премиальная система продаж для МОП, РОП и компаний,
                 которым нужен не шум, а управляемый результат.
               </h1>
 
-              <p className="editorial-subtitle body-large max-w-2xl">
+              <p className="editorial-subtitle body-large max-w-xl">
                 {homePage.hero.text}
               </p>
             </div>
@@ -157,7 +157,7 @@ export default function HomePage() {
 
       <section className="section-space bg-[#F8FAFC]">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <SectionTitle
               eyebrow={homePage.problem.eyebrow}
               title={homePage.problem.title}
@@ -199,11 +199,11 @@ export default function HomePage() {
             text={homePage.audiences.text}
           />
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {homePage.audiences.items.map((item, index) => (
               <div
                 key={item.title}
-                className="premium-panel p-8"
+                className="premium-panel p-6"
               >
                 <div
                   className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
@@ -240,7 +240,7 @@ export default function HomePage() {
 
       <section className="section-space premium-dark">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <SectionTitle
               eyebrow={homePage.method.eyebrow}
               title={homePage.method.title}
@@ -280,7 +280,7 @@ export default function HomePage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.98fr_1.02fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.98fr_1.02fr] lg:items-start">
             <SectionTitle
               eyebrow="Почему это выглядит дороже"
               title="Мы строим не просто лендинг, а бренд с архитектурой: academy, implementation и product layer."
@@ -324,8 +324,8 @@ export default function HomePage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="premium-band premium-dark p-8 lg:p-10">
-            <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+          <div className="premium-band premium-dark p-6 lg:p-8">
+            <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#D4A373]/14 px-4 py-2 text-sm text-[#D4A373] ring-1 ring-[#D4A373]/20">
                   {homePage.crm.eyebrow}
@@ -376,7 +376,7 @@ export default function HomePage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="premium-panel p-8 lg:p-10">
+          <div className="premium-panel p-6 lg:p-8">
             <SectionTitle
               eyebrow={homePage.cta.eyebrow}
               title={homePage.cta.title}

@@ -10,8 +10,8 @@ import { SectionTitle } from "@/components/site/SectionTitle";
 export default function MopPage() {
   return (
     <div className="page-wrap pb-24">
-      <section className="container-premium pt-14 pb-16 lg:pt-20">
-        <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
+      <section className="container-premium pt-8 pb-10 lg:pt-12">
+        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#EEF4FF] px-4 py-2 text-sm font-medium text-[#1D4ED8] ring-1 ring-[#1D4ED8]/18">
               Программа для МОП
@@ -45,7 +45,7 @@ export default function MopPage() {
 
       <section className="section-space bg-[#F8FAFC]">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <SectionTitle
               eyebrow={mopPage.benefits.eyebrow}
               title={mopPage.benefits.title}
@@ -83,9 +83,9 @@ export default function MopPage() {
             text="Эта секция показывает, что программа влияет не только на поведение менеджера, но и на общую управляемость отдела продаж."
           />
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {mopPage.results.items.map((item, index) => (
-              <div key={item.title} className="premium-panel p-8">
+              <div key={item.title} className="premium-panel p-6">
                 <div
                   className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
                     index === 0
@@ -112,7 +112,7 @@ export default function MopPage() {
 
       <section className="section-space premium-dark">
         <div className="container-premium">
-          <div className="grid gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
             <SectionTitle
               eyebrow="Связка с CRM"
               title="Когда навык уже собран, его можно закрепить в рабочей среде — без перегрузки и без потери простоты."
@@ -145,7 +145,7 @@ export default function MopPage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <div className="premium-panel p-8 lg:p-10">
+          <div className="premium-panel p-6 lg:p-8">
             <SectionTitle
               eyebrow="Следующий шаг"
               title="Подобрать обучение для ваших МОП"
