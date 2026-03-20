@@ -18,11 +18,11 @@ export default function CrmPage() {
                 Product website direction
               </div>
 
-              <h1 className="mt-5 max-w-5xl text-5xl font-semibold leading-tight tracking-tight text-white md:text-7xl">
+              <h1 className="mt-5 max-w-5xl hero-display text-white">
                 {crmPage.hero.title}
               </h1>
 
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
+              <p className="mt-6 max-w-3xl body-large text-[#CBD5E1]">
                 {crmPage.hero.text}
               </p>
 
@@ -76,7 +76,7 @@ export default function CrmPage() {
             {crmPage.features.items.map((item, index) => (
               <div key={item.title} className="premium-panel p-8">
                 <div
-                  className={`inline-flex rounded-2xl px-3 py-2 text-[11px] uppercase tracking-[0.28em] ring-1 ${
+                  className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
                     index === 0
                       ? "bg-[#EEF4FF] text-[#1D4ED8] ring-[#1D4ED8]/18"
                       : index === 1
@@ -90,7 +90,7 @@ export default function CrmPage() {
                 </div>
 
                 <div className="mt-6 h-px w-14 bg-[#D4A373]" />
-                <h3 className="mt-6 text-3xl font-semibold text-[#0B132B]">
+                <h3 className="mt-6 card-display font-semibold text-[#0B132B]">
                   {item.title}
                 </h3>
                 <p className="mt-4 text-base leading-8 text-[#5B6475]">
@@ -135,7 +135,7 @@ export default function CrmPage() {
                     : "bg-[#F6EBDD] ring-[#D4A373]/28"
                 }`}
               >
-                <div className="text-[11px] uppercase tracking-[0.30em] text-[#7B8393]">
+                <div className="text-xs uppercase tracking-[0.30em] text-[#7B8393]">
                   {item.title}
                 </div>
                 <div className="mt-4 h-px w-12 bg-[#D4A373]" />

@@ -21,17 +21,17 @@ export default function HomePage() {
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <span className="gold-line" />
-                <div className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#7B8393]">
+                <div className="text-xs font-semibold uppercase tracking-[0.34em] text-[#7B8393]">
                   Kazakhstan & CIS
                 </div>
               </div>
 
-              <h1 className="editorial-title max-w-5xl text-5xl md:text-7xl xl:text-[5.2rem]">
+              <h1 className="editorial-title hero-display max-w-5xl">
                 Премиальная система продаж для МОП, РОП и компаний,
                 которым нужен не шум, а управляемый результат.
               </h1>
 
-              <p className="editorial-subtitle max-w-3xl text-lg md:text-xl">
+              <p className="editorial-subtitle body-large max-w-3xl">
                 {homePage.hero.text}
               </p>
             </div>
@@ -43,7 +43,7 @@ export default function HomePage() {
 
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="premium-card p-5">
-                <div className="text-[11px] uppercase tracking-[0.28em] text-[#1D4ED8]">
+                <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
                   Academy
                 </div>
                 <p className="mt-3 text-sm leading-7 text-[#334155]">
@@ -52,7 +52,7 @@ export default function HomePage() {
               </div>
 
               <div className="premium-card tint-blue p-5">
-                <div className="text-[11px] uppercase tracking-[0.28em] text-[#1D4ED8]">
+                <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
                   Implementation
                 </div>
                 <p className="mt-3 text-sm leading-7 text-[#334155]">
@@ -61,7 +61,7 @@ export default function HomePage() {
               </div>
 
               <div className="premium-card tint-gold p-5">
-                <div className="text-[11px] uppercase tracking-[0.28em] text-[#9A6A33]">
+                <div className="text-xs uppercase tracking-[0.28em] text-[#9A6A33]">
                   Product layer
                 </div>
                 <p className="mt-3 text-sm leading-7 text-[#334155]">
@@ -95,7 +95,7 @@ export default function HomePage() {
                   <div className="glass-dark rounded-[1.75rem] p-5">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <div className="text-[11px] uppercase tracking-[0.30em] text-[#D4A373]">
+                        <div className="text-xs uppercase tracking-[0.30em] text-[#D4A373]">
                           Primary role
                         </div>
                         <div className="mt-2 text-2xl font-semibold text-white">
@@ -112,7 +112,7 @@ export default function HomePage() {
 
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="rounded-[1.6rem] bg-white p-5 ring-1 ring-white/10">
-                      <div className="text-[11px] uppercase tracking-[0.30em] text-[#1D4ED8]">
+                      <div className="text-xs uppercase tracking-[0.30em] text-[#1D4ED8]">
                         Audience split
                       </div>
                       <div className="mt-3 text-lg font-semibold text-[#0B132B]">
@@ -124,7 +124,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="rounded-[1.6rem] bg-[#EAF6F4] p-5 ring-1 ring-[#0F766E]/16">
-                      <div className="text-[11px] uppercase tracking-[0.30em] text-[#0F766E]">
+                      <div className="text-xs uppercase tracking-[0.30em] text-[#0F766E]">
                         Result logic
                       </div>
                       <div className="mt-3 text-lg font-semibold text-[#0B132B]">
@@ -137,7 +137,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="rounded-[1.75rem] bg-[#111C3D] p-5 ring-1 ring-white/10">
-                    <div className="text-[11px] uppercase tracking-[0.30em] text-[#93C5FD]">
+                    <div className="text-xs uppercase tracking-[0.30em] text-[#93C5FD]">
                       Product layer
                     </div>
                     <div className="mt-2 text-xl font-semibold text-white">
@@ -206,7 +206,7 @@ export default function HomePage() {
                 className="premium-panel p-8"
               >
                 <div
-                  className={`inline-flex rounded-2xl px-3 py-2 text-[11px] uppercase tracking-[0.28em] ring-1 ${
+                  className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
                     index === 0
                       ? "bg-[#EEF4FF] text-[#1D4ED8] ring-[#1D4ED8]/18"
                       : index === 1
@@ -219,7 +219,7 @@ export default function HomePage() {
 
                 <div className="mt-6 h-px w-14 bg-[#D4A373]" />
 
-                <h3 className="mt-6 text-3xl font-semibold text-[#0B132B]">
+                <h3 className="mt-6 card-display font-semibold text-[#0B132B]">
                   {item.title}
                 </h3>
                 <p className="mt-4 text-base leading-8 text-[#5B6475]">
@@ -262,7 +262,7 @@ export default function HomePage() {
                       : "bg-[#D4A373]/12 ring-[#D4A373]/18"
                   }`}
                 >
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.30em] text-[#D4A373]">
+                  <div className="text-xs font-semibold uppercase tracking-[0.30em] text-[#D4A373]">
                     {item.step}
                   </div>
                   <h3 className="mt-3 text-2xl font-semibold text-white">
@@ -289,7 +289,7 @@ export default function HomePage() {
 
             <div className="grid gap-4">
               <div className="premium-card p-7">
-                <div className="text-[11px] uppercase tracking-[0.28em] text-[#1D4ED8]">
+                <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
                   Academy-first
                 </div>
                 <p className="mt-4 text-base leading-8 text-[#5B6475]">
@@ -299,7 +299,7 @@ export default function HomePage() {
               </div>
 
               <div className="premium-card tint-emerald p-7">
-                <div className="text-[11px] uppercase tracking-[0.28em] text-[#0F766E]">
+                <div className="text-xs uppercase tracking-[0.28em] text-[#0F766E]">
                   Implementation-driven
                 </div>
                 <p className="mt-4 text-base leading-8 text-[#5B6475]">
@@ -309,7 +309,7 @@ export default function HomePage() {
               </div>
 
               <div className="premium-card tint-gold p-7">
-                <div className="text-[11px] uppercase tracking-[0.28em] text-[#9A6A33]">
+                <div className="text-xs uppercase tracking-[0.28em] text-[#9A6A33]">
                   Product-connected
                 </div>
                 <p className="mt-4 text-base leading-8 text-[#5B6475]">

@@ -407,3 +407,50 @@ pre {
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+/* Typography scale */
+.hero-display {
+  font-size: clamp(2.65rem, 5vw, 4.85rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.section-display {
+  font-size: clamp(2rem, 3.2vw, 3.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.card-display {
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.body-large {
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  line-height: 1.85;
+}
+
+.body-regular {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.label-premium {
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .hero-display {
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+    line-height: 1.02;
+  }
+  .section-display {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+  .card-display {
+    font-size: clamp(1.35rem, 6vw, 1.75rem);
+  }
+}

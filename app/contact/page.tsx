@@ -17,11 +17,11 @@ export default function ContactPage() {
               Контакт и следующий шаг
             </div>
 
-            <h1 className="editorial-title max-w-5xl text-5xl md:text-7xl">
+            <h1 className="editorial-title hero-display max-w-5xl">
               {contactPage.hero.title}
             </h1>
 
-            <p className="editorial-subtitle max-w-3xl text-lg md:text-xl">
+            <p className="editorial-subtitle body-large max-w-3xl">
               {contactPage.hero.text}
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function ContactPage() {
           <div className="relative">
             <div className="absolute -inset-5 rounded-[2.2rem] bg-gradient-to-br from-[#1D4ED8]/10 via-[#D4A373]/10 to-transparent blur-2xl" />
             <div className="premium-panel relative p-6">
-              <div className="text-[11px] uppercase tracking-[0.30em] text-[#7B8393]">
+              <div className="text-xs uppercase tracking-[0.30em] text-[#7B8393]">
                 Contact architecture
               </div>
               <div className="mt-4 h-px w-16 bg-[#D4A373]" />
@@ -55,7 +55,7 @@ export default function ContactPage() {
             {contactPage.options.map((item, index) => (
               <div key={item.title} className="premium-panel p-8">
                 <div
-                  className={`inline-flex rounded-2xl px-3 py-2 text-[11px] uppercase tracking-[0.28em] ring-1 ${
+                  className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
                     index === 0
                       ? "bg-white text-[#0B132B] ring-[#0B132B]/8"
                       : index === 1
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-6 h-px w-14 bg-[#D4A373]" />
-                <h3 className="mt-6 text-3xl font-semibold text-[#0B132B]">
+                <h3 className="mt-6 card-display font-semibold text-[#0B132B]">
                   {item.title}
                 </h3>
                 <p className="mt-4 text-base leading-8 text-[#5B6475]">

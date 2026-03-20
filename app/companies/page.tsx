@@ -17,11 +17,11 @@ export default function CompaniesPage() {
               Корпоративный формат
             </div>
 
-            <h1 className="editorial-title max-w-5xl text-5xl md:text-7xl">
+            <h1 className="editorial-title hero-display max-w-5xl">
               {companiesPage.hero.title}
             </h1>
 
-            <p className="editorial-subtitle max-w-3xl text-lg md:text-xl">
+            <p className="editorial-subtitle body-large max-w-3xl">
               {companiesPage.hero.text}
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function CompaniesPage() {
           <div className="relative">
             <div className="absolute -inset-5 rounded-[2.2rem] bg-gradient-to-br from-[#D4A373]/14 via-[#1D4ED8]/10 to-transparent blur-2xl" />
             <div className="premium-panel relative p-6">
-              <div className="text-[11px] uppercase tracking-[0.30em] text-[#7B8393]">
+              <div className="text-xs uppercase tracking-[0.30em] text-[#7B8393]">
                 B2B framing
               </div>
               <div className="mt-4 h-px w-16 bg-[#D4A373]" />
@@ -108,7 +108,7 @@ export default function CompaniesPage() {
                     : "bg-[#F6EBDD] ring-[#D4A373]/28"
                 }`}
               >
-                <div className="text-[11px] uppercase tracking-[0.30em] text-[#7B8393]">
+                <div className="text-xs uppercase tracking-[0.30em] text-[#7B8393]">
                   {item.title}
                 </div>
                 <div className="mt-4 h-px w-12 bg-[#D4A373]" />

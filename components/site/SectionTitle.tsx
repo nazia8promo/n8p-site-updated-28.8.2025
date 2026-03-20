@@ -9,29 +9,21 @@ export function SectionTitle({ eyebrow, title, text, light = false }: Props) {
   return (
     <div className="max-w-3xl space-y-4">
       {eyebrow ? (
-        <div
-          className={`text-xs font-semibold uppercase tracking-[0.28em] ${
-            light ? "text-[#D4A373]" : "text-[#1D4ED8]"
-          }`}
-        >
+        <div className={`label-premium ${
+          light ? "text-[#D4A373]" : "text-[#1D4ED8]"
+        }`}>
           {eyebrow}
         </div>
       ) : null}
-
-      <h2
-        className={`text-3xl font-semibold tracking-tight md:text-5xl ${
-          light ? "text-white" : "text-[#0B132B]"
-        }`}
-      >
+      <h2 className={`section-display font-semibold ${
+        light ? "text-white" : "text-[#0B132B]"
+      }`}>
         {title}
       </h2>
-
       {text ? (
-        <p
-          className={`text-lg leading-8 ${
-            light ? "text-slate-300" : "text-slate-600"
-          }`}
-        >
+        <p className={`body-large ${
+          light ? "text-slate-300" : "text-slate-600"
+        }`}>
           {text}
         </p>
       ) : null}

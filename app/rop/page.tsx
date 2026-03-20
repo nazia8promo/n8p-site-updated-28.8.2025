@@ -12,11 +12,11 @@ export default function RopPage() {
               Программа для РОП
             </div>
 
-            <h1 className="editorial-title max-w-5xl text-5xl md:text-7xl">
+            <h1 className="editorial-title hero-display max-w-5xl">
               {ropPage.hero.title}
             </h1>
 
-            <p className="editorial-subtitle max-w-3xl text-lg md:text-xl">
+            <p className="editorial-subtitle body-large max-w-3xl">
               {ropPage.hero.text}
             </p>
           </div>
@@ -24,7 +24,7 @@ export default function RopPage() {
           <div className="relative">
             <div className="absolute -inset-5 rounded-[2.2rem] bg-gradient-to-br from-[#0F766E]/10 via-[#D4A373]/10 to-[#1D4ED8]/10 blur-2xl" />
             <div className="premium-panel relative p-6">
-              <div className="text-[11px] uppercase tracking-[0.30em] text-[#7B8393]">
+              <div className="text-xs uppercase tracking-[0.30em] text-[#7B8393]">
                 Management layer
               </div>
               <div className="mt-4 h-px w-16 bg-[#D4A373]" />
