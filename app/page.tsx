@@ -9,12 +9,13 @@ import { SectionTitle } from "@/components/site/SectionTitle";
 import { AnimationPlaceholder } from "@/components/site/AnimationPlaceholder";
 import { CTAButtons } from "@/components/site/CTAButtons";
 import { HomeMotionPlaceholder } from "@/components/site/HomeMotionPlaceholder";
+import { HeroSystemCard } from "@/components/site/HeroSystemCard";
 
 export default function HomePage() {
   return (
     <div className="page-wrap pb-24">
       <section className="container-premium pt-8 pb-12 lg:pt-14">
-        <div className="grid items-start gap-8 lg:grid-cols-[1fr_0.92fr]">
+        <div className="grid items-start gap-6 lg:grid-cols-[0.96fr_1.04fr]">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#F6EBDD] px-4 py-2 text-sm font-medium text-[#9A6A33] ring-1 ring-[#D4A373]/40">
               {homePage.hero.badge}
@@ -43,121 +44,41 @@ export default function HomePage() {
             />
 
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="premium-card p-4">
-                <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
+              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-3 shadow-sm">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#2D66F6]">
                   Academy
                 </div>
-                <p className="mt-3 text-sm leading-7 text-[#334155]">
+                <p className="mt-2 text-sm leading-6 text-[#4B5563]">
                   Обучение МОП и РОП под реальные сценарии продаж.
                 </p>
               </div>
 
-              <div className="premium-card tint-blue p-4">
-                <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
+              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-3 shadow-sm">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#2D66F6]">
                   Implementation
                 </div>
-                <p className="mt-3 text-sm leading-7 text-[#334155]">
+                <p className="mt-2 text-sm leading-6 text-[#4B5563]">
                   Внедрение процесса, ownership и дисциплины команды.
                 </p>
               </div>
 
-              <div className="premium-card tint-gold p-4">
-                <div className="text-xs uppercase tracking-[0.28em] text-[#9A6A33]">
+              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-3 shadow-sm">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#9A6A33]">
                   Product layer
                 </div>
-                <p className="mt-3 text-sm leading-7 text-[#334155]">
+                <p className="mt-2 text-sm leading-6 text-[#4B5563]">
                   S:O:S CRM как среда для закрепления результата.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-8 rounded-[2.8rem] bg-gradient-to-br from-[#1D4ED8]/12 via-[#D4A373]/10 to-[#0F766E]/10 blur-3xl" />
-
-            <div className="premium-band premium-dark relative p-7 lg:p-8">
-              <div className="relative">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <div>
-                    <div className="text-sm text-[#94A3B8]">
-                      Brand architecture
-                    </div>
-                    <div className="mt-1 text-2xl font-semibold text-white">
-                      Nazia8Promo Ecosystem
-                    </div>
-                  </div>
-
-                  <div className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-[#D4A373] ring-1 ring-white/10">
-                    Ultra premium
-                  </div>
-                </div>
-
-                <div className="mt-6 grid gap-4">
-                  <div className="glass-dark rounded-[1.75rem] p-5">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <div className="text-xs uppercase tracking-[0.30em] text-[#D4A373]">
-                          Primary role
-                        </div>
-                        <div className="mt-2 text-2xl font-semibold text-white">
-                          Sales Academy + Implementation
-                        </div>
-                        <p className="mt-3 max-w-md text-sm leading-7 text-[#CBD5E1]">
-                          Не агентство "на все случаи", а премиальная система
-                          обучения и внедрения для продаж, построенных вокруг
-                          реальной работы команды.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="grid gap-4 md:grid-cols-2">
-                    <div className="rounded-[1.6rem] bg-white p-5 ring-1 ring-white/10">
-                      <div className="text-xs uppercase tracking-[0.30em] text-[#1D4ED8]">
-                        Audience split
-                      </div>
-                      <div className="mt-3 text-lg font-semibold text-[#0B132B]">
-                        МОП / РОП / B2B
-                      </div>
-                      <p className="mt-2 text-sm leading-7 text-[#5B6475]">
-                        Три отдельных входа, один уровень системы.
-                      </p>
-                    </div>
-
-                    <div className="rounded-[1.6rem] bg-[#EAF6F4] p-5 ring-1 ring-[#0F766E]/16">
-                      <div className="text-xs uppercase tracking-[0.30em] text-[#0F766E]">
-                        Result logic
-                      </div>
-                      <div className="mt-3 text-lg font-semibold text-[#0B132B]">
-                        От навыка к внедрению
-                      </div>
-                      <p className="mt-2 text-sm leading-7 text-[#3F5A56]">
-                        Обучение должно жить в ежедневной практике команды.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="rounded-[1.75rem] bg-[#111C3D] p-5 ring-1 ring-white/10">
-                    <div className="text-xs uppercase tracking-[0.30em] text-[#93C5FD]">
-                      Product layer
-                    </div>
-                    <div className="mt-2 text-xl font-semibold text-white">
-                      S:O:S CRM
-                    </div>
-                    <p className="mt-3 max-w-md text-sm leading-7 text-[#CBD5E1]">
-                      WhatsApp-first CRM, Kanban, ownership, role-based workflow
-                      и AI-assisted слой как продолжение academy-модели.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <HeroSystemCard />
         </div>
       </section>
 
       {/* Motion Placeholder — сразу после hero */}
-      <section className="section-space pt-2">
+      <section className="pt-3 pb-6 lg:pt-4 lg:pb-8">
         <div className="container-premium">
           <HomeMotionPlaceholder />
         </div>

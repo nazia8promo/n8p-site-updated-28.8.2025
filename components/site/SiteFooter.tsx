@@ -1,56 +1,68 @@
 import Link from "next/link";
-import { siteNavigation } from "@/lib/site/navigation";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-20 border-t border-slate-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
+    <footer className="border-t border-[#081733]/10 bg-white py-12">
+      <div className="container-premium">
+        <div className="grid gap-8 md:grid-cols-4">
           <div>
-            <div className="text-lg font-semibold tracking-[0.16em] text-[#0B132B]">
-              NAZIA 8 PROMO
-            </div>
-            <p className="mt-4 max-w-md text-base leading-8 text-slate-600">
-              Academy-first бренд для обучения продажам, корпоративного внедрения
-              и закрепления системы продаж в рабочей среде.
+            <h3 className="text-lg font-semibold text-[#081733]">Nazia8Promo</h3>
+            <p className="mt-2 text-sm text-[#5B6475]">
+              Премиальная академия продаж
             </p>
           </div>
-
+          
           <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#1D4ED8]">
-              Навигация
-            </div>
-            <div className="mt-4 flex flex-col gap-3">
-              {siteNavigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm text-slate-600 transition hover:text-[#0B132B]"
-                >
-                  {item.label}
+            <h4 className="text-sm font-semibold text-[#081733]">Навигация</h4>
+            <ul className="mt-3 space-y-2">
+              <li>
+                <Link href="/about" className="text-sm text-[#5B6475] hover:text-[#1D4ED8]">
+                  Об академии
                 </Link>
-              ))}
-            </div>
+              </li>
+              <li>
+                <Link href="/rop" className="text-sm text-[#5B6475] hover:text-[#1D4ED8]">
+                  РОП
+                </Link>
+              </li>
+              <li>
+                <Link href="/mop" className="text-sm text-[#5B6475] hover:text-[#1D4ED8]">
+                  МОП
+                </Link>
+              </li>
+            </ul>
           </div>
-
+          
           <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#1D4ED8]">
-              Архитектура
-            </div>
-            <div className="mt-4 space-y-3 text-sm text-slate-600">
-              <div>Nazia8Promo = academy + implementation</div>
-              <div>S:O:S Sales = Sales Operating System</div>
-              <div>S:O:S CRM = CRM layer inside S:O:S Sales</div>
-            </div>
+            <h4 className="text-sm font-semibold text-[#081733]">Продукты</h4>
+            <ul className="mt-3 space-y-2">
+              <li>
+                <Link href="/crm" className="text-sm text-[#5B6475] hover:text-[#1D4ED8]">
+                  S:O:S CRM
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-sm font-semibold text-[#081733]">Контакты</h4>
+            <ul className="mt-3 space-y-2">
+              <li className="text-sm text-[#5B6475]">
+                Kazakhstan & CIS
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm text-[#1D4ED8] hover:underline">
+                  Связаться с нами
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <div className="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-500">
-          © Nazia8Promo.kz — premium sales academy, implementation and sales operating system
+        
+        <div className="mt-8 border-t border-[#081733]/10 pt-6 text-center text-sm text-[#5B6475]">
+          © {new Date().getFullYear()} Nazia8Promo. Все права защищены.
         </div>
       </div>
-
-      <div className="h-20 md:hidden" />
     </footer>
   );
 }
