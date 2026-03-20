@@ -1,72 +1,57 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/site/metadata";
-
-export const metadata: Metadata = pageMetadata.companies;
-
 import Link from "next/link";
+import { pageMetadata } from "@/lib/site/metadata";
 import { companiesPage } from "@/content/site/companies";
 import { SectionTitle } from "@/components/site/SectionTitle";
+import { CompaniesHeroRail } from "@/components/site/CompaniesHeroRail";
+
+export const metadata: Metadata = pageMetadata.companies;
 
 export default function CompaniesPage() {
   return (
     <div className="page-wrap pb-24">
-      <section className="container-premium pt-8 pb-10 lg:pt-12">
-        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
-          <div className="space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#F6EBDD] px-4 py-2 text-sm font-medium text-[#9A6A33] ring-1 ring-[#D4A373]/28">
+      <section className="container-premium pt-6 pb-7 lg:pt-8">
+        <div className="grid items-start gap-6 lg:grid-cols-[0.96fr_1.04fr]">
+          <div>
+            <div className="inline-flex rounded-full bg-[#F6EBDD] px-5 py-3 text-sm text-[#9A6323] ring-1 ring-[#C88A35]/22">
               Корпоративный формат
             </div>
 
-            <h1 className="editorial-title page-display max-w-4xl">
+            <h1 className="mt-6 max-w-3xl page-display text-[#081733]">
               {companiesPage.hero.title}
             </h1>
 
-            <p className="editorial-subtitle body-large max-w-3xl">
+            <p className="mt-6 max-w-3xl body-large text-[#5B6475]">
               {companiesPage.hero.text}
             </p>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-5 rounded-[2.2rem] bg-gradient-to-br from-[#D4A373]/14 via-[#1D4ED8]/10 to-transparent blur-2xl" />
-            <div className="premium-panel relative p-6">
-              <div className="text-xs uppercase tracking-[0.30em] text-[#7B8393]">
-                B2B framing
-              </div>
-              <div className="mt-4 h-px w-16 bg-[#D4A373]" />
-              <p className="mt-5 body-regular text-[#334155]">
-                Это не “обучение для сотрудников на один день”. Это
-                сборка управляемой системы продаж: роли, процесс,
-                дисциплина, внедрение и рабочая среда команды.
-              </p>
-            </div>
-          </div>
+          <CompaniesHeroRail />
         </div>
       </section>
 
       <section className="section-space bg-[#F8FAFC]">
         <div className="container-premium">
-          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <SectionTitle
               eyebrow={companiesPage.benefits.eyebrow}
               title={companiesPage.benefits.title}
-              text="Для бизнеса это не про отдельный тренинг. Это про то, как собрать ясную систему: кто за что отвечает, как движется лид, где виден контроль и как закрепляется дисциплина."
+              text={companiesPage.benefits.text}
             />
 
             <div className="grid gap-4 md:grid-cols-2">
               {companiesPage.benefits.items.map((item, index) => (
                 <div
                   key={item}
-                  className={`rounded-[1.8rem] px-5 py-5 ring-1 shadow-sm ${
+                  className={`rounded-[1.85rem] px-6 py-6 ring-1 shadow-sm ${
                     index % 2 === 0
-                      ? "bg-white ring-[#0B132B]/8"
-                      : "bg-[#F6EBDD] ring-[#D4A373]/28"
+                      ? "bg-white ring-[#081733]/8"
+                      : "bg-[#F6EBDD] ring-[#C88A35]/20"
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <div className="mt-1 h-2.5 w-2.5 rounded-full bg-[#9A6A33]" />
-                    <div className="body-regular text-[#334155]">
-                      {item}
-                    </div>
+                    <div className="mt-1 h-4 w-1 rounded-full bg-[#C88A35]" />
+                    <div className="body-large text-[#334155]">{item}</div>
                   </div>
                 </div>
               ))}
@@ -77,78 +62,29 @@ export default function CompaniesPage() {
 
       <section className="section-space">
         <div className="container-premium">
-          <SectionTitle
-            eyebrow="Формат работы"
-            title="От диагностики до закрепления в команде."
-            text="Корпоративная программа должна выглядеть не как тренинг на день, а как маршрут внедрения управляемой системы продаж."
-          />
+          <div className="premium-band premium-dark p-6 lg:p-8">
+            <div className="grid gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
+              <SectionTitle
+                eyebrow={companiesPage.model.eyebrow}
+                title={companiesPage.model.title}
+                text={companiesPage.model.text}
+                light
+              />
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[
-              {
-                title: "Диагностика",
-                text: "Разбор текущей логики продаж, ролей и узких мест команды.",
-              },
-              {
-                title: "Обучение по ролям",
-                text: "Отдельная работа с собственником, РОП и МОП внутри общей системы.",
-              },
-              {
-                title: "Закрепление",
-                text: "Внедрение процесса и перенос методики в ежедневную практику команды.",
-              },
-            ].map((item, index) => (
-              <div
-                key={item.title}
-                className={`rounded-[1.9rem] px-6 py-6 ring-1 shadow-sm ${
-                  index === 0
-                    ? "bg-white ring-[#0B132B]/8"
-                    : index === 1
-                    ? "bg-[#EEF4FF] ring-[#1D4ED8]/18"
-                    : "bg-[#F6EBDD] ring-[#D4A373]/28"
-                }`}
-              >
-                <div className="text-xs uppercase tracking-[0.30em] text-[#7B8393]">
-                  {item.title}
-                </div>
-                <div className="mt-4 h-px w-12 bg-[#D4A373]" />
-                <p className="mt-4 body-regular text-[#334155]">
-                  {item.text}
-                </p>
+              <div className="grid gap-4 md:grid-cols-2">
+                {companiesPage.model.items.map((item, index) => (
+                  <div
+                    key={item}
+                    className={`rounded-[1.85rem] px-6 py-6 ring-1 ${
+                      index % 2 === 0
+                        ? "bg-white/8 ring-white/10"
+                        : "bg-[#2D66F6]/12 ring-[#2D66F6]/18"
+                    }`}
+                  >
+                    <div className="card-display text-white">{item}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space premium-dark">
-        <div className="container-premium">
-          <div className="grid gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
-            <SectionTitle
-              eyebrow="B2B-вход"
-              title="Если компании нужен не курс, а реально внедрённая система продаж — это уже разговор про роли, процесс и product layer."
-              text="Так корпоративная страница связывается с S:O:S CRM естественно: сначала собираем управляемую модель, затем переносим её в рабочую среду без лишней перегрузки."
-              light
-            />
-
-            <div className="grid gap-4">
-              {[
-                "Роли и ответственность внутри команды",
-                "Видимость по процессу и точкам контроля",
-                "Рабочая дисциплина, а не разовые усилия",
-                "Закрепление в CRM, когда процесс уже собран",
-              ].map((item, index) => (
-                <div
-                  key={item}
-                  className={`rounded-[1.8rem] px-5 py-5 text-base leading-8 ring-1 ${
-                    index % 2 === 0
-                      ? "bg-white/6 text-[#E2E8F0] ring-white/10"
-                      : "bg-[#D4A373]/12 text-[#E2E8F0] ring-[#D4A373]/18"
-                  }`}
-                >
-                  {item}
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -158,17 +94,20 @@ export default function CompaniesPage() {
         <div className="container-premium">
           <div className="premium-panel p-6 lg:p-8">
             <SectionTitle
-              eyebrow="Следующий шаг"
-              title="Обсудить корпоративное внедрение"
-              text="Если вы хотите не точечное обучение, а реально собранную систему продаж для компании — начнём с диагностики и архитектуры ролей."
+              eyebrow={companiesPage.bridge.eyebrow}
+              title={companiesPage.bridge.title}
+              text={companiesPage.bridge.text}
             />
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link href="/contact" className="button-premium-dark">
-                Назначить стратегический звонок
+                Обсудить внедрение
               </Link>
-              <Link href="/crm" className="button-premium-gold">
-                Открыть страницу CRM
+              <Link href="/rop" className="button-premium-gold">
+                Программа для РОП
+              </Link>
+              <Link href="/crm" className="button-premium-blue">
+                Перейти к S:O:S CRM
               </Link>
             </div>
           </div>
