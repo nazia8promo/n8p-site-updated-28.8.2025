@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="page-wrap pb-24">
       <section className="container-premium pt-8 pb-12 lg:pt-14">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="grid items-start gap-8 lg:grid-cols-[1fr_0.92fr]">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#F6EBDD] px-4 py-2 text-sm font-medium text-[#9A6A33] ring-1 ring-[#D4A373]/40">
               {homePage.hero.badge}
@@ -26,12 +26,11 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <h1 className="editorial-title hero-display max-w-3xl">
-                Премиальная система продаж для МОП, РОП и компаний,
-                которым нужен не шум, а управляемый результат.
+              <h1 className="editorial-title hero-display max-w-[42rem]">
+                {homePage.hero.title}
               </h1>
 
-              <p className="editorial-subtitle body-large max-w-xl">
+              <p className="editorial-subtitle body-large max-w-[34rem]">
                 {homePage.hero.text}
               </p>
             </div>
@@ -41,8 +40,8 @@ export default function HomePage() {
               secondary={homePage.hero.secondaryCta}
             />
 
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="premium-card p-5">
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div className="premium-card p-4">
                 <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
                   Academy
                 </div>
@@ -51,7 +50,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="premium-card tint-blue p-5">
+              <div className="premium-card tint-blue p-4">
                 <div className="text-xs uppercase tracking-[0.28em] text-[#1D4ED8]">
                   Implementation
                 </div>
@@ -60,7 +59,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="premium-card tint-gold p-5">
+              <div className="premium-card tint-gold p-4">
                 <div className="text-xs uppercase tracking-[0.28em] text-[#9A6A33]">
                   Product layer
                 </div>
@@ -102,7 +101,7 @@ export default function HomePage() {
                           Sales Academy + Implementation
                         </div>
                         <p className="mt-3 max-w-md text-sm leading-7 text-[#CBD5E1]">
-                          Не агентство “на все случаи”, а премиальная система
+                          Не агентство "на все случаи", а премиальная система
                           обучения и внедрения для продаж, построенных вокруг
                           реальной работы команды.
                         </p>
@@ -203,7 +202,7 @@ export default function HomePage() {
             {homePage.audiences.items.map((item, index) => (
               <div
                 key={item.title}
-                className="premium-panel p-6"
+                className="premium-panel p-5"
               >
                 <div
                   className={`inline-flex rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.28em] ring-1 ${
@@ -219,7 +218,7 @@ export default function HomePage() {
 
                 <div className="mt-6 h-px w-14 bg-[#D4A373]" />
 
-                <h3 className="mt-6 card-display font-semibold text-[#0B132B]">
+                <h3 className="mt-5 card-display font-semibold text-[#0B132B]">
                   {item.title}
                 </h3>
                 <p className="mt-4 body-regular text-[#5B6475]">
@@ -391,7 +390,7 @@ export default function HomePage() {
                 Написать в WhatsApp
               </Link>
               <Link href="/crm" className="button-premium-gold">
-                Запросить демо CRM
+                Запросить demo CRM
               </Link>
             </div>
           </div>
