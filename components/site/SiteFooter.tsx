@@ -12,7 +12,7 @@ export function SiteFooter() {
             </div>
             <p className="mt-4 max-w-md text-base leading-8 text-slate-600">
               Academy-first бренд для обучения продажам, корпоративного внедрения
-              и связки с S:O:S CRM как product-layer.
+              и закрепления системы продаж в рабочей среде.
             </p>
           </div>
 
@@ -39,14 +39,14 @@ export function SiteFooter() {
             </div>
             <div className="mt-4 space-y-3 text-sm text-slate-600">
               <div>Nazia8Promo = academy + implementation</div>
-              <div>S:O:S CRM = product layer</div>
-              <div>Kazakhstan & CIS first</div>
+              <div>S:O:S Sales = Sales Operating System</div>
+              <div>S:O:S CRM = CRM layer inside S:O:S Sales</div>
             </div>
           </div>
         </div>
 
         <div className="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-500">
-          © Nazia8Promo.kz — premium sales academy and implementation
+          © Nazia8Promo.kz — premium sales academy, implementation and sales operating system
         </div>
       </div>
 
