@@ -6,6 +6,7 @@ export const metadata: Metadata = pageMetadata.home;
 import Link from "next/link";
 import { homePage } from "@/content/site/home";
 import { SectionTitle } from "@/components/site/SectionTitle";
+import { AnimationPlaceholder } from "@/components/site/AnimationPlaceholder";
 import { CTAButtons } from "@/components/site/CTAButtons";
 
 export default function HomePage() {

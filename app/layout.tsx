@@ -1,9 +1,16 @@
 import type { Metadata, Viewport } from "next";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StructuredData } from "@/components/site/StructuredData";
 import { MobileStickyCTA } from "@/components/site/MobileStickyCTA";
+
+const manrope = Manrope({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-manrope",
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nazia8promo.kz"),
@@ -13,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Nazia8Promo.kz",
   },
   description:
-    "Академия продаж, корпоративное внедрение и S:O:S CRM для Казахстана и СНГ.",
+    "Академия продаж, корпоративное внедрение и S:O:S Sales для Казахстана и СНГ.",
   keywords: [
     "CRM",
     "продажи",
@@ -22,6 +29,7 @@ export const metadata: Metadata = {
     "МОП",
     "WhatsApp CRM",
     "Kanban CRM",
+    "S:O:S Sales",
     "S:O:S CRM",
     "Казахстан",
   ],
@@ -42,18 +50,18 @@ export const metadata: Metadata = {
     siteName: "Nazia8Promo.kz",
     title: "Nazia8Promo.kz",
     description:
-      "Академия продаж, корпоративное внедрение и S:O:S CRM для Казахстана и СНГ.",
+      "Академия продаж, корпоративное внедрение и S:O:S Sales для Казахстана и СНГ.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Nazia8Promo.kz",
     description:
-      "Академия продаж, корпоративное внедрение и S:O:S CRM для Казахстана и СНГ.",
+      "Академия продаж, корпоративное внедрение и S:O:S Sales для Казахстана и СНГ.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0B132B",
+  themeColor: "#081733",
   colorScheme: "light",
 };
 
@@ -64,7 +72,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className="premium-shell min-h-screen bg-[#FAF7F2] text-[#1F2937]">
+      <body
+        className={`${manrope.variable} premium-shell min-h-screen bg-[#F5F0E8] text-[#111827]`}
+      >
         <StructuredData />
         <SiteHeader />
         <main>{children}</main>
