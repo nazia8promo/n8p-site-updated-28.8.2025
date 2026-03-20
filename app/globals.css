@@ -1,0 +1,403 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f2;
+  --foreground: #1f2937;
+
+  --navy: #0b132b;
+  --navy-2: #111c3d;
+  --royal: #1d4ed8;
+  --royal-soft: #eef4ff;
+  --emerald: #0f766e;
+  --emerald-soft: #eaf6f4;
+  --gold: #d4a373;
+  --gold-soft: #f6ebdd;
+  --pearl: #fffdf8;
+  --ink-soft: #5b6475;
+  --line: rgba(11, 19, 43, 0.08);
+  --line-strong: rgba(11, 19, 43, 0.14);
+
+  --shadow-soft: 0 18px 55px rgba(11, 19, 43, 0.06);
+  --shadow-medium: 0 24px 80px rgba(11, 19, 43, 0.1);
+  --shadow-strong: 0 34px 120px rgba(11, 19, 43, 0.18);
+
+  --radius-card: 1.5rem;
+  --radius-panel: 2rem;
+  --radius-band: 2.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at top right, rgba(29, 78, 216, 0.08), transparent 24%),
+    radial-gradient(circle at top left, rgba(212, 163, 115, 0.1), transparent 20%),
+    radial-gradient(circle at bottom center, rgba(15, 118, 110, 0.06), transparent 18%),
+    linear-gradient(180deg, #faf7f2 0%, #f8f6f1 48%, #fbfaf7 100%);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(29, 78, 216, 0.18);
+  color: var(--navy);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--navy);
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  line-height: 1.02;
+  font-family:
+    "Iowan Old Style",
+    "Palatino Linotype",
+    "Book Antiqua",
+    Palatino,
+    "Times New Roman",
+    Georgia,
+    serif;
+}
+
+p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(29, 78, 216, 0.35);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+code,
+pre {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace;
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(11, 19, 43, 0.22) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(11, 19, 43, 0.18);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 19, 43, 0.28);
+  background-clip: padding-box;
+}
+
+/* Premium helpers */
+.premium-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.premium-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(11, 19, 43, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 19, 43, 0.015) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.18), transparent 55%);
+  z-index: -1;
+}
+
+.section-space {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.editorial-title {
+  font-family:
+    "Iowan Old Style",
+    "Palatino Linotype",
+    "Book Antiqua",
+    Palatino,
+    "Times New Roman",
+    Georgia,
+    serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  color: var(--navy);
+}
+
+.editorial-subtitle {
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.premium-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-card);
+}
+
+.premium-panel {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-panel);
+}
+
+.premium-band {
+  border-radius: var(--radius-band);
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+}
+
+.premium-dark {
+  color: white;
+  background:
+    radial-gradient(circle at top right, rgba(212, 163, 115, 0.2), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(29, 78, 216, 0.18), transparent 28%),
+    linear-gradient(180deg, #0b132b 0%, #0d1734 100%);
+}
+
+.premium-dark h1,
+.premium-dark h2,
+.premium-dark h3,
+.premium-dark h4,
+.premium-dark h5,
+.premium-dark h6 {
+  color: white;
+}
+
+.gold-line {
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 163, 115, 0.95), rgba(212, 163, 115, 0.2));
+}
+
+.top-gold-line {
+  position: relative;
+}
+
+.top-gold-line::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 163, 115, 0.65) 18%,
+    rgba(212, 163, 115, 0.2) 55%,
+    transparent 100%
+  );
+}
+
+.soft-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(11, 19, 43, 0.08) 18%,
+    rgba(11, 19, 43, 0.08) 82%,
+    transparent 100%
+  );
+}
+
+.luxury-border {
+  border: 1px solid var(--line);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 14px 40px rgba(11, 19, 43, 0.05);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(11, 19, 43, 0.08);
+}
+
+.glass-dark {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tint-blue {
+  background: var(--royal-soft);
+  border-color: rgba(29, 78, 216, 0.18);
+}
+
+.tint-emerald {
+  background: var(--emerald-soft);
+  border-color: rgba(15, 118, 110, 0.16);
+}
+
+.tint-gold {
+  background: var(--gold-soft);
+  border-color: rgba(212, 163, 115, 0.28);
+}
+
+.page-wrap {
+  width: 100%;
+}
+
+.container-premium {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.button-premium-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--navy);
+  color: white;
+  padding: 0.875rem 1.5rem;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button-premium-dark:hover {
+  background: var(--navy-2);
+  transform: translateY(-1px);
+}
+
+.button-premium-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  color: #9a6a33;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid rgba(212, 163, 115, 0.35);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button-premium-gold:hover {
+  background: #f0e0c9;
+  transform: translateY(-1px);
+}
+
+.button-premium-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--royal);
+  color: white;
+  padding: 0.875rem 1.5rem;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button-premium-blue:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* Better spacing on mobile */
+@media (max-width: 768px) {
+  .section-space {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .editorial-title {
+    line-height: 1.02;
+  }
+}
