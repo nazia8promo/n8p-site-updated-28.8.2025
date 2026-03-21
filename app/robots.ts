@@ -7,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: "https://nazia8promo.kz/sitemap.xml",
+    host: "https://nazia8promo.kz",
   };
 }
