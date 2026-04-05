@@ -18,7 +18,7 @@ export function SiteHeader() {
 
             <span className="inline-flex h-[24px] items-center justify-center overflow-hidden">
               <img
-                src="/brand/nazia8-mark.svg"
+                src="/brand/nazia8-mark-lightbg.svg"
                 alt="Nazia8Promo mark"
                 width={16}
                 height={24}
