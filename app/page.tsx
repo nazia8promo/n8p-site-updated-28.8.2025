@@ -24,7 +24,7 @@ export default function HomePage() {
               <div className="flex items-center gap-4">
                 <span className="gold-line" />
                 <div className="text-xs font-semibold uppercase tracking-[0.34em] text-[#7B8393]">
-                  Kazakhstan & CIS
+                  Sales operating system
                 </div>
               </div>
 
