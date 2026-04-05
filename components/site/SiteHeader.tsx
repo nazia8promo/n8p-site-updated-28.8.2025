@@ -20,9 +20,9 @@ export function SiteHeader() {
             <Image
               src="/brand/nazia8-mark.svg"
               alt="Nazia8Promo mark"
-              width={18}
-              height={26}
-              className="h-[26px] w-auto"
+              width={14}
+              height={22}
+              className="h-[22px] w-auto"
               priority
             />
 
