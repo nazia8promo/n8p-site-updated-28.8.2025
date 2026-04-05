@@ -11,23 +11,25 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#081733]/10 bg-white/86 backdrop-blur-md">
       <div className="container-premium flex h-18 min-h-[72px] items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <span className="text-[1.7rem] font-extrabold tracking-[-0.05em] text-[#081733]">
-            Nazia
-          </span>
+        <Link href="/" className="shrink-0">
+          <div className="flex items-center gap-[6px]">
+            <span className="text-[1.6rem] font-extrabold tracking-[-0.05em] text-[#081733]">
+              Nazia
+            </span>
 
-          <Image
-            src="/brand/nazia8-mark.svg"
-            alt="Nazia8Promo mark"
-            width={24}
-            height={36}
-            className="h-[36px] w-auto"
-            priority
-          />
+            <Image
+              src="/brand/nazia8-mark.svg"
+              alt="8"
+              width={20}
+              height={28}
+              className="h-[28px] w-auto"
+              priority
+            />
 
-          <span className="text-[1.7rem] font-extrabold tracking-[-0.05em] text-[#081733]">
-            Promo
-          </span>
+            <span className="text-[1.6rem] font-extrabold tracking-[-0.05em] text-[#081733]">
+              Promo
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex md:items-center md:gap-7">
