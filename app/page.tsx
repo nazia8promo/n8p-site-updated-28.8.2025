@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div className="page-wrap pb-24">
       <section className="container-premium pt-8 pb-12 lg:pt-14">
-        <div className="grid items-start gap-6 lg:grid-cols-[0.96fr_1.04fr]">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#F6EBDD] px-4 py-2 text-sm font-medium text-[#9A6A33] ring-1 ring-[#D4A373]/40">
               {homePage.hero.badge}
