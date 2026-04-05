@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { siteNavigation } from "@/lib/site/navigation";
 
@@ -9,24 +8,30 @@ export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#081733]/10 bg-white/86 backdrop-blur-md">
-      <div className="container-premium flex h-[72px] items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 w-full border-b border-[#081733]/10 bg-white/92 backdrop-blur-md">
+      <div className="container-premium flex h-[72px] items-center justify-between gap-4 overflow-hidden">
         <Link href="/" className="shrink-0">
-          <div className="flex items-center gap-[6px] leading-none">
-            <span className="text-[1.55rem] font-extrabold tracking-[-0.05em] text-[#081733]">
+          <div className="flex items-center gap-[4px] leading-none">
+            <span className="text-[1.45rem] font-extrabold tracking-[-0.05em] text-[#081733]">
               Nazia
             </span>
 
-            <Image
-              src="/brand/nazia8-mark.svg"
-              alt="Nazia8Promo mark"
-              width={14}
-              height={22}
-              className="h-[22px] w-auto"
-              priority
-            />
+            <span className="inline-flex h-[24px] items-center justify-center overflow-hidden">
+              <img
+                src="/brand/nazia8-mark.svg"
+                alt="Nazia8Promo mark"
+                width={16}
+                height={24}
+                style={{
+                  width: "16px",
+                  height: "24px",
+                  display: "block",
+                  objectFit: "contain",
+                }}
+              />
+            </span>
 
-            <span className="text-[1.55rem] font-extrabold tracking-[-0.05em] text-[#081733]">
+            <span className="text-[1.45rem] font-extrabold tracking-[-0.05em] text-[#081733]">
               Promo
             </span>
           </div>
