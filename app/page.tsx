@@ -7,7 +7,6 @@ import Link from "next/link";
 import { homePage } from "@/content/site/home";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { AnimationPlaceholder } from "@/components/site/AnimationPlaceholder";
-import { CTAButtons } from "@/components/site/CTAButtons";
 import { HomeMotionPlaceholder } from "@/components/site/HomeMotionPlaceholder";
 import { HeroSystemCard } from "@/components/site/HeroSystemCard";
 
@@ -38,14 +37,23 @@ export default function HomePage() {
               </p>
             </div>
 
-            <CTAButtons
-              primary={homePage.hero.primaryCta}
-              secondary={homePage.hero.secondaryCta}
-            />
+            {/* ЗАМЕНА: CTAButtons → три кнопки */}
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Link href="/contact" className="button-premium-dark">
+                Оставить заявку
+              </Link>
+              <Link href="/companies" className="button-premium-gold">
+                Для компаний
+              </Link>
+              <Link href="/crm" className="button-premium-blue">
+                Посмотреть CRM
+              </Link>
+            </div>
 
+            {/* ЗАМЕНА: три маленькие карточки под hero */}
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-3 shadow-sm">
-                <div className="text-xs uppercase tracking-[0.18em] text-[#2D66F6]">
+              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-4 shadow-sm">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#1fb6a6]">
                   Academy
                 </div>
                 <p className="mt-2 text-sm leading-6 text-[#4B5563]">
@@ -53,8 +61,8 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-3 shadow-sm">
-                <div className="text-xs uppercase tracking-[0.18em] text-[#2D66F6]">
+              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-4 shadow-sm">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#1fb6a6]">
                   Implementation
                 </div>
                 <p className="mt-2 text-sm leading-6 text-[#4B5563]">
@@ -62,8 +70,8 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-3 shadow-sm">
-                <div className="text-xs uppercase tracking-[0.18em] text-[#9A6A33]">
+              <div className="rounded-[1.5rem] border border-[#081733]/8 bg-white px-4 py-4 shadow-sm">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#C88A35]">
                   Product layer
                 </div>
                 <p className="mt-2 text-sm leading-6 text-[#4B5563]">

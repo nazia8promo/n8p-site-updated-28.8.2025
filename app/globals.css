@@ -681,14 +681,19 @@ body {
   background: #0B1E43;
 }
 
+/* === PATCH: button-premium-blue color update === */
 .button-premium-blue {
-  background: #2D66F6;
-  color: white;
+  background: #1fb6a6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(31, 182, 166, 0.20);
 }
 
 .button-premium-blue:hover {
-  background: #1E4FD1;
+  background: #169788 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
 }
+/* === end patch === */
 
 .button-premium-gold {
   background: #F3E0C4;
@@ -756,12 +761,12 @@ body {
   transform: translateY(-1px);
 }
 .button-premium-blue {
-  background: #2D66F6 !important;
+  background: #1fb6a6 !important;
   color: #ffffff !important;
-  box-shadow: 0 10px 24px rgba(45, 102, 246, 0.20);
+  box-shadow: 0 10px 24px rgba(31, 182, 166, 0.20);
 }
 .button-premium-blue:hover {
-  background: #1E4FD1 !important;
+  background: #169788 !important;
   color: #ffffff !important;
   transform: translateY(-1px);
 }

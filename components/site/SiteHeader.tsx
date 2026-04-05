@@ -1,62 +1,56 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import { siteNavigation } from "@/lib/site/navigation";
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#081733]/10 bg-white/80 backdrop-blur-md">
-      <div className="container-premium flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-[#081733]">Nazia8Promo</span>
-          <span className="hidden text-sm text-[#C88A35] md:inline-block">| Academy</span>
+    <header className="sticky top-0 z-50 w-full border-b border-[#081733]/10 bg-white/86 backdrop-blur-md">
+      <div className="container-premium flex h-18 min-h-[72px] items-center justify-between gap-4">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
+          <span className="text-[1.7rem] font-extrabold tracking-[-0.05em] text-[#081733]">
+            Nazia
+          </span>
+
+          <Image
+            src="/brand/nazia8-mark.svg"
+            alt="Nazia8Promo mark"
+            width={34}
+            height={46}
+            className="h-[42px] w-auto"
+            priority
+          />
+
+          <span className="text-[1.7rem] font-extrabold tracking-[-0.05em] text-[#081733]">
+            Promo
+          </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:items-center md:gap-8">
-          <Link
-            href="/"
-            className="text-sm font-medium text-[#334155] transition hover:text-[#1D4ED8]"
-          >
-            Главная
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm font-medium text-[#334155] transition hover:text-[#1D4ED8]"
-          >
-            Об академии
-          </Link>
-          <Link
-            href="/rop"
-            className="text-sm font-medium text-[#334155] transition hover:text-[#1D4ED8]"
-          >
-            РОП
-          </Link>
-          <Link
-            href="/mop"
-            className="text-sm font-medium text-[#334155] transition hover:text-[#1D4ED8]"
-          >
-            МОП
-          </Link>
-          <Link
-            href="/crm"
-            className="text-sm font-medium text-[#334155] transition hover:text-[#1D4ED8]"
-          >
-            S:O:S CRM
-          </Link>
+        <nav className="hidden md:flex md:items-center md:gap-7">
+          {siteNavigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-semibold text-[#334155] transition hover:text-[#1fb6a6]"
+            >
+              {item.label}
+            </Link>
+          ))}
+
           <Link
             href="/contact"
-            className="rounded-full bg-[#1D4ED8] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#1E4FD1]"
+            className="button-premium-dark"
           >
             Связаться
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="md:hidden inline-flex items-center justify-center rounded-full border border-[#081733]/10 bg-white p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -84,48 +78,23 @@ export function SiteHeader() {
           </svg>
         </button>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="absolute left-0 right-0 top-16 bg-white border-b border-[#081733]/10 shadow-lg md:hidden">
-            <nav className="flex flex-col p-4 gap-4">
-              <Link
-                href="/"
-                className="px-4 py-2 text-sm font-medium text-[#334155] hover:text-[#1D4ED8]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Главная
-              </Link>
-              <Link
-                href="/about"
-                className="px-4 py-2 text-sm font-medium text-[#334155] hover:text-[#1D4ED8]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Об академии
-              </Link>
-              <Link
-                href="/rop"
-                className="px-4 py-2 text-sm font-medium text-[#334155] hover:text-[#1D4ED8]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                РОП
-              </Link>
-              <Link
-                href="/mop"
-                className="px-4 py-2 text-sm font-medium text-[#334155] hover:text-[#1D4ED8]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                МОП
-              </Link>
-              <Link
-                href="/crm"
-                className="px-4 py-2 text-sm font-medium text-[#334155] hover:text-[#1D4ED8]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                S:O:S CRM
-              </Link>
+          <div className="absolute left-0 right-0 top-[72px] border-b border-[#081733]/10 bg-white shadow-lg md:hidden">
+            <nav className="flex flex-col gap-3 p-4">
+              {siteNavigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="px-4 py-2 text-sm font-medium text-[#334155] hover:text-[#1fb6a6]"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+
               <Link
                 href="/contact"
-                className="mx-4 rounded-full bg-[#1D4ED8] px-5 py-2 text-center text-sm font-medium text-white transition hover:bg-[#1E4FD1]"
+                className="mt-2 button-premium-dark"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Связаться
