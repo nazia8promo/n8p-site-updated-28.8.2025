@@ -1,7 +1,10 @@
 export function HeroSystemCard() {
   return (
     <div className="ml-auto w-full max-w-[760px]">
-      <div className="premium-dark overflow-hidden rounded-[2rem] p-5 text-white ring-1 ring-white/10 shadow-[0_18px_46px_rgba(8,23,51,0.16)] lg:p-6">
+      <div
+        style={{ background: "linear-gradient(180deg,#081733 0%,#0f274f 100%)" }}
+        className="overflow-hidden rounded-[2rem] p-5 text-white ring-1 ring-white/10 shadow-[0_18px_46px_rgba(8,23,51,0.16)] lg:p-6"
+      >
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="text-xs uppercase tracking-[0.24em] text-white/55">

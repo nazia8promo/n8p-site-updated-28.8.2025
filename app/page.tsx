@@ -38,7 +38,7 @@ export default function HomePage() {
             </div>
 
             {/* ЗАМЕНА: CTAButtons → три кнопки */}
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-5 rounded-[2rem] bg-white/65 p-6 backdrop-blur-sm">
               <Link href="/contact" className="button-premium-dark">
                 Оставить заявку
               </Link>
