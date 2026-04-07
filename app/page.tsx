@@ -35,8 +35,8 @@ export default function HomePage() {
               </p>
 
               <div className="inline-flex rounded-full bg-[#EEF4FF] px-4 py-2 text-sm font-medium text-[#1D4ED8] ring-1 ring-[#1D4ED8]/18">
-                Установка от 59 000 ₸ · запуск за 3–5 дней
-              </div>
+               Установка от 59 000 ₸ · до 5 менеджеров включено
+             </div>
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -241,8 +241,8 @@ export default function HomePage() {
                 Получить демонстрацию
               </Link>
               <Link href="/crm" className="button-premium-gold">
-                Посмотреть CRM
-              </Link>
+               Посмотреть возможности
+             </Link>
             </div>
           </div>
         </div>
