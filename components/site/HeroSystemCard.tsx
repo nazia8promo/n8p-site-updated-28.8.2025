@@ -1,81 +1,37 @@
 export function HeroSystemCard() {
   return (
-    <div className="ml-auto w-full max-w-[720px]">
-      <div className="premium-dark overflow-hidden rounded-[2rem] p-5 text-white ring-1 ring-white/10 shadow-[0_18px_46px_rgba(8,23,51,0.16)] lg:p-6">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <div className="text-xs uppercase tracking-[0.24em] text-white/50">
-              Sales system
-            </div>
-            <div className="mt-3 text-[2rem] font-extrabold tracking-[-0.05em] text-white">
-              Контроль. Порядок. Рост.
-            </div>
-          </div>
-
-          <div className="rounded-full bg-white/10 px-4 py-2 text-sm text-[#F3E0C4] ring-1 ring-white/10">
-            внедрение под ключ
-          </div>
+    <div className="ml-auto w-full max-w-[620px]">
+      <div className="rounded-[2rem] border border-[#081733]/8 bg-white/88 p-5 shadow-[0_16px_36px_rgba(8,23,51,0.06)] backdrop-blur-sm lg:p-6">
+        <div className="text-xs uppercase tracking-[0.22em] text-[#7B8393]">
+          Что внутри системы
         </div>
 
-        <div className="mt-5 rounded-[1.6rem] bg-white/6 p-5 ring-1 ring-white/10">
-          <div className="text-xs uppercase tracking-[0.2em] text-[#F3E0C4]">
-            Что получает бизнес
-          </div>
-          <div className="mt-3 text-[1.7rem] font-bold tracking-[-0.04em] text-white">
-            CRM + workflow + контроль команды
-          </div>
-          <p className="mt-3 text-[0.98rem] leading-8 text-white/72">
-            Вся работа с лидами, этапами, ответственными и переписками
-            собирается в одной системе без хаоса в WhatsApp.
-          </p>
+        <div className="mt-4 grid gap-3">
+          {[
+            "CRM с полной базой клиентов",
+            "Чаты внутри системы",
+            "Контроль менеджеров и переписок",
+            "AI-assisted workflow",
+            "Kanban и этапы продаж",
+            "Аналитика и отчёты",
+          ].map((item, index) => (
+            <div
+              key={item}
+              className={`rounded-[1.35rem] px-4 py-4 ring-1 ${
+                index % 3 === 0
+                  ? "bg-white text-[#081733] ring-[#081733]/8"
+                  : index % 3 === 1
+                  ? "bg-[#EEF4FF] text-[#081733] ring-[#1D4ED8]/18"
+                  : "bg-[#F6EBDD] text-[#081733] ring-[#D4A373]/24"
+              }`}
+            >
+              <div className="text-sm leading-6">{item}</div>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          <div className="rounded-[1.6rem] bg-[#2D66F6]/12 p-5 ring-1 ring-[#2D66F6]/18">
-            <div className="text-xs uppercase tracking-[0.2em] text-[#CFE0FF]">
-              CRM layer
-            </div>
-            <div className="mt-3 text-[1.45rem] font-bold tracking-[-0.04em] text-white">
-              S:O:S CRM
-            </div>
-            <p className="mt-3 text-[0.96rem] leading-8 text-white/72">
-              WhatsApp-first CRM: Kanban, ownership, контроль и практичная аналитика.
-            </p>
-          </div>
-
-          <div className="rounded-[1.6rem] bg-[#C88A35]/12 p-5 ring-1 ring-[#C88A35]/18">
-            <div className="text-xs uppercase tracking-[0.2em] text-[#F3E0C4]">
-              Implementation
-            </div>
-            <div className="mt-3 text-[1.45rem] font-bold tracking-[-0.04em] text-white">
-              Nazia8Promo
-            </div>
-            <p className="mt-3 text-[0.96rem] leading-8 text-white/72">
-              Настройка, запуск, обучение команды и закрепление процесса в ежедневной работе.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-4 rounded-[1.6rem] bg-white/6 p-5 ring-1 ring-white/10">
-          <div className="text-xs uppercase tracking-[0.2em] text-white/50">
-            Inside the system
-          </div>
-
-          <div className="mt-4 flex flex-wrap gap-3">
-            {[
-              "лиды в одном месте",
-              "контроль менеджеров",
-              "этапы и ownership",
-              "AI-assisted workflow",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-full bg-white/8 px-4 py-2.5 text-sm text-white/84 ring-1 ring-white/10"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
+        <div className="mt-5 rounded-[1.35rem] bg-[#081733] px-4 py-4 text-sm leading-6 text-white">
+          Всё в одной системе. Без хаоса в WhatsApp и без перегруженной CRM.
         </div>
       </div>
     </div>
