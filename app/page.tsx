@@ -44,6 +44,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Видео-демо секция (вставленный патч) */}
+      <section className="section-space">
+        <div className="container-premium">
+          <div className="premium-panel p-4 lg:p-5">
+            <div className="mb-4">
+              <div className="text-xs uppercase tracking-[0.22em] text-[#7B8393]">
+                Демо системы
+              </div>
+              <h2 className="mt-3 section-display text-[#081733]">
+                Посмотрите, как работает CRM вживую
+              </h2>
+              <p className="mt-3 body-regular text-[#5B6475]">
+                Короткая демонстрация Kanban, чатов и логики работы внутри системы.
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-[1.6rem] border border-[#081733]/8 bg-black">
+              <video
+                className="w-full h-auto block"
+                controls
+                preload="metadata"
+                playsInline
+              >
+                <source src="/videos/crm-demo.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Problem секция (закрыта корректно) */}
       <section className="section-space bg-[#F8FAFC]">
         <div className="container-premium">
