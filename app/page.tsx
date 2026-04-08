@@ -207,9 +207,14 @@ export default function HomePage() {
               <Link href="/contact" className="button-premium-dark">
                 Получить демонстрацию
               </Link>
-              <Link href="/crm" className="button-premium-blue">
-                Посмотреть возможности
-              </Link>
+              <a
+               href="https://wa.me/77478089359"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="button-premium-blue"
+              >
+               Написать в WhatsApp
+              </a>
             </div>
           </div>
         </div>

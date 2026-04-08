@@ -812,3 +812,56 @@ body {
   font-size: 0.92rem;
   line-height: 1.45;
 }
+
+/* ===== Mobile compact pass ===== */
+@media (max-width: 768px) {
+  .section-space {
+    padding-top: 1.4rem !important;
+    padding-bottom: 1.4rem !important;
+  }
+
+  .container-premium {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .premium-panel,
+  .premium-card {
+    border-radius: 1.35rem !important;
+    padding: 1rem !important;
+  }
+
+  .page-wrap {
+    padding-bottom: 5.5rem;
+  }
+
+  .hero-display {
+    font-size: clamp(1.9rem, 7.2vw, 2.7rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .page-display {
+    font-size: clamp(1.7rem, 6.5vw, 2.25rem) !important;
+    line-height: 1.04 !important;
+  }
+
+  .section-display {
+    font-size: clamp(1.45rem, 5.8vw, 1.95rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .card-display {
+    font-size: clamp(1.08rem, 4.8vw, 1.32rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  .body-large,
+  .body-regular {
+    line-height: 1.58 !important;
+  }
+
+  footer {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}

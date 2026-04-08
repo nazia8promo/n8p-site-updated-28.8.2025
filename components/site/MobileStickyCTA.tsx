@@ -2,19 +2,22 @@ import Link from "next/link";
 
 export function MobileStickyCTA() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#0B132B]/10 bg-white/92 p-3 backdrop-blur md:hidden">
-      <div className="mx-auto flex max-w-7xl gap-3">
-        <Link
-          href="/contact"
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#0B132B]/10 bg-white/95 p-2.5 backdrop-blur md:hidden">
+      <div className="mx-auto flex max-w-7xl gap-2.5">
+        <a
+          href="https://wa.me/77478089359"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex-1 rounded-full bg-[#0B132B] px-4 py-3 text-center text-sm font-medium text-white"
         >
-          Оставить заявку
-        </Link>
+          WhatsApp
+        </a>
+
         <Link
-          href="/crm"
-          className="flex-1 rounded-full bg-[#F6EBDD] px-4 py-3 text-center text-sm font-medium text-[#9A6A33]"
+          href="/contact"
+          className="flex-1 rounded-full bg-[#EEF4FF] px-4 py-3 text-center text-sm font-medium text-[#1D4ED8]"
         >
-          CRM
+          Демо
         </Link>
       </div>
     </div>
